@@ -1,0 +1,30 @@
+{
+  "type": "forge:ore_shaped",
+  "pattern": [
+    "#X#",
+    "ABA",
+    "CCC"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:glass_pane"
+    },
+    "X": {
+      "item": "minecraft:iron_ingot"
+    },
+	"A": {
+      "item": "minecraft:stone",
+	  "data": 0
+    },
+	"B": {
+      "item": "minecraft:cauldron"
+    },
+	"C": {
+      "item": "minecraft:stone_slab",
+	  "data": 0
+    }
+  },
+  "result": {
+    "item": "cbcraft:crushing_grinding_machine"
+  }
+}

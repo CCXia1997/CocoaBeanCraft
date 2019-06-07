@@ -1,0 +1,25 @@
+{
+  "type": "forge:ore_shaped",
+  "pattern": [
+    "###",
+    "#X#",
+    "ABA"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:glass_pane"
+    },
+    "X": {
+      "item": "minecraft:cauldron"
+    },
+	"A": {
+      "item": "minecraft:iron_ingot"
+    },
+	"B": {
+      "item": "minecraft:furnace"
+    }
+  },
+  "result": {
+    "item": "cbcraft:fermentation_baker"
+  }
+}

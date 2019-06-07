@@ -1,0 +1,8 @@
+{
+    "variants": {
+        "facing=north": { "model": "cbcraft:separator" },
+        "facing=south": { "model": "cbcraft:separator", "y": 180 },
+        "facing=west":  { "model": "cbcraft:separator", "y": 270 },
+        "facing=east":  { "model": "cbcraft:separator", "y": 90 }
+    }
+}

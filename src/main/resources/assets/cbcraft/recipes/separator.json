@@ -1,0 +1,25 @@
+{
+  "type": "forge:ore_shaped",
+  "pattern": [
+    "#X#",
+    "AAA",
+    "XBX"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:glass_pane"
+    },
+    "X": {
+      "item": "minecraft:cauldron"
+    },
+	"A": {
+      "item": "minecraft:hopper"
+    },
+	"B": {
+      "item": "minecraft:furnace"
+    }
+  },
+  "result": {
+    "item": "cbcraft:separator"
+  }
+}

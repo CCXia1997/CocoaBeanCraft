@@ -1,0 +1,8 @@
+itemGroup.cbcraft=Cocoa Bean Craft
+
+item.cbcraft.flour.name=Flour
+item.cbcraft.dough.name=Dough
+
+tile.cbcraft.fermentationBaker.name=Fermentation Baker
+tile.cbcraft.crushingGrindingMachine.name=Crushing Grinding Machine
+tile.cbcraft.separator.name=Separator

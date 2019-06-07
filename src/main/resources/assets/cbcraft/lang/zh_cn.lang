@@ -1,0 +1,8 @@
+itemGroup.cbcraft=可可豆工艺
+
+item.cbcraft.flour.name=面粉
+item.cbcraft.dough.name=面团
+
+tile.cbcraft.fermentationBaker.name=发酵烘焙机
+tile.cbcraft.crushingGrindingMachine.name=打碎研磨机
+tile.cbcraft.separator.name=分离机
