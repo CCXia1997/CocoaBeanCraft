@@ -1,4 +1,5 @@
 {
+	"parent": "block/cube",
 	"__comment": "Designed by XeKr with Cubik Studio - https://cubik.studio",
 	"textures": {
 		"particle": "cbcraft:blocks/crushing_grinding_machine_side",

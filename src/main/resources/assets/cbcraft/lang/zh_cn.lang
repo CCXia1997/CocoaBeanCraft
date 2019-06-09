@@ -6,3 +6,7 @@ item.cbcraft.dough.name=面团
 tile.cbcraft.fermentationBaker.name=发酵烘焙机
 tile.cbcraft.crushingGrindingMachine.name=打碎研磨机
 tile.cbcraft.separator.name=分离机
+
+container.cbcraft.fermentation_baking_machine=发酵烘焙机
+container.cbcraft.crushing_grinding_machine=打碎研磨机
+container.cbcraft.separator=分离机

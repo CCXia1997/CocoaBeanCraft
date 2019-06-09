@@ -1,13 +1,13 @@
 [
 {
   "modid": "cbcraft",
-  "name": "Cocoa Bean Craft",
+  "name": "CocoaCraft",
   "description": "a mod that development by cocoa bean",
   "version": "1.0.0",
   "mcversion": "1.12.2",
   "url": "https://github.com/CCXia1997/CocoaBeanCraft.git",
   "updateUrl": "",
-  "authorList": ["CCXia"],
+  "authorList": ["Xekr,CCXia"],
   "credits": "The Forge and FML guys, for making this example",
   "logoFile": "",
   "screenshots": [],
