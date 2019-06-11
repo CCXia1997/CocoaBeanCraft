@@ -9,6 +9,7 @@ import net.minecraft.inventory.Container;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
+
 @SideOnly(Side.CLIENT)
 public class GuiCrushingGrindingMachine extends GuiContainer {
 	private static final ResourceLocation TEXTURE = new ResourceLocation(CbCraft.MODID,
@@ -27,6 +28,8 @@ public class GuiCrushingGrindingMachine extends GuiContainer {
 		this.mc.getTextureManager().bindTexture(TEXTURE);
 		int offsetX = (this.width - this.xSize) / 2, offsetY = (this.height - this.ySize) / 2;
 		this.drawTexturedModalRect(offsetX, offsetY, 0, 0, this.xSize, this.ySize);
+		int loadTime = ((ContainerCrushingGrindingMachine) this.inventorySlots).getLoadTime();
+		this.drawTexturedModalRect(offsetX + 77, offsetY + 20, 176, 3, 24 * loadTime / 200, 17);
 	}
 
 	@Override
@@ -34,4 +37,5 @@ public class GuiCrushingGrindingMachine extends GuiContainer {
 		String title = I18n.format("container." + CbCraft.MODID + ".crushing_grinding_machine");
 		this.fontRenderer.drawString(title, (this.xSize - this.fontRenderer.getStringWidth(title)) / 2, 6, 0x404040);
 	}
+
 }

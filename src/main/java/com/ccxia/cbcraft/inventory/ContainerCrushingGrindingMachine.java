@@ -4,10 +4,13 @@ import com.ccxia.cbcraft.tileentity.TileEntityCrushingGrindingMachine;
 
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.Container;
+import net.minecraft.inventory.IContainerListener;
 import net.minecraft.inventory.Slot;
 import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.EnumFacing;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 import net.minecraftforge.items.CapabilityItemHandler;
 import net.minecraftforge.items.IItemHandler;
 import net.minecraftforge.items.SlotItemHandler;
@@ -16,6 +19,7 @@ public class ContainerCrushingGrindingMachine extends Container {
 	private IItemHandler upItems;
 	private IItemHandler downItems;
 	public TileEntityCrushingGrindingMachine tileEntity;
+	private int loadTime;
 
 	public ContainerCrushingGrindingMachine(EntityPlayer player, TileEntity tileEntity) {
 		super();
@@ -81,7 +85,7 @@ public class ContainerCrushingGrindingMachine extends Container {
 				if (!this.mergeItemStack(itemstack1, 2, 38, true)) {
 					return ItemStack.EMPTY;
 				}
-			} else if (!this.mergeItemStack(itemstack1, 0, 2, false)) {
+			} else if (!this.mergeItemStack(itemstack1, 0, 1, false)) {
 				return ItemStack.EMPTY;
 			}
 			if (itemstack1.isEmpty()) {
@@ -93,4 +97,29 @@ public class ContainerCrushingGrindingMachine extends Container {
 		return itemstack;
 	}
 
+	@Override
+	public void detectAndSendChanges() {
+		super.detectAndSendChanges();
+		this.loadTime = tileEntity.getLoadTime();
+		for (IContainerListener i : this.listeners) {
+			i.sendWindowProperty(this, 0, this.loadTime);
+		}
+	}
+
+	@SideOnly(Side.CLIENT)
+	@Override
+	public void updateProgressBar(int id, int data) {
+		super.updateProgressBar(id, data);
+		switch (id) {
+		case 0:
+			this.loadTime = data;
+			break;
+		default:
+			break;
+		}
+	}
+
+	public int getLoadTime() {
+		return this.loadTime;
+	}
 }

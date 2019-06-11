@@ -2,6 +2,7 @@ itemGroup.cbcraft=Cocoa Bean Craft
 
 item.cbcraft.flour.name=Flour
 item.cbcraft.dough.name=Dough
+item.cbcraft.eggMilkDough.name=Egg Milk Dough
 
 tile.cbcraft.fermentationBaker.name=Fermentation Baking Machine
 tile.cbcraft.crushingGrindingMachine.name=Crushing Grinding Machine
