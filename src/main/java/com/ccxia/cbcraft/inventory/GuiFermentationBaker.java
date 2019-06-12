@@ -33,8 +33,14 @@ public class GuiFermentationBaker extends GuiContainer {
 
 	@Override
 	protected void drawGuiContainerForegroundLayer(int mouseX, int mouseY) {
-		String title = I18n.format("container."+CbCraft.MODID+".fermentation_baking_machine");
+		String title = I18n.format("container." + CbCraft.MODID + ".fermentation_baking_machine");
 		this.fontRenderer.drawString(title, (this.xSize - this.fontRenderer.getStringWidth(title)) / 2, 6, 0x404040);
 	}
 
+	@Override
+	public void drawScreen(int mouseX, int mouseY, float partialTicks) {
+		this.drawDefaultBackground();
+		super.drawScreen(mouseX, mouseY, partialTicks);
+		this.renderHoveredToolTip(mouseX, mouseY);
+	}
 }

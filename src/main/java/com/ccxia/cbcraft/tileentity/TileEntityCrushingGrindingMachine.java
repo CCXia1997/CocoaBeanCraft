@@ -38,6 +38,7 @@ public class TileEntityCrushingGrindingMachine extends TileEntity implements ITi
 
 	public TileEntityCrushingGrindingMachine() {
 		// 1熟可可豆->1可可膏
+		workList.put(ModItems.COOKED_COCOA_BEANS, new ItemStack(ModItems.COCOA_PASTE, 1));
 		// 1砂砾->1燧石
 		workList.put(Item.getItemFromBlock(Blocks.GRAVEL), new ItemStack(Items.FLINT, 1));
 		// 1地狱疣块->6地狱疣

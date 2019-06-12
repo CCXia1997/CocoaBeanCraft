@@ -3,6 +3,8 @@ itemGroup.cbcraft=Cocoa Bean Craft
 item.cbcraft.flour.name=Flour
 item.cbcraft.dough.name=Dough
 item.cbcraft.eggMilkDough.name=Egg Milk Dough
+item.cbcraft.cookedCocoaBeans.name=Cooked Cocoa Beans
+item.cbcraft.cocoaPaste.name=Cocoa Paste
 
 tile.cbcraft.fermentationBaker.name=Fermentation Baking Machine
 tile.cbcraft.crushingGrindingMachine.name=Crushing Grinding Machine

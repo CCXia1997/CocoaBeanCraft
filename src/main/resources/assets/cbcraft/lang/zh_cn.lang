@@ -3,6 +3,8 @@ itemGroup.cbcraft=可可豆工艺
 item.cbcraft.flour.name=面粉
 item.cbcraft.dough.name=面团
 item.cbcraft.eggMilkDough.name=蛋奶面团
+item.cbcraft.cookedCocoaBeans.name=熟可可豆
+item.cbcraft.cocoaPaste.name=可可膏
 
 tile.cbcraft.fermentationBaker.name=发酵烘焙机
 tile.cbcraft.crushingGrindingMachine.name=打碎研磨机
