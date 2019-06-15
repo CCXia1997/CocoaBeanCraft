@@ -1,0 +1,57 @@
+{
+    "parent": "block/cube",
+	"__comment": "Designed by XeKr with Cubik Studio - https://cubik.studio",
+	"textures": {
+		"particle": "cbcraft:blocks/fermentation_baking_machine_front",
+		"front": "cbcraft:blocks/fermentation_baking_machine_front_on",
+		"side": "cbcraft:blocks/fermentation_baking_machine_side",
+		"inner": "cbcraft:blocks/fermentation_baking_machine_inner",
+		"back": "cbcraft:blocks/fermentation_baking_machine_back",
+		"top": "cbcraft:blocks/fermentation_baking_machine_top",
+		"bottom": "cbcraft:blocks/fermentation_baking_machine_bottom"
+	},
+	"elements": [ 	 
+		{
+			"__comment": "Box1",
+			"from": [ 0, 0, 0 ],
+			"to": [ 16, 16, 16 ],
+			"faces": {
+				"down": { "uv": [ 0, 0, 16, 16 ], "texture": "#bottom" },
+				"up": { "uv": [ 0, 0, 16, 16 ], "texture": "#top" },
+				"north": { "uv": [ 0, 0, 16, 16 ], "texture": "#front" },
+				"south": { "uv": [ 0, 0, 16, 16 ], "texture": "#back" },
+				"west": { "uv": [ 0, 0, 16, 16 ], "texture": "#side" },
+				"east": { "uv": [ 0, 0, 16, 16 ], "texture": "#side" }
+			}
+		},
+		{
+			"__comment": "Box2",
+			"from": [ 0, 8, 5 ],
+			"to": [ 16, 11, 11 ],
+			"faces": {
+				"up": { "uv": [ 0, 5, 16, 11 ], "texture": "#inner" },
+				"north": { "uv": [ 0, 5, 16, 8 ], "texture": "#inner" },
+				"south": { "uv": [ 0, 5, 16, 8 ], "texture": "#inner" }
+			}
+		},
+		{
+			"__comment": "PlaneY3",
+			"from": [ 0, 8, 0 ],
+			"to": [ 16, 8.001, 16 ],
+			"faces": {
+				"up": { "uv": [ 0, 0, 16, 16 ], "texture": "#inner" }
+			}
+		},
+		{
+			"__comment": "Box5",
+			"from": [ 4, 8, 4 ],
+			"to": [ 12, 16, 12 ],
+			"faces": {
+				"north": { "uv": [ 4, 0, 12, 8 ], "texture": "#inner" },
+				"south": { "uv": [ 4, 0, 12, 8 ], "texture": "#inner" },
+				"west": { "uv": [ 4, 0, 12, 8 ], "texture": "#inner" },
+				"east": { "uv": [ 4, 0, 12, 8 ], "texture": "#inner" }
+			}
+		}
+	]
+}

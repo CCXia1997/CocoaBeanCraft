@@ -1,0 +1,8 @@
+{
+    "variants": {
+        "facing=north": { "model": "cbcraft:fermentation_baking_machine_on" },
+        "facing=south": { "model": "cbcraft:fermentation_baking_machine_on", "y": 180 },
+        "facing=west":  { "model": "cbcraft:fermentation_baking_machine_on", "y": 270 },
+        "facing=east":  { "model": "cbcraft:fermentation_baking_machine_on", "y": 90 }
+    }
+}

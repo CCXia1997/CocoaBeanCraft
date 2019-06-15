@@ -4,10 +4,13 @@ import com.ccxia.cbcraft.tileentity.TileEntityFermentationBaker;
 
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.Container;
+import net.minecraft.inventory.IContainerListener;
 import net.minecraft.inventory.Slot;
 import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.EnumFacing;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 import net.minecraftforge.items.CapabilityItemHandler;
 import net.minecraftforge.items.IItemHandler;
 import net.minecraftforge.items.SlotItemHandler;
@@ -19,6 +22,10 @@ public class ContainerFermentationBaker extends Container {
 	private IItemHandler backItems;
 	private IItemHandler downItems;
 	private TileEntityFermentationBaker tileEntity;
+	private int furnaceBurnTime;
+	private int currentItemBurnTime;
+	private int cookTime;
+	private int totalCookTime;
 
 	public ContainerFermentationBaker(EntityPlayer player, TileEntity tileEntity) {
 		super();
@@ -123,4 +130,55 @@ public class ContainerFermentationBaker extends Container {
 		return itemstack;
 	}
 
+	@Override
+	public void detectAndSendChanges() {
+		super.detectAndSendChanges();
+		this.furnaceBurnTime = tileEntity.getTime(0);
+		this.currentItemBurnTime = tileEntity.getTime(1);
+		this.cookTime = tileEntity.getTime(2);
+		this.totalCookTime = tileEntity.getTime(3);
+		for (IContainerListener i : this.listeners) {
+			i.sendWindowProperty(this, 0, this.furnaceBurnTime);
+			i.sendWindowProperty(this, 1, this.currentItemBurnTime);
+			i.sendWindowProperty(this, 2, this.cookTime);
+			i.sendWindowProperty(this, 3, this.totalCookTime);
+		}
+	}
+
+	@SideOnly(Side.CLIENT)
+	@Override
+	public void updateProgressBar(int id, int data) {
+		super.updateProgressBar(id, data);
+		switch (id) {
+		case 0:
+			this.furnaceBurnTime = data;
+			break;
+		case 1:
+			this.currentItemBurnTime = data;
+			break;
+		case 2:
+			this.cookTime = data;
+			break;
+		case 3:
+			this.totalCookTime = data;
+			break;
+		default:
+			break;
+		}
+	}
+
+	public int getTime(int index) {
+		switch (index) {
+		case 0:
+			return this.furnaceBurnTime;
+		case 1:
+			return this.currentItemBurnTime;
+		case 2:
+			return this.cookTime;
+		case 3:
+			return this.totalCookTime;
+		default:
+			return 0;
+		}
+	}
 }

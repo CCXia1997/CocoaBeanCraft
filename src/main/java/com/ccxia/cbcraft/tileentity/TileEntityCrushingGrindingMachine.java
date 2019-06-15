@@ -79,6 +79,7 @@ public class TileEntityCrushingGrindingMachine extends TileEntity implements ITi
 
 	@Override
 	public void update() {
+		boolean flag1 = false;
 		if (!this.world.isRemote) {
 			if (canLoad()) {
 				Item item = upInventory.extractItem(0, 1, true).getItem();
@@ -89,6 +90,7 @@ public class TileEntityCrushingGrindingMachine extends TileEntity implements ITi
 						downInventory.insertItem(0, result, false);
 						upInventory.extractItem(0, 1, false);
 						this.loadTime = 0;
+						flag1 = true;
 					} else {
 						this.loadTime++;
 					}
@@ -99,7 +101,9 @@ public class TileEntityCrushingGrindingMachine extends TileEntity implements ITi
 				this.loadTime = 0;
 			}
 		}
-
+		if (flag1) {
+			this.markDirty();
+		}
 	}
 
 	public int getSizeInventory() {

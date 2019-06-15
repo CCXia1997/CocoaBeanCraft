@@ -5,8 +5,17 @@ item.cbcraft.dough.name=面团
 item.cbcraft.eggMilkDough.name=蛋奶面团
 item.cbcraft.cookedCocoaBeans.name=熟可可豆
 item.cbcraft.cocoaPaste.name=可可膏
+item.cbcraft.skimMilk.name=脱脂奶
+item.cbcraft.cheese.name=奶酪
+item.cbcraft.yogurt.name=酸奶
+item.cbcraft.cocoaBread.name=可可面包
+item.cbcraft.cakeBase.name=蛋糕基底
+item.cbcraft.cocoaCakeBase.name=可可蛋糕基底
+item.cbcraft.cookieDough.name=曲奇面团
+item.cbcraft.cocoaPowder.name=可可粉
 
 tile.cbcraft.fermentationBaker.name=发酵烘焙机
+tile.cbcraft.fermentationBakerOn.name=燃烧的发酵烘焙机
 tile.cbcraft.crushingGrindingMachine.name=打碎研磨机
 tile.cbcraft.separator.name=分离机
 

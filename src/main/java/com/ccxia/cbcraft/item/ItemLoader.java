@@ -13,7 +13,8 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 @Mod.EventBusSubscriber(modid = CbCraft.MODID)
 public class ItemLoader {
 	public static Item[] items = { new ItemFlour(), new ItemDough(), new ItemEggMilkDough(), new ItemCookedCocoa(),
-			new ItemCocoaPaste() };
+			new ItemCocoaPaste(), new ItemSkimMilk(), new ItemCheese(), new ItemYogurt(), new ItemCocoaBread(),
+			new ItemCakeBase(), new ItemCocoaCakeBase(), new ItemCookieDough(), new ItemCocoaPowder() };
 
 	public static Item getByName(String name) {
 		for (Item item : items)
