@@ -5,6 +5,8 @@ import java.util.List;
 import java.util.Map.Entry;
 
 import com.ccxia.cbcraft.block.BlockFermentationBaker;
+import com.ccxia.cbcraft.inventory.ContainerFermentationBaker;
+import com.ccxia.cbcraft.item.ModItems;
 import com.ccxia.cbcraft.tileentity.crafting.CraftingFermentationBaker;
 
 import net.minecraft.block.Block;
@@ -18,6 +20,8 @@ import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.inventory.Container;
 import net.minecraft.inventory.ContainerFurnace;
+import net.minecraft.inventory.ISidedInventory;
+import net.minecraft.inventory.ItemStackHelper;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBoat;
 import net.minecraft.item.ItemDoor;
@@ -36,6 +40,10 @@ import net.minecraftforge.items.CapabilityItemHandler;
 import net.minecraftforge.items.ItemStackHandler;
 
 public class TileEntityFermentationBaker extends TileEntity implements ITickable {
+	private static final int[] SLOTS_TOP = new int[] { 0 };
+	private static final int[] SLOTS_BOTTOM = new int[] { 3 };
+	private static final int[] SLOTS_SIDES1 = new int[] { 1 };
+	private static final int[] SLOTS_SIDES2 = new int[] { 2 };
 
 	// 创建4个物品槽位，上方为主料，左右两侧为辅料，后侧（暂且也包括正面）为燃料，下方为成品导出
 	protected ItemStackHandler upInventory = new ItemStackHandler();
@@ -60,6 +68,7 @@ public class TileEntityFermentationBaker extends TileEntity implements ITickable
 	}
 
 	// 这个方法用于确定方块的六个面和物品槽位的对应关系
+	// 这段代码逻辑写复杂了，要重写
 	@Override
 	public <T> T getCapability(Capability<T> capability, EnumFacing facing) {
 		if (CapabilityItemHandler.ITEM_HANDLER_CAPABILITY.equals(capability)) {
@@ -241,6 +250,10 @@ public class TileEntityFermentationBaker extends TileEntity implements ITickable
 			if (itemStack4 != ItemStack.EMPTY) {
 				upInventory.extractItem(0, 1, false);
 				downInventory.insertItem(0, itemStack4.copy(), false);
+				// 脱脂奶->奶酪返还空桶
+				if (itemStack1.isItemEqual(new ItemStack(ModItems.SKIM_MILK))) {
+					upInventory.insertItem(0, new ItemStack(Items.BUCKET), false);
+				}
 				return;
 			}
 		}
@@ -320,4 +333,82 @@ public class TileEntityFermentationBaker extends TileEntity implements ITickable
 		}
 	}
 
+	/*
+	 * 以下为实现ISidedInventory中的方法
+	 * 
+	 * @Override public boolean isEmpty() { for (ItemStack itemstack :
+	 * this.ferbakerItemStacks) { if (!itemstack.isEmpty()) { return false; } }
+	 * 
+	 * return true; }
+	 * 
+	 * @Override public ItemStack getStackInSlot(int index) { return
+	 * this.ferbakerItemStacks.get(index); }
+	 * 
+	 * @Override public ItemStack decrStackSize(int index, int count) { return
+	 * ItemStackHelper.getAndSplit(this.ferbakerItemStacks, index, count); }
+	 * 
+	 * @Override public ItemStack removeStackFromSlot(int index) { return
+	 * ItemStackHelper.getAndRemove(this.ferbakerItemStacks, index); }
+	 * 
+	 * @Override public void setInventorySlotContents(int index, ItemStack stack) {
+	 * 
+	 * }
+	 * 
+	 * @Override public boolean isUsableByPlayer(EntityPlayer player) { if
+	 * (this.world.getTileEntity(this.pos) != this) { return false; } else { return
+	 * player.getDistanceSq((double) this.pos.getX() + 0.5D, (double)
+	 * this.pos.getY() + 0.5D, (double) this.pos.getZ() + 0.5D) <= 64.0D; } }
+	 * 
+	 * @Override public void openInventory(EntityPlayer player) {
+	 * 
+	 * }
+	 * 
+	 * @Override public void closeInventory(EntityPlayer player) {
+	 * 
+	 * }
+	 * 
+	 * @Override public boolean isItemValidForSlot(int index, ItemStack stack) { if
+	 * (index == 3) { return false; } else { return true; } }
+	 * 
+	 * @Override public int getField(int id) { switch (id) { case 0: return
+	 * this.furnaceBurnTime; case 1: return this.currentItemBurnTime; case 2: return
+	 * this.cookTime; case 3: return this.totalCookTime; default: return 0; } }
+	 * 
+	 * @Override public void setField(int id, int value) { switch (id) { case 0:
+	 * this.furnaceBurnTime = value; break; case 1: this.currentItemBurnTime =
+	 * value; break; case 2: this.cookTime = value; break; case 3:
+	 * this.totalCookTime = value; } }
+	 * 
+	 * @Override public int getFieldCount() { return 4; }
+	 * 
+	 * @Override public void clear() { this.ferbakerItemStacks.clear(); }
+	 * 
+	 * @Override public String getName() { // TODO Auto-generated method stub return
+	 * null; }
+	 * 
+	 * @Override public boolean hasCustomName() { // TODO Auto-generated method stub
+	 * return false; }
+	 * 
+	 * @Override public int[] getSlotsForFace(EnumFacing side) { if (side ==
+	 * EnumFacing.UP) { return SLOTS_TOP; } else if (side == EnumFacing.DOWN) {
+	 * return SLOTS_BOTTOM; } else { EnumFacing blockfacing = (EnumFacing)
+	 * this.world.getBlockState(this.pos).getValue(BlockHorizontal.FACING); if
+	 * (blockfacing == side || blockfacing == side.getOpposite()) { return
+	 * SLOTS_SIDES2; } else { return SLOTS_SIDES1; } } }
+	 * 
+	 * @Override public boolean canInsertItem(int index, ItemStack itemStackIn,
+	 * EnumFacing direction) { return this.isItemValidForSlot(index, itemStackIn); }
+	 * 
+	 * @Override public boolean canExtractItem(int index, ItemStack stack,
+	 * EnumFacing direction) { if (direction == EnumFacing.DOWN && index == 2) {
+	 * Item item = stack.getItem();
+	 * 
+	 * if (item != Items.WATER_BUCKET && item != Items.BUCKET) { return false; } }
+	 * 
+	 * return true; }
+	 * 
+	 * public Container createContainer(InventoryPlayer playerInventory,
+	 * EntityPlayer playerIn) { return new ContainerFermentationBaker(playerIn,
+	 * this); }
+	 */
 }

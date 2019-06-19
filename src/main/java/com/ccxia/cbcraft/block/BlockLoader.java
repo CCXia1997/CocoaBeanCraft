@@ -15,7 +15,8 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 @Mod.EventBusSubscriber(modid = CbCraft.MODID)
 public class BlockLoader {
 	public static Block[] blocks = { new BlockFermentationBaker(false), new BlockFermentationBaker(true),
-			new BlockCrushingGrindingMachine(), new BlockSeparator() };
+			new BlockCrushingGrindingMachine(), new BlockSeparator(), new BlockDarkChocolate(),
+			new BlockMilkChocolate(), new BlockWhiteChocolate() };
 
 	@SubscribeEvent
 	public static void registerBlocks(RegistryEvent.Register<Block> event) {

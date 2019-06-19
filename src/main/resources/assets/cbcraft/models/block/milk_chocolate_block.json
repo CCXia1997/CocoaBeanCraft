@@ -1,0 +1,6 @@
+{
+    "parent": "block/cube_all",
+    "textures": {
+        "all": "cbcraft:blocks/milk_chocolate_block"
+    }
+}

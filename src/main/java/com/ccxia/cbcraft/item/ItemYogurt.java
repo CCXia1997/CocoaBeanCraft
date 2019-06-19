@@ -9,6 +9,7 @@ public class ItemYogurt extends Item {
 	public ItemYogurt() {
 		this.setUnlocalizedName(CbCraft.MODID + ".yogurt");
 		this.setRegistryName("yogurt");
+		this.setMaxStackSize(1);
 		this.setCreativeTab(CreativeTabsCbCraft.tabCbCraft);
 	}
 }

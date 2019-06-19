@@ -1,7 +1,9 @@
 package com.ccxia.cbcraft;
 
 import com.ccxia.cbcraft.common.CommonProxy;
+import com.ccxia.cbcraft.item.ModItems;
 
+import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.Mod.Instance;
@@ -9,6 +11,7 @@ import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.registry.GameRegistry;
 
 @Mod(modid = CbCraft.MODID, name = CbCraft.NAME, version = CbCraft.VERSION, acceptedMinecraftVersions = "1.12.2")
 public class CbCraft {
@@ -28,6 +31,7 @@ public class CbCraft {
 	@EventHandler
 	public static void init(FMLInitializationEvent event) {
 		proxy.init(event);
+		GameRegistry.addSmelting(new ItemStack(ModItems.COCOA_PASTE), new ItemStack(ModItems.COCOA_LIQUOR), 1.0F);
 	}
 
 	@EventHandler

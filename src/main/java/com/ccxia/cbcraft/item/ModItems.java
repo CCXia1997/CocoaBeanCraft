@@ -18,6 +18,12 @@ public class ModItems {
 	public static final Item COCOA_CAKE_BASE;// 可可蛋糕基底
 	public static final Item COOKIE_DOUGH;// 曲奇面团
 	public static final Item COCOA_POWDER;// 可可粉
+	public static final Item COCOA_LIQUOR;// 可可液块
+	public static final Item COCOA_BUTTER;// 可可脂
+	public static final Item CREAM;// 奶油
+	public static final Item DARK_CHOCOLATE;// 黑巧克力
+	public static final Item MILK_CHOCOLATE;// 棕巧克力
+	public static final Item WHITE_CHOCOLATE;// 白巧克力
 	static {
 		FLOUR = ItemLoader.getByName("item." + CbCraft.MODID + ".flour");
 		DOUGH = ItemLoader.getByName("item." + CbCraft.MODID + ".dough");
@@ -32,6 +38,12 @@ public class ModItems {
 		COCOA_CAKE_BASE = ItemLoader.getByName("item." + CbCraft.MODID + ".cocoaCakeBase");
 		COOKIE_DOUGH = ItemLoader.getByName("item." + CbCraft.MODID + ".cookieDough");
 		COCOA_POWDER = ItemLoader.getByName("item." + CbCraft.MODID + ".cocoaPowder");
+		COCOA_LIQUOR = ItemLoader.getByName("item." + CbCraft.MODID + ".cocoaLiquor");
+		COCOA_BUTTER = ItemLoader.getByName("item." + CbCraft.MODID + ".cocoaButter");
+		CREAM = ItemLoader.getByName("item." + CbCraft.MODID + ".cream");
+		DARK_CHOCOLATE = ItemLoader.getByName("item." + CbCraft.MODID + ".darkChocolate");
+		MILK_CHOCOLATE = ItemLoader.getByName("item." + CbCraft.MODID + ".milkChocolate");
+		WHITE_CHOCOLATE = ItemLoader.getByName("item." + CbCraft.MODID + ".whiteChocolate");
 	}
 
 }

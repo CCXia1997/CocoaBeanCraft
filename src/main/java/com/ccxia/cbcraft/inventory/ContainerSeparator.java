@@ -45,10 +45,10 @@ public class ContainerSeparator extends Container {
 			}
 		});
 		this.addSlotToContainer(new SlotItemHandler(this.downItems, 0, 109, 34) {
-
+			// 这边返回false，表示成品槽正常情况下不能输入物品
 			@Override
 			public boolean isItemValid(ItemStack stack) {
-				return stack != null && super.isItemValid(stack);
+				return false;
 			}
 
 			@Override
@@ -57,10 +57,10 @@ public class ContainerSeparator extends Container {
 			}
 		});
 		this.addSlotToContainer(new SlotItemHandler(this.downItems, 1, 127, 34) {
-
+			// 这边返回false，表示成品槽正常情况下不能输入物品
 			@Override
 			public boolean isItemValid(ItemStack stack) {
-				return stack != null && super.isItemValid(stack);
+				return false;
 			}
 
 			@Override
@@ -100,7 +100,7 @@ public class ContainerSeparator extends Container {
 				if (!this.mergeItemStack(itemstack1, 4, 40, true)) {
 					return ItemStack.EMPTY;
 				}
-			} else if (!this.mergeItemStack(itemstack1, 0, 4, false)) {
+			} else if (!this.mergeItemStack(itemstack1, 0, 2, false)) {
 				return ItemStack.EMPTY;
 			}
 			if (itemstack1.isEmpty()) {

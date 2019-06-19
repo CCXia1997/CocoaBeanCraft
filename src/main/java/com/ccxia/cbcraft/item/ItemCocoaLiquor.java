@@ -5,11 +5,10 @@ import com.ccxia.cbcraft.creativetab.CreativeTabsCbCraft;
 
 import net.minecraft.item.Item;
 
-public class ItemSkimMilk extends Item {
-	public ItemSkimMilk() {
-		this.setUnlocalizedName(CbCraft.MODID + ".skimMilk");
-		this.setRegistryName("skim_milk");
-		this.setMaxStackSize(1);
+public class ItemCocoaLiquor extends Item {
+	public ItemCocoaLiquor() {
+		this.setUnlocalizedName(CbCraft.MODID + ".cocoaLiquor");
+		this.setRegistryName("cocoa_liquor");
 		this.setCreativeTab(CreativeTabsCbCraft.tabCbCraft);
 	}
 }
