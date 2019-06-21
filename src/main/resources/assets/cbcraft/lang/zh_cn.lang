@@ -24,6 +24,7 @@ tile.cbcraft.fermentationBaker.name=发酵烘焙机
 tile.cbcraft.fermentationBakerOn.name=燃烧的发酵烘焙机
 tile.cbcraft.crushingGrindingMachine.name=打碎研磨机
 tile.cbcraft.separator.name=分离机
+tile.cbcraft.separatorOn.name=燃烧的分离机
 tile.cbcraft.darkChocolateBlock.name=黑巧克力块
 tile.cbcraft.milkChocolateBlock.name=棕巧克力块
 tile.cbcraft.whiteChocolateBlock.name=白巧克力块

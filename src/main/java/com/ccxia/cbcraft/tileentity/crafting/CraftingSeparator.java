@@ -50,4 +50,8 @@ public class CraftingSeparator {
 		list.add(ItemStack.EMPTY);
 		return list;
 	}
+
+	public static CraftingSeparator instance() {
+		return SMELTING_BASE;
+	}
 }

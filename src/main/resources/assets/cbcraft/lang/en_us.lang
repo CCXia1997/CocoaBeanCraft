@@ -24,6 +24,7 @@ tile.cbcraft.fermentationBaker.name=Fermentation Baking Machine
 tile.cbcraft.fermentationBakerOn.name=Burning Fermentation Baking Machine
 tile.cbcraft.crushingGrindingMachine.name=Crushing Grinding Machine
 tile.cbcraft.separator.name=Separator
+tile.cbcraft.separatorOn.name=Burning Separator
 tile.cbcraft.darkChocolateBlock.name=Dark Chocolate Block
 tile.cbcraft.milkChocolateBlock.name=Milk Chocolate Block
 tile.cbcraft.whiteChocolateBlock.name=White Chocolate Block

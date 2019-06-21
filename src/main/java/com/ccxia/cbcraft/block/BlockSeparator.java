@@ -36,15 +36,28 @@ import net.minecraftforge.items.IItemHandlerModifiable;
 public class BlockSeparator extends BlockContainer {
 
 	public static final PropertyDirection FACING = BlockHorizontal.FACING;
+	private final boolean isBurning;
+	// 当方块燃烧状态改变时，防止容器中的物品掉出
+	// 在breakBlock方法中限定掉落的条件
+	private static boolean keepInventory;
 
-	public BlockSeparator() {
+	public BlockSeparator(boolean isBuring) {
 		super(Material.ROCK);
-		this.setUnlocalizedName(CbCraft.MODID + ".separator");
-		this.setRegistryName("separator");
-		this.setCreativeTab(CreativeTabsCbCraft.tabCbCraft);
-		this.setHardness(3.5F);
-		this.setSoundType(SoundType.STONE);
 		this.setDefaultState(this.blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH));
+		this.isBurning = isBuring;
+		if (isBuring) {
+			this.setUnlocalizedName(CbCraft.MODID + ".separatorOn");
+			this.setRegistryName("separator_on");
+			this.setHardness(3.5F);
+			this.setSoundType(SoundType.STONE);
+			this.setLightLevel(0.875F);
+		} else {
+			this.setUnlocalizedName(CbCraft.MODID + ".separator");
+			this.setRegistryName("separator");
+			this.setCreativeTab(CreativeTabsCbCraft.tabCbCraft);
+			this.setHardness(3.5F);
+			this.setSoundType(SoundType.STONE);
+		}
 	}
 
 	@Override
@@ -147,22 +160,24 @@ public class BlockSeparator extends BlockContainer {
 		IItemHandler up = te.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, EnumFacing.UP);
 		IItemHandler side = te.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, EnumFacing.NORTH);
 		IItemHandler down = te.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, EnumFacing.DOWN);
-		for (int i = up.getSlots() - 1; i >= 0; --i) {
-			if (up.getStackInSlot(i) != null) {
-				Block.spawnAsEntity(worldIn, pos, up.getStackInSlot(i));
-				((IItemHandlerModifiable) up).setStackInSlot(i, ItemStack.EMPTY);
+		if (!keepInventory) {
+			for (int i = up.getSlots() - 1; i >= 0; --i) {
+				if (up.getStackInSlot(i) != null) {
+					Block.spawnAsEntity(worldIn, pos, up.getStackInSlot(i));
+					((IItemHandlerModifiable) up).setStackInSlot(i, ItemStack.EMPTY);
+				}
 			}
-		}
-		for (int i = side.getSlots() - 1; i >= 0; --i) {
-			if (side.getStackInSlot(i) != null) {
-				Block.spawnAsEntity(worldIn, pos, side.getStackInSlot(i));
-				((IItemHandlerModifiable) side).setStackInSlot(i, ItemStack.EMPTY);
+			for (int i = side.getSlots() - 1; i >= 0; --i) {
+				if (side.getStackInSlot(i) != null) {
+					Block.spawnAsEntity(worldIn, pos, side.getStackInSlot(i));
+					((IItemHandlerModifiable) side).setStackInSlot(i, ItemStack.EMPTY);
+				}
 			}
-		}
-		for (int i = down.getSlots() - 1; i >= 0; --i) {
-			if (down.getStackInSlot(i) != null) {
-				Block.spawnAsEntity(worldIn, pos, down.getStackInSlot(i));
-				((IItemHandlerModifiable) down).setStackInSlot(i, ItemStack.EMPTY);
+			for (int i = down.getSlots() - 1; i >= 0; --i) {
+				if (down.getStackInSlot(i) != null) {
+					Block.spawnAsEntity(worldIn, pos, down.getStackInSlot(i));
+					((IItemHandlerModifiable) down).setStackInSlot(i, ItemStack.EMPTY);
+				}
 			}
 		}
 	}
@@ -179,4 +194,25 @@ public class BlockSeparator extends BlockContainer {
 		return true;
 	}
 
+	public static void setState(boolean active, World worldIn, BlockPos pos) {
+		IBlockState iblockstate = worldIn.getBlockState(pos);
+		TileEntity tileentity = worldIn.getTileEntity(pos);
+		keepInventory = true;
+		if (active) {
+			worldIn.setBlockState(pos,
+					ModBlocks.LIT_SEPARATOR.getDefaultState().withProperty(FACING, iblockstate.getValue(FACING)), 3);
+			worldIn.setBlockState(pos,
+					ModBlocks.LIT_SEPARATOR.getDefaultState().withProperty(FACING, iblockstate.getValue(FACING)), 3);
+		} else {
+			worldIn.setBlockState(pos,
+					ModBlocks.SEPARATOR.getDefaultState().withProperty(FACING, iblockstate.getValue(FACING)), 3);
+			worldIn.setBlockState(pos,
+					ModBlocks.SEPARATOR.getDefaultState().withProperty(FACING, iblockstate.getValue(FACING)), 3);
+		}
+		keepInventory = false;
+		if (tileentity != null) {
+			tileentity.validate();
+			worldIn.setTileEntity(pos, tileentity);
+		}
+	}
 }

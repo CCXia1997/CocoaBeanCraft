@@ -1,11 +1,16 @@
 package com.ccxia.cbcraft.inventory;
 
+import com.ccxia.cbcraft.tileentity.TileEntitySeparator;
+
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.Container;
+import net.minecraft.inventory.IContainerListener;
 import net.minecraft.inventory.Slot;
 import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.EnumFacing;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 import net.minecraftforge.items.CapabilityItemHandler;
 import net.minecraftforge.items.IItemHandler;
 import net.minecraftforge.items.SlotItemHandler;
@@ -14,6 +19,11 @@ public class ContainerSeparator extends Container {
 	private IItemHandler upItems;
 	private IItemHandler sideItems;
 	private IItemHandler downItems;
+	private TileEntitySeparator tileEntity;
+	private int furnaceBurnTime;
+	private int currentItemBurnTime;
+	private int cookTime;
+	private int totalCookTime;
 
 	public ContainerSeparator(EntityPlayer player, TileEntity tileEntity) {
 		super();
@@ -77,6 +87,7 @@ public class ContainerSeparator extends Container {
 		for (int i = 0; i < 9; ++i) {
 			this.addSlotToContainer(new Slot(player.inventory, i, 8 + i * 18, 142));
 		}
+		this.tileEntity = (TileEntitySeparator) tileEntity;
 	}
 
 	@Override
@@ -112,4 +123,55 @@ public class ContainerSeparator extends Container {
 		return itemstack;
 	}
 
+	@Override
+	public void detectAndSendChanges() {
+		super.detectAndSendChanges();
+		this.furnaceBurnTime = tileEntity.getTime(0);
+		this.currentItemBurnTime = tileEntity.getTime(1);
+		this.cookTime = tileEntity.getTime(2);
+		this.totalCookTime = tileEntity.getTime(3);
+		for (IContainerListener i : this.listeners) {
+			i.sendWindowProperty(this, 0, this.furnaceBurnTime);
+			i.sendWindowProperty(this, 1, this.currentItemBurnTime);
+			i.sendWindowProperty(this, 2, this.cookTime);
+			i.sendWindowProperty(this, 3, this.totalCookTime);
+		}
+	}
+
+	@SideOnly(Side.CLIENT)
+	@Override
+	public void updateProgressBar(int id, int data) {
+		super.updateProgressBar(id, data);
+		switch (id) {
+		case 0:
+			this.furnaceBurnTime = data;
+			break;
+		case 1:
+			this.currentItemBurnTime = data;
+			break;
+		case 2:
+			this.cookTime = data;
+			break;
+		case 3:
+			this.totalCookTime = data;
+			break;
+		default:
+			break;
+		}
+	}
+
+	public int getTime(int index) {
+		switch (index) {
+		case 0:
+			return this.furnaceBurnTime;
+		case 1:
+			return this.currentItemBurnTime;
+		case 2:
+			return this.cookTime;
+		case 3:
+			return this.totalCookTime;
+		default:
+			return 0;
+		}
+	}
 }
