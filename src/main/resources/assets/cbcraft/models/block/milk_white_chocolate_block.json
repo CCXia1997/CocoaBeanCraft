@@ -1,0 +1,7 @@
+{
+    "parent": "cbcraft:block/dark_milk_chocolate_block",
+    "textures": {
+		"particle": "cbcraft:blocks/milk_white_chocolate_block",
+        "texture": "cbcraft:blocks/milk_white_chocolate_block"
+    }
+}

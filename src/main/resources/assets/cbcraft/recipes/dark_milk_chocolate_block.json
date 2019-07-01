@@ -1,0 +1,18 @@
+{
+  "type": "forge:ore_shaped",
+  "pattern": [
+    "AB",
+    "BA"
+  ],
+  "key": {
+    "A": {
+      "item": "cbcraft:dark_chocolate"
+    },
+	 "B": {
+      "item": "cbcraft:milk_chocolate"
+    }
+  },
+  "result": {
+    "item": "cbcraft:dark_milk_chocolate_block"
+  }
+}

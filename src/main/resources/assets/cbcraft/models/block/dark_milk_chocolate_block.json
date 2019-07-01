@@ -1,0 +1,23 @@
+{
+    "parent": "block/cube",
+	"__comment": "Designed by XeKr with Cubik Studio - https://cubik.studio",
+	"textures": {
+		"particle": "cbcraft:blocks/dark_milk_chocolate_block",
+		"texture": "cbcraft:blocks/dark_milk_chocolate_block"
+	},
+	"elements": [ 	 
+		{
+			"__comment": "Box1",
+			"from": [ 0, 0, 0 ],
+			"to": [ 16, 16, 16 ],
+			"faces": {
+				"down": { "uv": [ 16, 0, 0, 16 ], "texture": "#texture" },
+				"up": { "uv": [ 16, 0, 0, 16 ], "texture": "#texture" },
+				"north": { "uv": [ 0, 0, 16, 16 ], "texture": "#texture" },
+				"south": { "uv": [ 0, 0, 16, 16 ], "texture": "#texture" },
+				"west": { "uv": [ 16, 0, 0, 16 ], "texture": "#texture" },
+				"east": { "uv": [ 16, 0, 0, 16 ], "texture": "#texture" }
+			}
+		}
+	]
+}

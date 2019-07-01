@@ -19,6 +19,8 @@ item.cbcraft.cream.name=奶油
 item.cbcraft.darkChocolate.name=黑巧克力
 item.cbcraft.milkChocolate.name=棕巧克力
 item.cbcraft.whiteChocolate.name=白巧克力
+item.cbcraft.cocoaCream.name=可可奶油
+item.cbcraft.hotChocolate.name=热可可
 
 tile.cbcraft.fermentationBaker.name=发酵烘焙机
 tile.cbcraft.fermentationBakerOn.name=燃烧的发酵烘焙机
@@ -28,6 +30,10 @@ tile.cbcraft.separatorOn.name=燃烧的分离机
 tile.cbcraft.darkChocolateBlock.name=黑巧克力块
 tile.cbcraft.milkChocolateBlock.name=棕巧克力块
 tile.cbcraft.whiteChocolateBlock.name=白巧克力块
+tile.cbcraft.chocolateCake.name=巧克力蛋糕
+tile.cbcraft.darkMilkChocolateBlock.name=棕黑巧克力块
+tile.cbcraft.milkWhiteChocolateBlock.name=棕白巧克力块
+tile.cbcraft.whiteDarkChocolateBlock.name=黑白巧克力块
 
 container.cbcraft.fermentation_baking_machine=发酵烘焙机
 container.cbcraft.crushing_grinding_machine=打碎研磨机

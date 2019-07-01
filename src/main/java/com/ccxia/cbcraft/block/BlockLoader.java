@@ -16,7 +16,8 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 public class BlockLoader {
 	public static Block[] blocks = { new BlockFermentationBaker(false), new BlockFermentationBaker(true),
 			new BlockCrushingGrindingMachine(), new BlockSeparator(false), new BlockSeparator(true),
-			new BlockDarkChocolate(), new BlockMilkChocolate(), new BlockWhiteChocolate() };
+			new BlockDarkChocolate(), new BlockMilkChocolate(), new BlockWhiteChocolate(), new BlockChocolateCake(),
+			new BlockDarkMilk(), new BlockMilkWhite(), new BlockWhiteDark() };
 
 	@SubscribeEvent
 	public static void registerBlocks(RegistryEvent.Register<Block> event) {

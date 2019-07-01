@@ -14,6 +14,10 @@ public class ModBlocks {
 	public static final Block DARK_CHOCOLATE_BLOCK;// ╨зги©ка╕©И
 	public static final Block MILK_CHOCOLATE_BLOCK;// вьги©ка╕©И
 	public static final Block WHITE_CHOCOLATE_BLOCK;// ╟вги©ка╕©И
+	public static final Block CHOCOLATE_CAKE;// ги©ка╕╣╟╦Б
+	public static final Block DARK_MILK_CHOCOLATE_BLOCK;// вь╨зги©ка╕©И
+	public static final Block MILK_WHITE_CHOCOLATE_BLOCK;// вь╟вги©ка╕©И
+	public static final Block WHITE_DARK_CHOCOLATE_BLOCK;// ╨з╟вги©ка╕©И
 
 	static {
 		// FERMENTATION_BAKER = BlockLoader.getByName("block." + CbCraft.MODID +
@@ -26,6 +30,11 @@ public class ModBlocks {
 		DARK_CHOCOLATE_BLOCK = BlockLoader.getByName("block." + CbCraft.MODID + ".darkChocolateBlock");
 		MILK_CHOCOLATE_BLOCK = BlockLoader.getByName("block." + CbCraft.MODID + ".milkChocolateBlock");
 		WHITE_CHOCOLATE_BLOCK = BlockLoader.getByName("block." + CbCraft.MODID + ".whiteChocolateBlock");
+		CHOCOLATE_CAKE = BlockLoader.getByName("block." + CbCraft.MODID + ".chocolateCake");
+		DARK_MILK_CHOCOLATE_BLOCK = BlockLoader.getByName("block." + CbCraft.MODID + ".darkMilkChocolateBlock");
+		MILK_WHITE_CHOCOLATE_BLOCK = BlockLoader.getByName("block." + CbCraft.MODID + ".milkWhiteChocolateBlock");
+		WHITE_DARK_CHOCOLATE_BLOCK = BlockLoader.getByName("block." + CbCraft.MODID + ".whiteDarkChocolateBlock");
+
 	}
 
 }

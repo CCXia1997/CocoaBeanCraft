@@ -1,0 +1,21 @@
+{
+  "type": "forge:ore_shaped",
+  "pattern": [
+    "ABA",
+    "CCC"
+  ],
+  "key": {
+    "A": {
+      "item": "cbcraft:cocoa_cream"
+    },
+	"B": {
+      "item": "cbcraft:dark_chocolate"
+    },
+	"C": {
+      "item": "cbcraft:cocoa_cake_base"
+    }
+  },
+  "result": {
+    "item": "cbcraft:chocolate_cake"
+  }
+}

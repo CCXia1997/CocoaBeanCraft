@@ -24,6 +24,8 @@ public class ModItems {
 	public static final Item DARK_CHOCOLATE;// 黑巧克力
 	public static final Item MILK_CHOCOLATE;// 棕巧克力
 	public static final Item WHITE_CHOCOLATE;// 白巧克力
+	public static final Item COCOA_CREAM;// 可可奶油
+	public static final Item HOT_CHOCOLATE;// 热可可
 	static {
 		FLOUR = ItemLoader.getByName("item." + CbCraft.MODID + ".flour");
 		DOUGH = ItemLoader.getByName("item." + CbCraft.MODID + ".dough");
@@ -44,6 +46,8 @@ public class ModItems {
 		DARK_CHOCOLATE = ItemLoader.getByName("item." + CbCraft.MODID + ".darkChocolate");
 		MILK_CHOCOLATE = ItemLoader.getByName("item." + CbCraft.MODID + ".milkChocolate");
 		WHITE_CHOCOLATE = ItemLoader.getByName("item." + CbCraft.MODID + ".whiteChocolate");
+		COCOA_CREAM = ItemLoader.getByName("item." + CbCraft.MODID + ".cocoaCream");
+		HOT_CHOCOLATE = ItemLoader.getByName("item." + CbCraft.MODID + ".hotChocolate");
 	}
 
 }

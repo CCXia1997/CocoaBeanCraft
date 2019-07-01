@@ -19,6 +19,8 @@ item.cbcraft.cream.name=Cream
 item.cbcraft.darkChocolate.name=Dark Chocolate
 item.cbcraft.milkChocolate.name=Milk Chocolate
 item.cbcraft.whiteChocolate.name=White Chocolate
+item.cbcraft.cocoaCream.name=Cocoa Cream
+item.cbcraft.hotChocolate.name=Hot Chocolate
 
 tile.cbcraft.fermentationBaker.name=Fermentation Baking Machine
 tile.cbcraft.fermentationBakerOn.name=Burning Fermentation Baking Machine
@@ -28,6 +30,10 @@ tile.cbcraft.separatorOn.name=Burning Separator
 tile.cbcraft.darkChocolateBlock.name=Dark Chocolate Block
 tile.cbcraft.milkChocolateBlock.name=Milk Chocolate Block
 tile.cbcraft.whiteChocolateBlock.name=White Chocolate Block
+tile.cbcraft.chocolateCake.name=Chocolate Cake
+tile.cbcraft.darkMilkChocolateBlock.name=Dark Milk Chocolate Block
+tile.cbcraft.milkWhiteChocolateBlock.name=Milk White Chocolate Block
+tile.cbcraft.whiteDarkChocolateBlock.name=White Dark Chocolate Block
 
 container.cbcraft.fermentation_baking_machine=Fermentation Baking Machine
 container.cbcraft.crushing_grinding_machine=Crushing Grinding Machine
