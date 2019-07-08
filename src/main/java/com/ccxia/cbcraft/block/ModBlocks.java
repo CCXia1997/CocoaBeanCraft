@@ -18,22 +18,40 @@ public class ModBlocks {
 	public static final Block DARK_MILK_CHOCOLATE_BLOCK;// ×ØºÚÇÉ¿ËÁ¦¿é
 	public static final Block MILK_WHITE_CHOCOLATE_BLOCK;// ×Ø°×ÇÉ¿ËÁ¦¿é
 	public static final Block WHITE_DARK_CHOCOLATE_BLOCK;// ºÚ°×ÇÉ¿ËÁ¦¿é
+	public static final Block DARK_CHOCOLATE_BLOCK_CARVED;// µñ¿ÌºÚÇÉ¿ËÁ¦¿é
+	public static final Block DARK_CHOCOLATE_BLOCK_PILLAR;// ÊúÎÆºÚÇÉ¿ËÁ¦¿é
+	public static final Block DARK_CHOCOLATE_BLOCK_SMOOTH;// Æ½»¬ºÚÇÉ¿ËÁ¦¿é
+	public static final Block MILK_CHOCOLATE_BLOCK_CARVED;// µñ¿Ì×ØÇÉ¿ËÁ¦¿é
+	public static final Block MILK_CHOCOLATE_BLOCK_PILLAR;// ÊúÎÆ×ØÇÉ¿ËÁ¦¿é
+	public static final Block MILK_CHOCOLATE_BLOCK_SMOOTH;// Æ½»¬×ØÇÉ¿ËÁ¦¿é
+	public static final Block WHITE_CHOCOLATE_BLOCK_CARVED;// µñ¿Ì°×ÇÉ¿ËÁ¦¿é
+	public static final Block WHITE_CHOCOLATE_BLOCK_PILLAR;// ÊúÎÆ°×ÇÉ¿ËÁ¦¿é
+	public static final Block WHITE_CHOCOLATE_BLOCK_SMOOTH;// Æ½»¬°×ÇÉ¿ËÁ¦¿é
 
 	static {
 		// FERMENTATION_BAKER = BlockLoader.getByName("block." + CbCraft.MODID +
 		// ".fermentationBaker");
 		FERMENTATION_BAKER = BlockLoader.blocks[0];
 		LIT_FERMENTATION_BAKER = BlockLoader.blocks[1];
-		CRUSHING_GRINDING_MACHINE = BlockLoader.getByName("block." + CbCraft.MODID + ".crushingGrindingMachine");
+		CRUSHING_GRINDING_MACHINE = BlockLoader.getByName("tile." + CbCraft.MODID + ".crushingGrindingMachine");
 		SEPARATOR = BlockLoader.blocks[3];
 		LIT_SEPARATOR = BlockLoader.blocks[4];
-		DARK_CHOCOLATE_BLOCK = BlockLoader.getByName("block." + CbCraft.MODID + ".darkChocolateBlock");
-		MILK_CHOCOLATE_BLOCK = BlockLoader.getByName("block." + CbCraft.MODID + ".milkChocolateBlock");
-		WHITE_CHOCOLATE_BLOCK = BlockLoader.getByName("block." + CbCraft.MODID + ".whiteChocolateBlock");
-		CHOCOLATE_CAKE = BlockLoader.getByName("block." + CbCraft.MODID + ".chocolateCake");
-		DARK_MILK_CHOCOLATE_BLOCK = BlockLoader.getByName("block." + CbCraft.MODID + ".darkMilkChocolateBlock");
-		MILK_WHITE_CHOCOLATE_BLOCK = BlockLoader.getByName("block." + CbCraft.MODID + ".milkWhiteChocolateBlock");
-		WHITE_DARK_CHOCOLATE_BLOCK = BlockLoader.getByName("block." + CbCraft.MODID + ".whiteDarkChocolateBlock");
+		DARK_CHOCOLATE_BLOCK = BlockLoader.getByName("tile." + CbCraft.MODID + ".darkChocolateBlock");
+		MILK_CHOCOLATE_BLOCK = BlockLoader.getByName("tile." + CbCraft.MODID + ".milkChocolateBlock");
+		WHITE_CHOCOLATE_BLOCK = BlockLoader.getByName("tile." + CbCraft.MODID + ".whiteChocolateBlock");
+		CHOCOLATE_CAKE = BlockLoader.getByName("tile." + CbCraft.MODID + ".chocolateCake");
+		DARK_MILK_CHOCOLATE_BLOCK = BlockLoader.getByName("tile." + CbCraft.MODID + ".darkMilkChocolateBlock");
+		MILK_WHITE_CHOCOLATE_BLOCK = BlockLoader.getByName("tile." + CbCraft.MODID + ".milkWhiteChocolateBlock");
+		WHITE_DARK_CHOCOLATE_BLOCK = BlockLoader.getByName("tile." + CbCraft.MODID + ".whiteDarkChocolateBlock");
+		DARK_CHOCOLATE_BLOCK_CARVED = BlockLoader.getByName("tile." + CbCraft.MODID + ".darkChocolateBlockCarved");
+		DARK_CHOCOLATE_BLOCK_PILLAR = BlockLoader.getByName("tile." + CbCraft.MODID + ".darkChocolateBlockPillar");
+		DARK_CHOCOLATE_BLOCK_SMOOTH = BlockLoader.getByName("tile." + CbCraft.MODID + ".darkChocolateBlockSmooth");
+		MILK_CHOCOLATE_BLOCK_CARVED = BlockLoader.getByName("tile." + CbCraft.MODID + ".milkChocolateBlockCarved");
+		MILK_CHOCOLATE_BLOCK_PILLAR = BlockLoader.getByName("tile." + CbCraft.MODID + ".milkChocolateBlockPillar");
+		MILK_CHOCOLATE_BLOCK_SMOOTH = BlockLoader.getByName("tile." + CbCraft.MODID + ".milkChocolateBlockSmooth");
+		WHITE_CHOCOLATE_BLOCK_CARVED = BlockLoader.getByName("tile." + CbCraft.MODID + ".whiteChocolateBlockCarved");
+		WHITE_CHOCOLATE_BLOCK_PILLAR = BlockLoader.getByName("tile." + CbCraft.MODID + ".whiteChocolateBlockPillar");
+		WHITE_CHOCOLATE_BLOCK_SMOOTH = BlockLoader.getByName("tile." + CbCraft.MODID + ".whiteChocolateBlockSmooth");
 
 	}
 

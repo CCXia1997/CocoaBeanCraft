@@ -9,7 +9,8 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 public class TileEntityLoader {
 	public TileEntityLoader(FMLPreInitializationEvent event) {
 		registerTileEntity(TileEntityFermentationBaker.class, "FermentationBaker");
-		registerTileEntity(TileEntityCrushingGrindingMachine.class, "CrushingGrindingMachine");
+		// registerTileEntity(TileEntityCrushingGrindingMachine.class,
+		// "CrushingGrindingMachine");
 		registerTileEntity(TileEntitySeparator.class, "Separator");
 	}
 

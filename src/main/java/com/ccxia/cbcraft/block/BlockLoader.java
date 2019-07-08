@@ -17,7 +17,9 @@ public class BlockLoader {
 	public static Block[] blocks = { new BlockFermentationBaker(false), new BlockFermentationBaker(true),
 			new BlockCrushingGrindingMachine(), new BlockSeparator(false), new BlockSeparator(true),
 			new BlockDarkChocolate(), new BlockMilkChocolate(), new BlockWhiteChocolate(), new BlockChocolateCake(),
-			new BlockDarkMilk(), new BlockMilkWhite(), new BlockWhiteDark() };
+			new BlockDarkMilk(), new BlockMilkWhite(), new BlockWhiteDark(), new BlockDarkCarved(),
+			new BlockDarkPillar(), new BlockDarkSmooth(), new BlockMilkCarved(), new BlockMilkPillar(),
+			new BlockMilkSmooth(), new BlockWhiteCarved(), new BlockWhitePillar(), new BlockWhiteSmooth() };
 
 	@SubscribeEvent
 	public static void registerBlocks(RegistryEvent.Register<Block> event) {
@@ -39,6 +41,9 @@ public class BlockLoader {
 	public static void registerItems(RegistryEvent.Register<Item> event) {
 		for (Block block : blocks) {
 			Item itemBlock = new ItemBlock(block).setRegistryName(block.getRegistryName());
+			if (block instanceof BlockChocolateCake) {
+				itemBlock.setMaxStackSize(1);
+			}
 			ModelLoader.setCustomModelResourceLocation(itemBlock, 0,
 					new ModelResourceLocation(block.getRegistryName(), "inventory"));
 			event.getRegistry().register(itemBlock);

@@ -24,7 +24,7 @@ public class GuiLoader implements IGuiHandler {
 		case GUI_FERMENTATIONBAKER:
 			return new ContainerFermentationBaker(player, world.getTileEntity(new BlockPos(x, y, z)));
 		case GUI_CRUSHINGGRINDINGMACHINE:
-			return new ContainerCrushingGrindingMachine(player, world.getTileEntity(new BlockPos(x, y, z)));
+			return new ContainerCrushingGrindingMachine(player.inventory, world, new BlockPos(x, y, z));
 		case GUI_SEPARATOR:
 			return new ContainerSeparator(player, world.getTileEntity(new BlockPos(x, y, z)));
 		default:
@@ -40,7 +40,7 @@ public class GuiLoader implements IGuiHandler {
 					new ContainerFermentationBaker(player, world.getTileEntity(new BlockPos(x, y, z))));
 		case GUI_CRUSHINGGRINDINGMACHINE:
 			return new GuiCrushingGrindingMachine(
-					new ContainerCrushingGrindingMachine(player, world.getTileEntity(new BlockPos(x, y, z))));
+					new ContainerCrushingGrindingMachine(player.inventory, world, new BlockPos(x, y, z)));
 		case GUI_SEPARATOR:
 			return new GuiSeparator(new ContainerSeparator(player, world.getTileEntity(new BlockPos(x, y, z))));
 		default:

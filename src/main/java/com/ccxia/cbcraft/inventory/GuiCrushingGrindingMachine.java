@@ -28,8 +28,6 @@ public class GuiCrushingGrindingMachine extends GuiContainer {
 		this.mc.getTextureManager().bindTexture(TEXTURE);
 		int offsetX = (this.width - this.xSize) / 2, offsetY = (this.height - this.ySize) / 2;
 		this.drawTexturedModalRect(offsetX, offsetY, 0, 0, this.xSize, this.ySize);
-		int loadTime = ((ContainerCrushingGrindingMachine) this.inventorySlots).getLoadTime();
-		this.drawTexturedModalRect(offsetX + 77, offsetY + 20, 176, 3, 24 * loadTime / 200, 17);
 	}
 
 	@Override

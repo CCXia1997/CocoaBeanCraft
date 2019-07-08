@@ -34,6 +34,15 @@ tile.cbcraft.chocolateCake.name=Chocolate Cake
 tile.cbcraft.darkMilkChocolateBlock.name=Dark Milk Chocolate Block
 tile.cbcraft.milkWhiteChocolateBlock.name=Milk White Chocolate Block
 tile.cbcraft.whiteDarkChocolateBlock.name=White Dark Chocolate Block
+tile.cbcraft.darkChocolateBlockCarved.name=Dark Chocolate Block Carved
+tile.cbcraft.darkChocolateBlockPillar.name=Dark Chocolate Block Pillar
+tile.cbcraft.darkChocolateBlockSmooth.name=Dark Chocolate Block Smooth
+tile.cbcraft.milkChocolateBlockCarved.name=Milk Chocolate Block Carved
+tile.cbcraft.milkChocolateBlockPillar.name=Milk Chocolate Block Pillar
+tile.cbcraft.milkChocolateBlockSmooth.name=Milk Chocolate Block Smooth
+tile.cbcraft.whiteChocolateBlockCarved.name=White Chocolate Block Carved
+tile.cbcraft.whiteChocolateBlockPillar.name=White Chocolate Block Pillar
+tile.cbcraft.whiteChocolateBlockSmooth.name=White Chocolate Block Smooth
 
 container.cbcraft.fermentation_baking_machine=Fermentation Baking Machine
 container.cbcraft.crushing_grinding_machine=Crushing Grinding Machine

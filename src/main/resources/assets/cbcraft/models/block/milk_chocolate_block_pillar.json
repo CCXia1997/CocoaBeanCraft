@@ -1,0 +1,7 @@
+{
+    "parent": "block/cube_column",
+    "textures": {
+        "end": "cbcraft:blocks/milk_chocolate_block_pillar_top",
+        "side": "cbcraft:blocks/milk_chocolate_block_pillar"
+    }
+}

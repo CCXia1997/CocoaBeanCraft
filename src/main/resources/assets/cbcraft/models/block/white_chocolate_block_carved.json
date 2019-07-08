@@ -1,0 +1,7 @@
+{
+    "parent": "block/cube_column",
+    "textures": {
+        "end": "cbcraft:blocks/white_chocolate_block_carved_top",
+        "side": "cbcraft:blocks/white_chocolate_block_carved"
+    }
+}

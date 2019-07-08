@@ -34,6 +34,15 @@ tile.cbcraft.chocolateCake.name=巧克力蛋糕
 tile.cbcraft.darkMilkChocolateBlock.name=棕黑巧克力块
 tile.cbcraft.milkWhiteChocolateBlock.name=棕白巧克力块
 tile.cbcraft.whiteDarkChocolateBlock.name=黑白巧克力块
+tile.cbcraft.darkChocolateBlockCarved.name=雕刻黑巧克力块
+tile.cbcraft.darkChocolateBlockPillar.name=竖纹黑巧克力块
+tile.cbcraft.darkChocolateBlockSmooth.name=平滑黑巧克力块
+tile.cbcraft.milkChocolateBlockCarved.name=雕刻棕巧克力块
+tile.cbcraft.milkChocolateBlockPillar.name=竖纹棕巧克力块
+tile.cbcraft.milkChocolateBlockSmooth.name=平滑棕巧克力块
+tile.cbcraft.whiteChocolateBlockCarved.name=雕刻白巧克力块
+tile.cbcraft.whiteChocolateBlockPillar.name=竖纹白巧克力块
+tile.cbcraft.whiteChocolateBlockSmooth.name=平滑白巧克力块
 
 container.cbcraft.fermentation_baking_machine=发酵烘焙机
 container.cbcraft.crushing_grinding_machine=打碎研磨机

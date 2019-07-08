@@ -1,0 +1,7 @@
+{
+    "variants": {
+        "axis=y": { "model": "cbcraft:dark_chocolate_block_pillar" },
+        "axis=z": { "model": "cbcraft:dark_chocolate_block_pillar", "x": 90 },
+        "axis=x": { "model": "cbcraft:dark_chocolate_block_pillar", "x": 90, "y": 90 }
+    }
+}
