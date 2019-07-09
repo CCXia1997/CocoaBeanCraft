@@ -60,6 +60,14 @@ public class BlockSeparator extends BlockContainer {
 		}
 	}
 
+	public boolean isOpaqueCube(IBlockState state) {
+		return false;
+	}
+
+	public boolean isFullCube(IBlockState state) {
+		return false;
+	}
+
 	@Override
 	public TileEntity createNewTileEntity(World worldIn, int meta) {
 		// TODO Auto-generated method stub

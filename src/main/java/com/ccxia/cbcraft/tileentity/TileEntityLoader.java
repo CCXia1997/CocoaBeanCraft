@@ -12,6 +12,7 @@ public class TileEntityLoader {
 		// registerTileEntity(TileEntityCrushingGrindingMachine.class,
 		// "CrushingGrindingMachine");
 		registerTileEntity(TileEntitySeparator.class, "Separator");
+		registerTileEntity(TileEntityAutoCrushing.class, "AutoCrushing");
 	}
 
 	public void registerTileEntity(Class<? extends TileEntity> tileEntityClass, String id) {

@@ -43,6 +43,7 @@ tile.cbcraft.milkChocolateBlockSmooth.name=Milk Chocolate Block Smooth
 tile.cbcraft.whiteChocolateBlockCarved.name=White Chocolate Block Carved
 tile.cbcraft.whiteChocolateBlockPillar.name=White Chocolate Block Pillar
 tile.cbcraft.whiteChocolateBlockSmooth.name=White Chocolate Block Smooth
+tile.cbcraft.autoCrushingGrindingMachine.name=Auto Crushing Grinding Machine
 
 container.cbcraft.fermentation_baking_machine=Fermentation Baking Machine
 container.cbcraft.crushing_grinding_machine=Crushing Grinding Machine

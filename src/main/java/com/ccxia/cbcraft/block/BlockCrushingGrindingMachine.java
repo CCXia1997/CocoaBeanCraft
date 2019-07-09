@@ -53,6 +53,14 @@ public class BlockCrushingGrindingMachine extends Block {
 		this.setSoundType(SoundType.STONE);
 	}
 
+	public boolean isOpaqueCube(IBlockState state) {
+		return false;
+	}
+
+	public boolean isFullCube(IBlockState state) {
+		return false;
+	}
+
 	@Override
 	public EnumBlockRenderType getRenderType(IBlockState state) {
 		return EnumBlockRenderType.MODEL;

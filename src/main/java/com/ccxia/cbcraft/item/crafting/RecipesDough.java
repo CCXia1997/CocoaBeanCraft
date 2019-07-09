@@ -1,9 +1,9 @@
 package com.ccxia.cbcraft.item.crafting;
 
 import net.minecraftforge.registries.IForgeRegistryEntry.Impl;
-import scala.actors.threadpool.Arrays;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 import com.ccxia.cbcraft.CbCraft;
 

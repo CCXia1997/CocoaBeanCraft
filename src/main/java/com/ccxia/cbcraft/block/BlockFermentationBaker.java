@@ -42,8 +42,8 @@ public class BlockFermentationBaker extends BlockContainer {
 
 	public static final PropertyDirection FACING = BlockHorizontal.FACING;
 	private final boolean isBurning;
-	//当方块燃烧状态改变时，防止容器中的物品掉出
-	//在breakBlock方法中限定掉落的条件
+	// 当方块燃烧状态改变时，防止容器中的物品掉出
+	// 在breakBlock方法中限定掉落的条件
 	private static boolean keepInventory;
 
 	protected BlockFermentationBaker(boolean isBuring) {
@@ -63,6 +63,14 @@ public class BlockFermentationBaker extends BlockContainer {
 			this.setHardness(3.5F);
 			this.setSoundType(SoundType.STONE);
 		}
+	}
+
+	public boolean isOpaqueCube(IBlockState state) {
+		return false;
+	}
+
+	public boolean isFullCube(IBlockState state) {
+		return false;
 	}
 
 	@Override

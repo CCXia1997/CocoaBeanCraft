@@ -1,6 +1,7 @@
 package com.ccxia.cbcraft.item.crafting;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 import com.ccxia.cbcraft.item.ModItems;
 
@@ -12,7 +13,6 @@ import net.minecraft.item.crafting.IRecipe;
 import net.minecraft.util.NonNullList;
 import net.minecraft.world.World;
 import net.minecraftforge.registries.IForgeRegistryEntry.Impl;
-import scala.actors.threadpool.Arrays;
 
 public class RecipesEggMilkDough extends Impl<IRecipe> implements IRecipe {
 	private Item[] eggMilkDough = { Items.EGG, ModItems.FLOUR, Items.EGG, ModItems.FLOUR, Items.MILK_BUCKET,

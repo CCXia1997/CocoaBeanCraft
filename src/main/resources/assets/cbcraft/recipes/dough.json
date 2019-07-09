@@ -1,0 +1,20 @@
+{
+  "type": "forge:ore_shaped",
+  "pattern": [
+    "AAA",
+    "ABA",
+	"AAA"
+  ],
+  "key": {
+    "A": {
+      "item": "cbcraft:flour"
+    },
+	"B": {
+      "item": "minecraft:water_bucket"
+    }
+  },
+  "result": {
+    "item": "cbcraft:dough",
+	"count":8
+  }
+}

@@ -27,6 +27,7 @@ public class ModBlocks {
 	public static final Block WHITE_CHOCOLATE_BLOCK_CARVED;// 雕刻白巧克力块
 	public static final Block WHITE_CHOCOLATE_BLOCK_PILLAR;// 竖纹白巧克力块
 	public static final Block WHITE_CHOCOLATE_BLOCK_SMOOTH;// 平滑白巧克力块
+	public static final Block AUTO_CRUSHING_GRINDING_MACHINE;// 自动打碎研磨机
 
 	static {
 		// FERMENTATION_BAKER = BlockLoader.getByName("block." + CbCraft.MODID +
@@ -52,6 +53,8 @@ public class ModBlocks {
 		WHITE_CHOCOLATE_BLOCK_CARVED = BlockLoader.getByName("tile." + CbCraft.MODID + ".whiteChocolateBlockCarved");
 		WHITE_CHOCOLATE_BLOCK_PILLAR = BlockLoader.getByName("tile." + CbCraft.MODID + ".whiteChocolateBlockPillar");
 		WHITE_CHOCOLATE_BLOCK_SMOOTH = BlockLoader.getByName("tile." + CbCraft.MODID + ".whiteChocolateBlockSmooth");
+		AUTO_CRUSHING_GRINDING_MACHINE = BlockLoader
+				.getByName("tile." + CbCraft.MODID + ".autoCrushingGrindingMachine");
 
 	}
 

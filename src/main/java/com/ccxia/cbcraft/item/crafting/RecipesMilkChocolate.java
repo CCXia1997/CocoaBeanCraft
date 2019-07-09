@@ -17,7 +17,7 @@ public class RecipesMilkChocolate extends Impl<IRecipe> implements IRecipe {
 	private int milkSlot;
 
 	public RecipesMilkChocolate() {
-		this.setRegistryName("recipes_milk_chocolate");
+		this.setRegistryName("recipes_milk_chocolate_block");
 	}
 
 	@Override
