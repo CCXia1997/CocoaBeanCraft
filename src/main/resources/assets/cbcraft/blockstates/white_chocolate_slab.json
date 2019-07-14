@@ -1,0 +1,6 @@
+{
+    "variants": {
+        "half=bottom,variant=default": { "model": "cbcraft:white_chocolate_slab" },
+        "half=top,variant=default": { "model": "cbcraft:white_chocolate_upper_slab" }
+    }
+}

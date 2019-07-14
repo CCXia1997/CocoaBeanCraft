@@ -48,8 +48,8 @@ public class CraftingFermentationBaker {
 		// 蛋奶面团+可可粉->可可蛋糕基底
 		this.add(new ItemStack(ModItems.EGG_MILK_DOUGH), new ItemStack(ModItems.COCOA_POWDER),
 				new ItemStack(ModItems.COCOA_CAKE_BASE), 0.5F);
-		// 曲奇面团->曲奇饼
-		this.add(new ItemStack(ModItems.COOKIE_DOUGH), new ItemStack(Items.COOKIE), 0.5F);
+		// 曲奇面团->8曲奇饼
+		this.add(new ItemStack(ModItems.COOKIE_DOUGH), new ItemStack(Items.COOKIE, 8), 0.5F);
 	}
 
 	private void add(ItemStack item1, ItemStack itemStack, float experience) {

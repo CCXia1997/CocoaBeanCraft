@@ -1,0 +1,5 @@
+{
+    "variants": {
+		"variant=default": { "model": "cbcraft:milk_chocolate_block" }
+    }
+}

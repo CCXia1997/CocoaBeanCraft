@@ -1,5 +1,7 @@
 package com.ccxia.cbcraft.block;
 
+import java.util.Random;
+
 import com.ccxia.cbcraft.CbCraft;
 import com.ccxia.cbcraft.creativetab.CreativeTabsCbCraft;
 import com.ccxia.cbcraft.inventory.GuiLoader;
@@ -17,6 +19,7 @@ import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.Container;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.BlockRenderLayer;
@@ -82,6 +85,10 @@ public class BlockSeparator extends BlockContainer {
 	@SideOnly(Side.CLIENT)
 	public BlockRenderLayer getBlockLayer() {
 		return BlockRenderLayer.CUTOUT;
+	}
+
+	public Item getItemDropped(IBlockState state, Random rand, int fortune) {
+		return Item.getItemFromBlock(ModBlocks.SEPARATOR);
 	}
 
 	@Override

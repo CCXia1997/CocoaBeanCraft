@@ -89,6 +89,10 @@ public class BlockFermentationBaker extends BlockContainer {
 		return BlockRenderLayer.CUTOUT;
 	}
 
+	public Item getItemDropped(IBlockState state, Random rand, int fortune) {
+		return Item.getItemFromBlock(ModBlocks.FERMENTATION_BAKER);
+	}
+
 	@Override
 	public void onBlockAdded(World worldIn, BlockPos pos, IBlockState state) {
 		this.setDefaultFacing(worldIn, pos, state);

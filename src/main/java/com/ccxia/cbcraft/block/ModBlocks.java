@@ -3,6 +3,7 @@ package com.ccxia.cbcraft.block;
 import com.ccxia.cbcraft.CbCraft;
 
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockSlab;
 
 public class ModBlocks {
 	// 可可工艺方块
@@ -28,6 +29,9 @@ public class ModBlocks {
 	public static final Block WHITE_CHOCOLATE_BLOCK_PILLAR;// 竖纹白巧克力块
 	public static final Block WHITE_CHOCOLATE_BLOCK_SMOOTH;// 平滑白巧克力块
 	public static final Block AUTO_CRUSHING_GRINDING_MACHINE;// 自动打碎研磨机
+	public static final Block DARK_CHOCOLATE_SLAB;// 黑巧克力台阶
+	public static final Block MILK_CHOCOLATE_SLAB;// 棕巧克力台阶
+	public static final Block WHITE_CHOCOLATE_SLAB;// 白巧克力台阶
 
 	static {
 		// FERMENTATION_BAKER = BlockLoader.getByName("block." + CbCraft.MODID +
@@ -55,7 +59,9 @@ public class ModBlocks {
 		WHITE_CHOCOLATE_BLOCK_SMOOTH = BlockLoader.getByName("tile." + CbCraft.MODID + ".whiteChocolateBlockSmooth");
 		AUTO_CRUSHING_GRINDING_MACHINE = BlockLoader
 				.getByName("tile." + CbCraft.MODID + ".autoCrushingGrindingMachine");
-
+		DARK_CHOCOLATE_SLAB = (BlockSlab) BlockLoader.getByName("tile." + CbCraft.MODID + ".darkChocolateSlab");
+		MILK_CHOCOLATE_SLAB = (BlockSlab) BlockLoader.getByName("tile." + CbCraft.MODID + ".milkChocolateSlab");
+		WHITE_CHOCOLATE_SLAB = (BlockSlab) BlockLoader.getByName("tile." + CbCraft.MODID + ".whiteChocolateSlab");
 	}
 
 }

@@ -12,7 +12,8 @@ public class RecipesLoader {
 	@SubscribeEvent
 	public static void registerRecipes(RegistryEvent.Register<IRecipe> event) {
 		event.getRegistry().registerAll(new RecipesDough(), new RecipesEggMilkDough(), new RecipesMilkChocolate(),
-				new RecipesWhiteChocolate());
+				new RecipesWhiteChocolate(), new RecipesHotChocolate(), new RecipesCake(), new RecipesCocoa(),
+				new RecipesBread());
 	}
 
 }

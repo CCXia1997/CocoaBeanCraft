@@ -44,6 +44,9 @@ tile.cbcraft.whiteChocolateBlockCarved.name=雕刻白巧克力块
 tile.cbcraft.whiteChocolateBlockPillar.name=竖纹白巧克力块
 tile.cbcraft.whiteChocolateBlockSmooth.name=平滑白巧克力块
 tile.cbcraft.autoCrushingGrindingMachine.name=自动打碎研磨机
+tile.cbcraft.darkChocolateSlab.name=黑巧克力台阶
+tile.cbcraft.milkChocolateSlab.name=棕巧克力台阶
+tile.cbcraft.whiteChocolateSlab.name=白巧克力台阶
 
 container.cbcraft.fermentation_baking_machine=发酵烘焙机
 container.cbcraft.crushing_grinding_machine=打碎研磨机

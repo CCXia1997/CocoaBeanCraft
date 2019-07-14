@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ABA",
+    "CCC"
+  ],
+  "key": {
+    "A": {
+      "item": "cbcraft:cream"
+    },
+	"B": {
+      "item": "minecraft:sugar"
+    },
+	"C": {
+      "item": "cbcraft:cake_base"
+    }
+  },
+  "result": {
+    "item": "minecraft:cake"
+  }
+}
