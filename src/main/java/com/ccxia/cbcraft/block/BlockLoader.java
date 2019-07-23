@@ -17,25 +17,46 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 @Mod.EventBusSubscriber(modid = CbCraft.MODID)
 public class BlockLoader {
-	public static Block[] blocks = { new BlockFermentationBaker(false), new BlockFermentationBaker(true),
-			new BlockCrushingGrindingMachine(), new BlockSeparator(false), new BlockSeparator(true),
-			new BlockDarkChocolate(), new BlockMilkChocolate(), new BlockWhiteChocolate(), new BlockChocolateCake(),
-			new BlockDarkMilk(), new BlockMilkWhite(), new BlockWhiteDark(), new BlockDarkCarved(),
-			new BlockDarkPillar(), new BlockDarkSmooth(), new BlockMilkCarved(), new BlockMilkPillar(),
-			new BlockMilkSmooth(), new BlockWhiteCarved(), new BlockWhitePillar(), new BlockWhiteSmooth(),
-			new BlockAutoCrushing(),
-			(new BlockDarkChocolateSlab.Half().setIndex(0)).setUnlocalizedName(CbCraft.MODID + ".darkChocolateSlab")
-					.setRegistryName("dark_chocolate_slab").setCreativeTab(CreativeTabsCbCraft.tabCbCraft),
-			(new BlockDarkChocolateSlab.Double().setIndex(1)).setUnlocalizedName(CbCraft.MODID + ".darkChocolateSlab")
-					.setRegistryName("dark_chocolate_double_slab"),
-			(new BlockDarkChocolateSlab.Half().setIndex(2)).setUnlocalizedName(CbCraft.MODID + ".milkChocolateSlab")
-					.setRegistryName("milk_chocolate_slab").setCreativeTab(CreativeTabsCbCraft.tabCbCraft),
-			(new BlockDarkChocolateSlab.Double().setIndex(3)).setUnlocalizedName(CbCraft.MODID + ".milkChocolateSlab")
-					.setRegistryName("milk_chocolate_double_slab"),
-			(new BlockDarkChocolateSlab.Half().setIndex(4)).setUnlocalizedName(CbCraft.MODID + ".whiteChocolateSlab")
-					.setRegistryName("white_chocolate_slab").setCreativeTab(CreativeTabsCbCraft.tabCbCraft),
-			(new BlockDarkChocolateSlab.Double().setIndex(5)).setUnlocalizedName(CbCraft.MODID + ".whiteChocolateSlab")
-					.setRegistryName("white_chocolate_double_slab") };
+	public static Block[] blocks = { 
+		new BlockFermentationBaker(false), 
+		new BlockFermentationBaker(true),
+		new BlockCrushingGrindingMachine(), 
+		new BlockSeparator(false), 
+		new BlockSeparator(true),
+		new BlockDarkChocolate(), 
+		new BlockMilkChocolate(), 
+		new BlockWhiteChocolate(), 
+		new BlockChocolateCake(),
+		new BlockDarkMilk(), 
+		new BlockMilkWhite(), 
+		new BlockWhiteDark(), 
+		new BlockDarkCarved(),
+		new BlockDarkPillar(), 
+		new BlockDarkSmooth(), 
+		new BlockMilkCarved(), 
+		new BlockMilkPillar(),
+		new BlockMilkSmooth(), 
+		new BlockWhiteCarved(), 
+		new BlockWhitePillar(), 
+		new BlockWhiteSmooth(),
+		new BlockAutoCrushing(),
+		(new BlockDarkChocolateSlab.Half().setIndex(0)).setUnlocalizedName(CbCraft.MODID + ".darkChocolateSlab")
+			.setRegistryName("dark_chocolate_slab").setCreativeTab(CreativeTabsCbCraft.tabCbCraft),
+		(new BlockDarkChocolateSlab.Double().setIndex(1)).setUnlocalizedName(CbCraft.MODID + ".darkChocolateSlab")
+			.setRegistryName("dark_chocolate_double_slab"),
+		(new BlockDarkChocolateSlab.Half().setIndex(2)).setUnlocalizedName(CbCraft.MODID + ".milkChocolateSlab")
+			.setRegistryName("milk_chocolate_slab").setCreativeTab(CreativeTabsCbCraft.tabCbCraft),
+		(new BlockDarkChocolateSlab.Double().setIndex(3)).setUnlocalizedName(CbCraft.MODID + ".milkChocolateSlab")
+			.setRegistryName("milk_chocolate_double_slab"),
+		(new BlockDarkChocolateSlab.Half().setIndex(4)).setUnlocalizedName(CbCraft.MODID + ".whiteChocolateSlab")
+			.setRegistryName("white_chocolate_slab").setCreativeTab(CreativeTabsCbCraft.tabCbCraft),
+		(new BlockDarkChocolateSlab.Double().setIndex(5)).setUnlocalizedName(CbCraft.MODID + ".whiteChocolateSlab")
+			.setRegistryName("white_chocolate_double_slab"), 
+		new BlockInjectionTable(),
+		new BlockInjectedDark(),
+		new BlockInjectedWhite(),
+		new BlockInjectedMilk()
+		};
 
 	@SubscribeEvent
 	public static void registerBlocks(RegistryEvent.Register<Block> event) {

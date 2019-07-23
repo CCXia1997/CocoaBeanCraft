@@ -47,6 +47,11 @@ tile.cbcraft.autoCrushingGrindingMachine.name=Auto Crushing Grinding Machine
 tile.cbcraft.darkChocolateSlab.name=Dark Chocolate Slab
 tile.cbcraft.milkChocolateSlab.name=Milk Chocolate Slab
 tile.cbcraft.whiteChocolateSlab.name=White Chocolate Slab
+tile.cbcraft.injectionTable.name=Injection Table
+tile.cbcraft.injectedDarkChocolate.name=Injected Dark Chocolate
+tile.cbcraft.injectedWhiteChocolate.name=Injected White Chocolate
+tile.cbcraft.injectedMilkChocolate.name=Injected Milk Chocolate
+
 
 container.cbcraft.fermentation_baking_machine=Fermentation Baking Machine
 container.cbcraft.crushing_grinding_machine=Crushing Grinding Machine

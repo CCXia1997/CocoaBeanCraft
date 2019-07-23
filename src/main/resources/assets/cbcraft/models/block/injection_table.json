@@ -1,0 +1,25 @@
+{
+    "parent": "block/cube",
+	"__comment": "Designed by XeKr with Cubik Studio - https://cubik.studio",
+	"textures": {
+		"particle": "cbcraft:blocks/injection_table_side",
+		"side": "cbcraft:blocks/injection_table_side",
+		"bottom": "cbcraft:blocks/injection_table_bottom",
+		"top": "cbcraft:blocks/injection_table_top"
+	},
+	"elements": [ 	 
+		{
+			"__comment": "Box1",
+			"from": [ 0, 0, 0 ],
+			"to": [ 16, 12, 16 ],
+			"faces": {
+				"down": { "uv": [ 0, 0, 16, 16 ], "texture": "#bottom" },
+				"up": { "uv": [ 0, 0, 16, 16 ], "texture": "#top" },
+				"north": { "uv": [ 0, 4, 16, 16 ], "texture": "#side" },
+				"south": { "uv": [ 0, 4, 16, 16 ], "texture": "#side" },
+				"west": { "uv": [ 0, 4, 16, 16 ], "texture": "#side" },
+				"east": { "uv": [ 0, 4, 16, 16 ], "texture": "#side" }
+			}
+		}
+	]
+}

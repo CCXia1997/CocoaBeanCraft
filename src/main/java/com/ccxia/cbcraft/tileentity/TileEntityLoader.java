@@ -2,7 +2,9 @@ package com.ccxia.cbcraft.tileentity;
 
 import com.ccxia.cbcraft.CbCraft;
 
+import com.ccxia.cbcraft.client.renderer.TileEntityInjectionTableRenderer;
 import net.minecraft.tileentity.TileEntity;
+import net.minecraftforge.fml.client.registry.ClientRegistry;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
@@ -13,6 +15,10 @@ public class TileEntityLoader {
 		// "CrushingGrindingMachine");
 		registerTileEntity(TileEntitySeparator.class, "Separator");
 		registerTileEntity(TileEntityAutoCrushing.class, "AutoCrushing");
+		registerTileEntity(TileEntityInjectionTable.class, "InjectionTable");
+
+		//‰÷»æ”ÎTileEntity∞Û∂®
+		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityInjectionTable.class, new TileEntityInjectionTableRenderer());
 	}
 
 	public void registerTileEntity(Class<? extends TileEntity> tileEntityClass, String id) {

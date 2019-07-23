@@ -32,6 +32,10 @@ public class ModBlocks {
 	public static final Block DARK_CHOCOLATE_SLAB;// 黑巧克力台阶
 	public static final Block MILK_CHOCOLATE_SLAB;// 棕巧克力台阶
 	public static final Block WHITE_CHOCOLATE_SLAB;// 白巧克力台阶
+	public static final Block INJECTION_TABLE;// 注魔台
+	public static final Block INJECTED_DARK_CHOCOLATE;// 注魔黑巧克力
+	public static final Block INJECTED_WHITE_CHOCOLATE;// 注魔白巧克力
+	public static final Block INJECTED_MILK_CHOCOLATE;// 注魔牛奶巧克力
 
 	static {
 		// FERMENTATION_BAKER = BlockLoader.getByName("block." + CbCraft.MODID +
@@ -62,6 +66,10 @@ public class ModBlocks {
 		DARK_CHOCOLATE_SLAB = (BlockSlab) BlockLoader.getByName("tile." + CbCraft.MODID + ".darkChocolateSlab");
 		MILK_CHOCOLATE_SLAB = (BlockSlab) BlockLoader.getByName("tile." + CbCraft.MODID + ".milkChocolateSlab");
 		WHITE_CHOCOLATE_SLAB = (BlockSlab) BlockLoader.getByName("tile." + CbCraft.MODID + ".whiteChocolateSlab");
+		INJECTION_TABLE = BlockLoader.blocks[28];
+		INJECTED_DARK_CHOCOLATE = BlockLoader.getByName("tile." + CbCraft.MODID + ".injectedDarkChocolate");
+		INJECTED_MILK_CHOCOLATE = BlockLoader.getByName("tile." + CbCraft.MODID + ".injectedMilkChocolate");
+		INJECTED_WHITE_CHOCOLATE = BlockLoader.getByName("tile." + CbCraft.MODID + ".injectedWhiteChocolate");
 	}
 
 }
