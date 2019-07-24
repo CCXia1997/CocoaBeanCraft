@@ -11,7 +11,6 @@ import net.minecraft.world.World;
 import net.minecraftforge.registries.IForgeRegistryEntry.Impl;
 
 public class RecipesWhiteChocolate extends Impl<IRecipe> implements IRecipe {
-	private int milkSlot;
 
 	public RecipesWhiteChocolate() {
 		this.setRegistryName("recipes_white_chocolate_block");
@@ -19,7 +18,7 @@ public class RecipesWhiteChocolate extends Impl<IRecipe> implements IRecipe {
 
 	@Override
 	public boolean matches(InventoryCrafting inv, World worldIn) {
-		int num1 = 0, num2 = 0, num3 = 0, num4 = 0;
+		int num1 = 0, num2 = 0, num3 = 0, num4 = 0, num5 = 0;
 		for (int i = 0; i < inv.getSizeInventory(); i++) {
 			ItemStack itemStack = inv.getStackInSlot(i);
 			if (itemStack.isItemEqual(new ItemStack(ModItems.COCOA_BUTTER))) {
@@ -28,12 +27,15 @@ public class RecipesWhiteChocolate extends Impl<IRecipe> implements IRecipe {
 				num2++;
 			} else if (itemStack.isItemEqual(new ItemStack(Items.MILK_BUCKET))) {
 				num3++;
-				this.milkSlot = i;
 			} else if (itemStack.isEmpty()) {
 				num4++;
+			} else if (itemStack.isItemEqual(new ItemStack(ModItems.PACKED_MILK))) {
+				num5++;
 			}
 		}
 		if (num1 == 1 && num2 == 1 && num3 == 1 && num4 == 6) {
+			return true;
+		} else if (num1 == 1 && num2 == 1 && num5 == 1 && num4 == 6) {
 			return true;
 		} else {
 			return false;
@@ -58,7 +60,6 @@ public class RecipesWhiteChocolate extends Impl<IRecipe> implements IRecipe {
 	@Override
 	public NonNullList<ItemStack> getRemainingItems(InventoryCrafting inv) {
 		NonNullList<ItemStack> nonnulllist = NonNullList.<ItemStack>withSize(inv.getSizeInventory(), ItemStack.EMPTY);
-		nonnulllist.set(this.milkSlot, new ItemStack(Items.BUCKET));
 		return nonnulllist;
 	}
 

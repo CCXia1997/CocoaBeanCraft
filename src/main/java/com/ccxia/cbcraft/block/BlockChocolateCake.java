@@ -30,7 +30,7 @@ public class BlockChocolateCake extends BlockCake {
 			return false;
 		} else {
 			player.addStat(StatList.CAKE_SLICES_EATEN);
-			player.getFoodStats().addStats(3, 0.15F);
+			player.getFoodStats().addStats(4, 0.25F);
 			int i = ((Integer) state.getValue(BITES)).intValue();
 
 			if (i < 6) {

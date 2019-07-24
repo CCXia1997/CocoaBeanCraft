@@ -20,7 +20,8 @@ item.cbcraft.darkChocolate.name=Dark Chocolate
 item.cbcraft.milkChocolate.name=Milk Chocolate
 item.cbcraft.whiteChocolate.name=White Chocolate
 item.cbcraft.cocoaCream.name=Cocoa Cream
-item.cbcraft.hotChocolate.name=Hot Chocolate
+item.cbcraft.packedMilk.name=Packed Milk
+item.cbcraft.hotChocolate.name=Chocolate Milk
 
 tile.cbcraft.fermentationBaker.name=Fermentation Baking Machine
 tile.cbcraft.fermentationBakerOn.name=Burning Fermentation Baking Machine

@@ -12,7 +12,6 @@ import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.init.Items;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemBucketMilk;
 import net.minecraft.item.ItemStack;
 import net.minecraft.potion.Potion;
@@ -20,17 +19,17 @@ import net.minecraft.potion.PotionEffect;
 import net.minecraft.stats.StatList;
 import net.minecraft.world.World;
 
-public class ItemHotChocolate extends ItemBucketMilk {
-	public ItemHotChocolate() {
-		this.setUnlocalizedName(CbCraft.MODID + ".hotChocolate");
-		this.setRegistryName("chocolate_milk");
+public class ItemPackedMilk extends ItemBucketMilk {
+	public ItemPackedMilk() {
+		this.setUnlocalizedName(CbCraft.MODID + ".packedMilk");
+		this.setRegistryName("packed_milk");
 		this.setMaxStackSize(16);
 		this.setCreativeTab(CreativeTabsCbCraft.tabCbCraft);
 	}
 
 	public ItemStack onItemUseFinish(ItemStack stack, World worldIn, EntityLivingBase entityLiving) {
 		if (!worldIn.isRemote)
-			this.removeBadPotion(stack, entityLiving);
+			this.removeAllPotion(stack, entityLiving);
 		if (entityLiving instanceof EntityPlayerMP) {
 			EntityPlayerMP entityplayermp = (EntityPlayerMP) entityLiving;
 			CriteriaTriggers.CONSUME_ITEM.trigger(entityplayermp, stack);
@@ -44,21 +43,17 @@ public class ItemHotChocolate extends ItemBucketMilk {
 		return stack.isEmpty() ? new ItemStack(Items.AIR) : stack;
 	}
 
-	// 移除所有负面效果
-	public void removeBadPotion(ItemStack stack, EntityLivingBase entityLiving) {
+	public void removeAllPotion(ItemStack stack, EntityLivingBase entityLiving) {
 		if (entityLiving.world.isRemote)
 			return;
-		List<Potion> badPotion = new ArrayList<Potion>();
+		List<Potion> potionList = new ArrayList<Potion>();
 		Iterator<PotionEffect> iterator = entityLiving.getActivePotionMap().values().iterator();
 		while (iterator.hasNext()) {
 			PotionEffect effect = iterator.next();
-			if (effect.getPotion().isBadEffect()) {
-				badPotion.add(effect.getPotion());
-			}
+			potionList.add(effect.getPotion());
 		}
-		for (Potion potion : badPotion) {
+		for (Potion potion : potionList) {
 			entityLiving.removePotionEffect(potion);
 		}
 	}
-
 }

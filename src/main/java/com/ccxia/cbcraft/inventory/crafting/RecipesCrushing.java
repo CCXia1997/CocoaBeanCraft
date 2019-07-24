@@ -44,6 +44,8 @@ public class RecipesCrushing extends Impl<IRecipe> implements IRecipe {
 		workList.put(new ItemStack(Items.BONE), new ItemStack(Items.DYE, 4, 15));
 		// 1小麦->1面粉
 		workList.put(new ItemStack(Items.WHEAT), new ItemStack(ModItems.FLOUR, 1));
+		// 1泥土->1黏土球
+		workList.put(new ItemStack(Item.getItemFromBlock(Blocks.DIRT)), new ItemStack(Items.CLAY_BALL, 1));
 
 	}
 
