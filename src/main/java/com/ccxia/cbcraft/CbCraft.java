@@ -12,6 +12,8 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.registry.GameRegistry;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 @Mod(modid = CbCraft.MODID, name = CbCraft.NAME, version = CbCraft.VERSION, acceptedMinecraftVersions = "1.12.2")
 public class CbCraft {
@@ -22,6 +24,9 @@ public class CbCraft {
 	public static CommonProxy proxy;
 	@Instance(CbCraft.MODID)
 	public static CbCraft instance;
+
+	/** »´æ÷Logger≤‚ ‘”√ **/
+	public static final Logger LOGGER = LogManager.getLogger();
 
 	@EventHandler
 	public static void preInit(FMLPreInitializationEvent event) {

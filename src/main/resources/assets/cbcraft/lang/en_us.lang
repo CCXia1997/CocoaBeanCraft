@@ -21,6 +21,8 @@ item.cbcraft.milkChocolate.name=Milk Chocolate
 item.cbcraft.whiteChocolate.name=White Chocolate
 item.cbcraft.cocoaCream.name=Cocoa Cream
 item.cbcraft.hotChocolate.name=Hot Chocolate
+item.cbcraft.pressingMachineCore=Pressing Machine Core
+item.cbcraft.purpleGem=Purple Gem
 
 tile.cbcraft.fermentationBaker.name=Fermentation Baking Machine
 tile.cbcraft.fermentationBakerOn.name=Burning Fermentation Baking Machine
@@ -56,3 +58,5 @@ tile.cbcraft.injectedMilkChocolate.name=Injected Milk Chocolate
 container.cbcraft.fermentation_baking_machine=Fermentation Baking Machine
 container.cbcraft.crushing_grinding_machine=Crushing Grinding Machine
 container.cbcraft.separator=Separator
+container.cbcraft.injection_table=Injection Table
+container.cbcraft.injection_table.cost=Need %d Level and Cocoa Powder

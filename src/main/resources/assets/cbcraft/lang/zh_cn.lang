@@ -21,6 +21,8 @@ item.cbcraft.milkChocolate.name=棕巧克力
 item.cbcraft.whiteChocolate.name=白巧克力
 item.cbcraft.cocoaCream.name=可可奶油
 item.cbcraft.hotChocolate.name=热可可
+item.cbcraft.pressingMachineCore=压合机核心
+item.cbcraft.purpleGem=紫宝石
 
 tile.cbcraft.fermentationBaker.name=发酵烘焙机
 tile.cbcraft.fermentationBakerOn.name=燃烧的发酵烘焙机
@@ -55,3 +57,7 @@ tile.cbcraft.injectedWhiteChocolate.name=注魔白巧克力
 container.cbcraft.fermentation_baking_machine=发酵烘焙机
 container.cbcraft.crushing_grinding_machine=打碎研磨机
 container.cbcraft.separator=分离机
+container.cbcraft.injection_table=可可注魔台
+container.cbcraft.injection_table.level_not_enough=等级不足
+container.cbcraft.injection_table.powder_not_enough=可可粉不足
+container.cbcraft.injection_table.cost=需要 %d 等级与可可粉

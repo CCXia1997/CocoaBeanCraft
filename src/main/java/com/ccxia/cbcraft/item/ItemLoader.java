@@ -1,7 +1,6 @@
 package com.ccxia.cbcraft.item;
 
 import com.ccxia.cbcraft.CbCraft;
-
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
@@ -12,11 +11,31 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 @Mod.EventBusSubscriber(modid = CbCraft.MODID)
 public class ItemLoader {
-	public static Item[] items = { new ItemFlour(), new ItemDough(), new ItemEggMilkDough(), new ItemCookedCocoa(),
-			new ItemCocoaPaste(), new ItemSkimMilk(), new ItemCheese(), new ItemYogurt(), new ItemCocoaBread(),
-			new ItemCakeBase(), new ItemCocoaCakeBase(), new ItemCookieDough(), new ItemCocoaPowder(),
-			new ItemCocoaLiquor(), new ItemCocoaButter(), new ItemCream(), new ItemDarkChocolate(),
-			new ItemMilkChocolate(), new ItemWhiteChocolate(), new ItemCocoaCream(), new ItemHotChocolate() };
+	public static Item[] items = { 
+			new ItemFlour(), 
+			new ItemDough(), 
+			new ItemEggMilkDough(), 
+			new ItemCookedCocoa(),
+			new ItemCocoaPaste(), 
+			new ItemSkimMilk(), 
+			new ItemCheese(), 
+			new ItemYogurt(), 
+			new ItemCocoaBread(),
+			new ItemCakeBase(), 
+			new ItemCocoaCakeBase(), 
+			new ItemCookieDough(), 
+			new ItemCocoaPowder(),
+			new ItemCocoaLiquor(), 
+			new ItemCocoaButter(), 
+			new ItemCream(), 
+			new ItemDarkChocolate(),
+			new ItemMilkChocolate(), 
+			new ItemWhiteChocolate(), 
+			new ItemCocoaCream(), 
+			new ItemHotChocolate(),
+			new ItemPressingMachineCore(),
+			new ItemPurpleGem()
+	};
 
 	public static Item getByName(String name) {
 		for (Item item : items)
@@ -32,5 +51,7 @@ public class ItemLoader {
 					new ModelResourceLocation(item.getRegistryName(), "inventory"));
 			event.getRegistry().register(item);
 		}
+
+		new OreDictLoader();
 	}
 }
