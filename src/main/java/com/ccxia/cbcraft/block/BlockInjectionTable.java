@@ -93,38 +93,4 @@ public class BlockInjectionTable extends BlockContainer {
         }
         return true;
     }
-
-    public static class InjectionTable implements IInteractionObject {
-        private final World world;
-        private final BlockPos pos;
-
-        public InjectionTable(World world, BlockPos pos) {
-            this.world = world;
-            this.pos = pos;
-        }
-
-        @Override
-        public String getName() {
-            return "injection_table";
-        }
-
-        @Override
-        public boolean hasCustomName() {
-            return false;
-        }
-
-        public ITextComponent getDisplayName() {
-            return new TextComponentTranslation("container." + CbCraft.MODID + ".injection_table", new Object[0]);
-        }
-
-        @Override
-        public Container createContainer(InventoryPlayer playerInventory, EntityPlayer playerIn) {
-            return new ContainerInjectionTable(playerInventory, this.world, this.pos, playerIn);
-        }
-
-        @Override
-        public String getGuiID() {
-            return CbCraft.MODID + ":injection_table";
-        }
-    }
 }

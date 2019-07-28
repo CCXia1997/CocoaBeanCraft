@@ -53,6 +53,21 @@ tile.cbcraft.injectionTable.name=Injection Table
 tile.cbcraft.injectedDarkChocolate.name=Injected Dark Chocolate
 tile.cbcraft.injectedWhiteChocolate.name=Injected White Chocolate
 tile.cbcraft.injectedMilkChocolate.name=Injected Milk Chocolate
+tile.cbcraft.darkChocolateBrick.name=Dark Chocolate Brick
+tile.cbcraft.darkChocolateWall.name=Dark Chocolate Wall
+tile.cbcraft.darkChocolateStairs.name=Dark Chocolate Stairs
+tile.cbcraft.darkChocolateFence.name=Dark Chocolate Fence
+tile.cbcraft.darkChocolateFenceGate.name=Dark Chocolate Fence Gate
+tile.cbcraft.whiteChocolateBrick.name=White Chocolate Brick
+tile.cbcraft.whiteChocolateWall.name=White Chocolate Wall
+tile.cbcraft.whiteChocolateStairs.name=White Chocolate Stairs
+tile.cbcraft.whiteChocolateFence.name=White Chocolate Fence
+tile.cbcraft.whiteChocolateFenceGate.name=White Chocolate Fence Gate
+tile.cbcraft.milkChocolateBrick.name=Milk Chocolate Brick
+tile.cbcraft.milkChocolateWall.name=Milk Chocolate Wall
+tile.cbcraft.milkChocolateStairs.name=Milk Chocolate Stairs
+tile.cbcraft.milkChocolateFence.name=Milk Chocolate Fence
+tile.cbcraft.milkChocolateFenceGate.name=Milk Chocolate Fence Gate
 
 
 container.cbcraft.fermentation_baking_machine=Fermentation Baking Machine

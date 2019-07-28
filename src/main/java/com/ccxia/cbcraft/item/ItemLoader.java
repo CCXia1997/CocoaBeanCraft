@@ -51,7 +51,5 @@ public class ItemLoader {
 					new ModelResourceLocation(item.getRegistryName(), "inventory"));
 			event.getRegistry().register(item);
 		}
-
-		new OreDictLoader();
 	}
 }

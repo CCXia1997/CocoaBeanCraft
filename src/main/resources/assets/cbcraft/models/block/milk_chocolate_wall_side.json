@@ -1,0 +1,6 @@
+{
+    "parent": "block/wall_side",
+    "textures": {
+        "wall": "cbcraft:blocks/milk_chocolate_brick"
+    }
+}

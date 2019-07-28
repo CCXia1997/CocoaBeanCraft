@@ -1,0 +1,66 @@
+{
+    "parent": "block/cube",
+	"__comment": "Designed by XeKr with Cubik Studio - https://cubik.studio",
+	"textures": {
+		"particle": "cbcraft:blocks/auto_pressing_machine_side",
+		"side": "cbcraft:blocks/auto_pressing_machine_side",
+		"top": "cbcraft:blocks/auto_pressing_machine_top",
+		"bottom": "cbcraft:blocks/auto_pressing_machine_bottom",
+		"inner": "cbcraft:blocks/auto_pressing_machine_inner"
+	},
+	"elements": [ 	 
+		{
+			"__comment": "Box1",
+			"from": [ 0, 0, 0 ],
+			"to": [ 16, 16, 16 ],
+			"faces": {
+				"down": { "uv": [ 0, 0, 16, 16 ], "texture": "#bottom" },
+				"up": { "uv": [ 0, 0, 16, 16 ], "texture": "#top" },
+				"north": { "uv": [ 0, 0, 16, 16 ], "texture": "#side" },
+				"south": { "uv": [ 0, 0, 16, 16 ], "texture": "#side" },
+				"west": { "uv": [ 0, 0, 16, 16 ], "texture": "#side" },
+				"east": { "uv": [ 0, 0, 16, 16 ], "texture": "#side" }
+			}
+		},
+		{
+			"__comment": "PlaneY2",
+			"from": [ 0, 8, 0 ],
+			"to": [ 16, 8.001, 16 ],
+			"faces": {
+				"up": { "uv": [ 0, 0, 16, 16 ], "texture": "#inner" }
+			}
+		},
+		{
+			"__comment": "Box3",
+			"from": [ 4, 4, 4 ],
+			"to": [ 12, 12, 12 ],
+			"faces": {
+				"up": { "uv": [ 4, 4, 12, 12 ], "texture": "#inner" },
+				"north": { "uv": [ 4, 4, 12, 12 ], "texture": "#inner" },
+				"south": { "uv": [ 4, 4, 12, 12 ], "texture": "#inner" },
+				"west": { "uv": [ 4, 4, 12, 12 ], "texture": "#inner" },
+				"east": { "uv": [ 4, 4, 12, 12 ], "texture": "#inner" }
+			}
+		},
+		{
+			"__comment": "Box4",
+			"from": [ 0, 8, 5 ],
+			"to": [ 16, 11, 11 ],
+			"faces": {
+				"up": { "uv": [ 0, 5, 16, 11 ], "texture": "#inner" },
+				"north": { "uv": [ 0, 5, 16, 8 ], "texture": "#inner" },
+				"south": { "uv": [ 0, 5, 16, 8 ], "texture": "#inner" }
+			}
+		},
+		{
+			"__comment": "Box5",
+			"from": [ 5, 8, 0 ],
+			"to": [ 11, 11, 16 ],
+			"faces": {
+				"up": { "uv": [ 5, 0, 11, 16 ], "texture": "#inner" },
+				"west": { "uv": [ 0, 5, 16, 8 ], "texture": "#inner" },
+				"east": { "uv": [ 0, 5, 16, 8 ], "texture": "#inner" }
+			}
+		}
+	]
+}
