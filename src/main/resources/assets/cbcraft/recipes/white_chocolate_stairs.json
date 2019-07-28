@@ -1,0 +1,16 @@
+{
+  "type": "forge:ore_shaped",
+  "pattern": [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "cbcraft:white_chocolate_block"
+    }
+  },
+  "result": {
+    "item": "cbcraft:white_chocolate_stairs"
+  }
+}

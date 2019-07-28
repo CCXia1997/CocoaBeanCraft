@@ -1,0 +1,18 @@
+{
+  "type": "forge:ore_shaped",
+  "pattern": [
+    "-#-",
+    "-#-"
+  ],
+  "key": {
+    "#": {
+      "item": "cbcraft:dark_chocolate_brick"
+    },
+    "-": {
+      "item": "cbcraft:dark_chocolate"
+    }
+  },
+  "result": {
+    "item": "cbcraft:dark_chocolate_fence_gate"
+  }
+}

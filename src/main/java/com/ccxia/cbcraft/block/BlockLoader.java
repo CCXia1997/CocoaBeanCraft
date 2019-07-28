@@ -68,27 +68,27 @@ public class BlockLoader {
 					.setRegistryName("dark_chocolate_wall"),
 			new BlockChocolateStairs(dark.getDefaultState()).setUnlocalizedName(CbCraft.MODID + ".darkChocolateStairs")
 					.setRegistryName("dark_chocolate_stairs"),
-			new BlockChocolateFence(dark).setUnlocalizedName(CbCraft.MODID + ".darkChocolateFence")
+			new BlockChocolateFence(darkBrick).setUnlocalizedName(CbCraft.MODID + ".darkChocolateFence")
 					.setRegistryName("dark_chocolate_fence"),
-			new BlockChocolateFenceGate(dark).setUnlocalizedName(CbCraft.MODID + ".darkChocolateFenceGate")
+			new BlockChocolateFenceGate(darkBrick).setUnlocalizedName(CbCraft.MODID + ".darkChocolateFenceGate")
 					.setRegistryName("dark_chocolate_fence_gate"),
 			milkBrick,
 			new BlockChocolateWall(milkBrick).setUnlocalizedName(CbCraft.MODID + ".milkChocolateWall")
 					.setRegistryName("milk_chocolate_wall"),
 			new BlockChocolateStairs(milk.getDefaultState()).setUnlocalizedName(CbCraft.MODID + ".milkChocolateStairs")
 					.setRegistryName("milk_chocolate_stairs"),
-			new BlockChocolateFence(milk).setUnlocalizedName(CbCraft.MODID + ".milkChocolateFence")
+			new BlockChocolateFence(milkBrick).setUnlocalizedName(CbCraft.MODID + ".milkChocolateFence")
 					.setRegistryName("milk_chocolate_fence"),
-			new BlockChocolateFenceGate(milk).setUnlocalizedName(CbCraft.MODID + ".milkChocolateFenceGate")
+			new BlockChocolateFenceGate(milkBrick).setUnlocalizedName(CbCraft.MODID + ".milkChocolateFenceGate")
 					.setRegistryName("milk_chocolate_fence_gate"),
 			whiteBrick,
 			new BlockChocolateWall(whiteBrick).setUnlocalizedName(CbCraft.MODID + ".whiteChocolateWall")
 					.setRegistryName("white_chocolate_wall"),
 			new BlockChocolateStairs(white.getDefaultState()).setUnlocalizedName(CbCraft.MODID + ".whiteChocolateStairs")
 					.setRegistryName("white_chocolate_stairs"),
-			new BlockChocolateFence(white).setUnlocalizedName(CbCraft.MODID + ".whiteChocolateFence")
+			new BlockChocolateFence(whiteBrick).setUnlocalizedName(CbCraft.MODID + ".whiteChocolateFence")
 					.setRegistryName("white_chocolate_fence"),
-			new BlockChocolateFenceGate(white).setUnlocalizedName(CbCraft.MODID + ".whiteChocolateFenceGate")
+			new BlockChocolateFenceGate(whiteBrick).setUnlocalizedName(CbCraft.MODID + ".whiteChocolateFenceGate")
 					.setRegistryName("white_chocolate_fence_gate"),
 		};
 
