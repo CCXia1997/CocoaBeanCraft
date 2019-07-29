@@ -1,0 +1,8 @@
+{
+    "parent": "block/inner_stairs",
+    "textures": {
+        "bottom": "cbcraft:blocks/dark_chocolate_block",
+        "top": "cbcraft:blocks/dark_chocolate_block",
+        "side": "cbcraft:blocks/dark_chocolate_block"
+    }
+}

@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " H ",
+    "C#C",
+    "###"
+  ],
+  "key": {
+    "C": {
+      "item": "minecraft:cookie"
+    },
+    "#": {
+      "type": "forge:ore_dict", "ore": "blockChocolate"
+    },
+    "H": {
+      "item": "cbcraft:chocolate_cake"
+    }
+  },
+  "result": {
+    "item": "cbcraft:injection_table"
+  }
+}

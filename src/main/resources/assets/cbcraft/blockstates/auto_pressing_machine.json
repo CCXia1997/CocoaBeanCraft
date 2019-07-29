@@ -1,0 +1,5 @@
+{
+    "variants": {
+        "normal": { "model": "cbcraft:auto_pressing_machine" }
+    }
+}

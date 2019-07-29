@@ -1,0 +1,10 @@
+{
+    "variants": {
+        "normal": [
+            { "model": "cbcraft:tiramisu_block" },
+            { "model": "cbcraft:tiramisu_block", "y": 90 },
+            { "model": "cbcraft:tiramisu_block", "y": 180 },
+            { "model": "cbcraft:tiramisu_block", "y": 270 }
+        ]
+    }
+}

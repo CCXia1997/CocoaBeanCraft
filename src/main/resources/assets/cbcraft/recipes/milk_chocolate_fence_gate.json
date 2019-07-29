@@ -1,0 +1,19 @@
+{
+  "type": "forge:ore_shaped",
+  "pattern": [
+    "-#-",
+    "-#-"
+  ],
+  "key": {
+    "#": {
+      "item": "cbcraft:milk_chocolate_brick"
+    },
+    "-": {
+      "item": "cbcraft:milk_chocolate"
+    }
+  },
+  "result": {
+    "item": "cbcraft:milk_chocolate_fence_gate",
+	"count":3
+  }
+}

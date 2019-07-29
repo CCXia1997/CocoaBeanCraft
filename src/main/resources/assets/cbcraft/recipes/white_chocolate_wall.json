@@ -1,0 +1,16 @@
+{
+  "type": "forge:ore_shaped",
+  "pattern": [
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "cbcraft:white_chocolate_brick"
+    }
+  },
+  "result": {
+    "item": "cbcraft:white_chocolate_wall",
+	"count":6
+  }
+}

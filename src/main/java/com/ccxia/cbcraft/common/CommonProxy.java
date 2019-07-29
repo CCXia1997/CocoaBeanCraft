@@ -1,6 +1,7 @@
 package com.ccxia.cbcraft.common;
 
 import com.ccxia.cbcraft.inventory.GuiLoader;
+import com.ccxia.cbcraft.item.OreDictLoader;
 import com.ccxia.cbcraft.tileentity.TileEntityLoader;
 
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;

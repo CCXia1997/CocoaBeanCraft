@@ -1,0 +1,17 @@
+{
+  "type": "forge:ore_shaped",
+  "pattern": [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "cbcraft:milk_chocolate_block"
+    }
+  },
+  "result": {
+    "item": "cbcraft:milk_chocolate_stairs",
+	"count":4
+  }
+}

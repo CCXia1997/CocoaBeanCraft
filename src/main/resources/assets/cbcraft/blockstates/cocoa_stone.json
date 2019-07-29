@@ -1,0 +1,10 @@
+{
+    "variants": {
+        "normal": [
+            { "model": "cbcraft:cocoa_stone" },
+            { "model": "cbcraft:cocoa_stone_mirrored" },
+            { "model": "cbcraft:cocoa_stone", "y": 180 },
+            { "model": "cbcraft:cocoa_stone_mirrored", "y": 180 }
+        ]
+    }
+}
