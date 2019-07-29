@@ -21,8 +21,13 @@ item.cbcraft.milkChocolate.name=Milk Chocolate
 item.cbcraft.whiteChocolate.name=White Chocolate
 item.cbcraft.cocoaCream.name=Cocoa Cream
 item.cbcraft.hotChocolate.name=Hot Chocolate
+<<<<<<< HEAD
 item.cbcraft.pressingMachineCore.name=Pressing Machine Core
 item.cbcraft.purpleGem.name=Purple Gem
+=======
+item.cbcraft.pressingMachineCore=Pressing Machine Core
+item.cbcraft.purpleGem=Purple Gem
+>>>>>>> origin/master
 item.cbcraft.packedMilk.name=Packed Milk
 item.cbcraft.hotChocolate.name=Chocolate Milk
 

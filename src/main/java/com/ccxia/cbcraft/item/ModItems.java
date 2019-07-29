@@ -5,6 +5,7 @@ import com.ccxia.cbcraft.CbCraft;
 import net.minecraft.item.Item;
 
 public class ModItems {
+<<<<<<< HEAD
 	public static final Item FLOUR;// 闈㈢矇
 	public static final Item DOUGH;// 闈㈠洟
 	public static final Item EGG_MILK_DOUGH;// 铔嬪ザ闈㈠洟
@@ -30,6 +31,34 @@ public class ModItems {
 	public static final Item PURPLE_GEM;// 绱疂鐭�
 	public static final Item PACKED_MILK;// 鐩掕鐗涘ザ
 
+=======
+	public static final Item FLOUR;// 面粉
+	public static final Item DOUGH;// 面团
+	public static final Item EGG_MILK_DOUGH;// 蛋奶面团
+	public static final Item COOKED_COCOA_BEANS;// 熟可可豆
+	public static final Item COCOA_PASTE;// 可可膏
+	public static final Item SKIM_MILK;// 脱脂奶
+	public static final Item CHEESE;// 奶酪
+	public static final Item YOGURT;// 酸奶
+	public static final Item COCOA_BREAD;// 可可面包
+	public static final Item CAKE_BASE;// 蛋糕基底
+	public static final Item COCOA_CAKE_BASE;// 可可蛋糕基底
+	public static final Item COOKIE_DOUGH;// 曲奇面团
+	public static final Item COCOA_POWDER;// 可可粉
+	public static final Item COCOA_LIQUOR;// 可可液块
+	public static final Item COCOA_BUTTER;// 可可脂
+	public static final Item CREAM;// 奶油
+	public static final Item DARK_CHOCOLATE;// 黑巧克力
+	public static final Item MILK_CHOCOLATE;// 棕巧克力
+	public static final Item WHITE_CHOCOLATE;// 白巧克力
+	public static final Item COCOA_CREAM;// 可可奶油
+	public static final Item HOT_CHOCOLATE;// 热可可
+	public static final Item PRESSING_MACHINE_CORE;//压合机核心
+	public static final Item PURPLE_GEM;//紫宝石
+	public static final Item HOT_CHOCOLATE;// 巧克力牛奶
+	public static final Item PACKED_MILK;// 盒装牛奶
+  
+>>>>>>> origin/master
 	static {
 		FLOUR = ItemLoader.getByName("item." + CbCraft.MODID + ".flour");
 		DOUGH = ItemLoader.getByName("item." + CbCraft.MODID + ".dough");
