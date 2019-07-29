@@ -1,6 +1,6 @@
 {
     "parent": "item/generated",
     "textures": {
-        "layer0": "cbcraft:items/hot_chocolate"
+        "layer0": "cbcraft:items/packed_milk"
     }
 }

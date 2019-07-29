@@ -23,6 +23,8 @@ item.cbcraft.cocoaCream.name=Cocoa Cream
 item.cbcraft.hotChocolate.name=Hot Chocolate
 item.cbcraft.pressingMachineCore=Pressing Machine Core
 item.cbcraft.purpleGem=Purple Gem
+item.cbcraft.packedMilk.name=Packed Milk
+item.cbcraft.hotChocolate.name=Chocolate Milk
 
 tile.cbcraft.fermentationBaker.name=Fermentation Baking Machine
 tile.cbcraft.fermentationBakerOn.name=Burning Fermentation Baking Machine

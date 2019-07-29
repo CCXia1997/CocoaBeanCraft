@@ -10,6 +10,7 @@
     }
   },
   "result": {
-    "item": "cbcraft:milk_chocolate_block"
+    "item": "cbcraft:milk_chocolate_block",
+	"count":4
   }
 }

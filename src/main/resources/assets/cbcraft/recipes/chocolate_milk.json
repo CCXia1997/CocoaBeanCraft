@@ -5,11 +5,11 @@
       "item": "cbcraft:cocoa_powder"
     },
     {
-      "item": "minecraft:milk_bucket"
+      "item": "cbcraft:packed_milk"
     }
   ],
   "result": {
-    "item": "cbcraft:hot_chocolate",
+    "item": "cbcraft:chocolate_milk",
     "count": 1
   }
 }

@@ -10,6 +10,7 @@
     }
   },
   "result": {
-    "item": "cbcraft:white_chocolate_block"
+    "item": "cbcraft:white_chocolate_block",
+	"count":4
   }
 }

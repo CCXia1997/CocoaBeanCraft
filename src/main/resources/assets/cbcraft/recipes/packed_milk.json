@@ -1,0 +1,20 @@
+{
+  "type": "forge:ore_shaped",
+  "pattern": [
+    " # ",
+    "#X#",
+    " # "
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:paper"
+    },
+    "X": {
+      "item": "minecraft:milk_bucket"
+    }
+  },
+  "result": {
+    "item": "cbcraft:packed_milk",
+	"count":8
+  }
+}
