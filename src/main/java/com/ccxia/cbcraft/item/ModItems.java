@@ -5,28 +5,32 @@ import com.ccxia.cbcraft.CbCraft;
 import net.minecraft.item.Item;
 
 public class ModItems {
-	public static final Item FLOUR;// Ãæ·Û
-	public static final Item DOUGH;// ÃæÍÅ
-	public static final Item EGG_MILK_DOUGH;// µ°ÄÌÃæÍÅ
-	public static final Item COOKED_COCOA_BEANS;// Êì¿É¿É¶¹
-	public static final Item COCOA_PASTE;// ¿É¿É¸à
-	public static final Item SKIM_MILK;// ÍÑÖ¬ÄÌ
-	public static final Item CHEESE;// ÄÌÀÒ
-	public static final Item YOGURT;// ËáÄÌ
-	public static final Item COCOA_BREAD;// ¿É¿ÉÃæ°ü
-	public static final Item CAKE_BASE;// µ°¸â»ùµ×
-	public static final Item COCOA_CAKE_BASE;// ¿É¿Éµ°¸â»ùµ×
-	public static final Item COOKIE_DOUGH;// ÇúÆæÃæÍÅ
-	public static final Item COCOA_POWDER;// ¿É¿É·Û
-	public static final Item COCOA_LIQUOR;// ¿É¿ÉÒº¿é
-	public static final Item COCOA_BUTTER;// ¿É¿ÉÖ¬
-	public static final Item CREAM;// ÄÌÓÍ
-	public static final Item DARK_CHOCOLATE;// ºÚÇÉ¿ËÁ¦
-	public static final Item MILK_CHOCOLATE;// ×ØÇÉ¿ËÁ¦
-	public static final Item WHITE_CHOCOLATE;// °×ÇÉ¿ËÁ¦
-	public static final Item COCOA_CREAM;// ¿É¿ÉÄÌÓÍ
-	public static final Item HOT_CHOCOLATE;// ÇÉ¿ËÁ¦Å£ÄÌ
-	public static final Item PACKED_MILK;// ºĞ×°Å£ÄÌ
+	public static final Item FLOUR;// é¢ç²‰
+	public static final Item DOUGH;// é¢å›¢
+	public static final Item EGG_MILK_DOUGH;// è›‹å¥¶é¢å›¢
+	public static final Item COOKED_COCOA_BEANS;// ç†Ÿå¯å¯è±†
+	public static final Item COCOA_PASTE;// å¯å¯è†
+	public static final Item SKIM_MILK;// è„±è„‚å¥¶
+	public static final Item CHEESE;// å¥¶é…ª
+	public static final Item YOGURT;// é…¸å¥¶
+	public static final Item COCOA_BREAD;// å¯å¯é¢åŒ…
+	public static final Item CAKE_BASE;// è›‹ç³•åŸºåº•
+	public static final Item COCOA_CAKE_BASE;// å¯å¯è›‹ç³•åŸºåº•
+	public static final Item COOKIE_DOUGH;// æ›²å¥‡é¢å›¢
+	public static final Item COCOA_POWDER;// å¯å¯ç²‰
+	public static final Item COCOA_LIQUOR;// å¯å¯æ¶²å—
+	public static final Item COCOA_BUTTER;// å¯å¯è„‚
+	public static final Item CREAM;// å¥¶æ²¹
+	public static final Item DARK_CHOCOLATE;// é»‘å·§å…‹åŠ›
+	public static final Item MILK_CHOCOLATE;// æ£•å·§å…‹åŠ›
+	public static final Item WHITE_CHOCOLATE;// ç™½å·§å…‹åŠ›
+	public static final Item COCOA_CREAM;// å¯å¯å¥¶æ²¹
+	public static final Item HOT_CHOCOLATE;// çƒ­å¯å¯
+	public static final Item PRESSING_MACHINE_CORE;//å‹åˆæœºæ ¸å¿ƒ
+	public static final Item PURPLE_GEM;//ç´«å®çŸ³
+	public static final Item HOT_CHOCOLATE;// å·§å…‹åŠ›ç‰›å¥¶
+	public static final Item PACKED_MILK;// ç›’è£…ç‰›å¥¶
+  
 	static {
 		FLOUR = ItemLoader.getByName("item." + CbCraft.MODID + ".flour");
 		DOUGH = ItemLoader.getByName("item." + CbCraft.MODID + ".dough");
@@ -49,6 +53,8 @@ public class ModItems {
 		WHITE_CHOCOLATE = ItemLoader.getByName("item." + CbCraft.MODID + ".whiteChocolate");
 		COCOA_CREAM = ItemLoader.getByName("item." + CbCraft.MODID + ".cocoaCream");
 		HOT_CHOCOLATE = ItemLoader.getByName("item." + CbCraft.MODID + ".hotChocolate");
+		PRESSING_MACHINE_CORE = ItemLoader.getByName("item." + CbCraft.MODID + ".pressingMachineCore");
+		PURPLE_GEM = ItemLoader.getByName("item." + CbCraft.MODID + ".purpleGem");
 		PACKED_MILK = ItemLoader.getByName("item." + CbCraft.MODID + ".packedMilk");
 	}
 

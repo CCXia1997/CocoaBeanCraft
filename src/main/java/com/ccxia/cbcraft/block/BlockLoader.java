@@ -2,7 +2,7 @@ package com.ccxia.cbcraft.block;
 
 import com.ccxia.cbcraft.CbCraft;
 import com.ccxia.cbcraft.creativetab.CreativeTabsCbCraft;
-
+import com.ccxia.cbcraft.item.OreDictLoader;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockSlab;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
@@ -17,25 +17,80 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 @Mod.EventBusSubscriber(modid = CbCraft.MODID)
 public class BlockLoader {
-	public static Block[] blocks = { new BlockFermentationBaker(false), new BlockFermentationBaker(true),
-			new BlockCrushingGrindingMachine(), new BlockSeparator(false), new BlockSeparator(true),
-			new BlockDarkChocolate(), new BlockMilkChocolate(), new BlockWhiteChocolate(), new BlockChocolateCake(),
-			new BlockDarkMilk(), new BlockMilkWhite(), new BlockWhiteDark(), new BlockDarkCarved(),
-			new BlockDarkPillar(), new BlockDarkSmooth(), new BlockMilkCarved(), new BlockMilkPillar(),
-			new BlockMilkSmooth(), new BlockWhiteCarved(), new BlockWhitePillar(), new BlockWhiteSmooth(),
+	private static Block darkBrick = new BlockDarkBrick();
+	private static Block dark = new BlockDarkChocolate();
+	private static Block milkBrick = new BlockMilkBrick();
+	private static Block milk = new BlockMilkChocolate();
+	private static Block whiteBrick = new BlockWhiteBrick();
+	private static Block white = new BlockWhiteChocolate();
+
+	public static Block[] blocks = {
+			new BlockFermentationBaker(false),
+			new BlockFermentationBaker(true),
+			new BlockCrushingGrindingMachine(),
+			new BlockSeparator(false),
+			new BlockSeparator(true),
+			dark,
+			milk,
+			white,
+			new BlockChocolateCake(),
+			new BlockDarkMilk(),
+			new BlockMilkWhite(),
+			new BlockWhiteDark(),
+			new BlockDarkCarved(),
+			new BlockDarkPillar(),
+			new BlockDarkSmooth(),
+			new BlockMilkCarved(),
+			new BlockMilkPillar(),
+			new BlockMilkSmooth(),
+			new BlockWhiteCarved(),
+			new BlockWhitePillar(),
+			new BlockWhiteSmooth(),
 			new BlockAutoCrushing(),
 			(new BlockDarkChocolateSlab.Half().setIndex(0)).setUnlocalizedName(CbCraft.MODID + ".darkChocolateSlab")
-					.setRegistryName("dark_chocolate_slab").setCreativeTab(CreativeTabsCbCraft.tabCbCraft),
+				.setRegistryName("dark_chocolate_slab").setCreativeTab(CreativeTabsCbCraft.tabCbCraft),
 			(new BlockDarkChocolateSlab.Double().setIndex(1)).setUnlocalizedName(CbCraft.MODID + ".darkChocolateSlab")
-					.setRegistryName("dark_chocolate_double_slab"),
+				.setRegistryName("dark_chocolate_double_slab"),
 			(new BlockDarkChocolateSlab.Half().setIndex(2)).setUnlocalizedName(CbCraft.MODID + ".milkChocolateSlab")
-					.setRegistryName("milk_chocolate_slab").setCreativeTab(CreativeTabsCbCraft.tabCbCraft),
+				.setRegistryName("milk_chocolate_slab").setCreativeTab(CreativeTabsCbCraft.tabCbCraft),
 			(new BlockDarkChocolateSlab.Double().setIndex(3)).setUnlocalizedName(CbCraft.MODID + ".milkChocolateSlab")
-					.setRegistryName("milk_chocolate_double_slab"),
+				.setRegistryName("milk_chocolate_double_slab"),
 			(new BlockDarkChocolateSlab.Half().setIndex(4)).setUnlocalizedName(CbCraft.MODID + ".whiteChocolateSlab")
-					.setRegistryName("white_chocolate_slab").setCreativeTab(CreativeTabsCbCraft.tabCbCraft),
+				.setRegistryName("white_chocolate_slab").setCreativeTab(CreativeTabsCbCraft.tabCbCraft),
 			(new BlockDarkChocolateSlab.Double().setIndex(5)).setUnlocalizedName(CbCraft.MODID + ".whiteChocolateSlab")
-					.setRegistryName("white_chocolate_double_slab") };
+				.setRegistryName("white_chocolate_double_slab"),
+			new BlockInjectionTable(),
+			new BlockInjectedDark(),
+			new BlockInjectedWhite(),
+			new BlockInjectedMilk(),
+			darkBrick,
+			new BlockChocolateWall(darkBrick).setUnlocalizedName(CbCraft.MODID + ".darkChocolateWall")
+					.setRegistryName("dark_chocolate_wall"),
+			new BlockChocolateStairs(dark.getDefaultState()).setUnlocalizedName(CbCraft.MODID + ".darkChocolateStairs")
+					.setRegistryName("dark_chocolate_stairs"),
+			new BlockChocolateFence(darkBrick).setUnlocalizedName(CbCraft.MODID + ".darkChocolateFence")
+					.setRegistryName("dark_chocolate_fence"),
+			new BlockChocolateFenceGate(darkBrick).setUnlocalizedName(CbCraft.MODID + ".darkChocolateFenceGate")
+					.setRegistryName("dark_chocolate_fence_gate"),
+			milkBrick,
+			new BlockChocolateWall(milkBrick).setUnlocalizedName(CbCraft.MODID + ".milkChocolateWall")
+					.setRegistryName("milk_chocolate_wall"),
+			new BlockChocolateStairs(milk.getDefaultState()).setUnlocalizedName(CbCraft.MODID + ".milkChocolateStairs")
+					.setRegistryName("milk_chocolate_stairs"),
+			new BlockChocolateFence(milkBrick).setUnlocalizedName(CbCraft.MODID + ".milkChocolateFence")
+					.setRegistryName("milk_chocolate_fence"),
+			new BlockChocolateFenceGate(milkBrick).setUnlocalizedName(CbCraft.MODID + ".milkChocolateFenceGate")
+					.setRegistryName("milk_chocolate_fence_gate"),
+			whiteBrick,
+			new BlockChocolateWall(whiteBrick).setUnlocalizedName(CbCraft.MODID + ".whiteChocolateWall")
+					.setRegistryName("white_chocolate_wall"),
+			new BlockChocolateStairs(white.getDefaultState()).setUnlocalizedName(CbCraft.MODID + ".whiteChocolateStairs")
+					.setRegistryName("white_chocolate_stairs"),
+			new BlockChocolateFence(whiteBrick).setUnlocalizedName(CbCraft.MODID + ".whiteChocolateFence")
+					.setRegistryName("white_chocolate_fence"),
+			new BlockChocolateFenceGate(whiteBrick).setUnlocalizedName(CbCraft.MODID + ".whiteChocolateFenceGate")
+					.setRegistryName("white_chocolate_fence_gate"),
+		};
 
 	@SubscribeEvent
 	public static void registerBlocks(RegistryEvent.Register<Block> event) {
@@ -79,6 +134,8 @@ public class BlockLoader {
 					new ModelResourceLocation(block.getRegistryName(), "inventory"));
 			event.getRegistry().register(itemBlock);
 		}
+
+		new OreDictLoader();
 	}
 
 }

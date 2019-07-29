@@ -13,6 +13,7 @@ public class GuiLoader implements IGuiHandler {
 	public static final int GUI_FERMENTATIONBAKER = 1;
 	public static final int GUI_CRUSHINGGRINDINGMACHINE = 2;
 	public static final int GUI_SEPARATOR = 3;
+	public static final int GUI_INJECTION_TABLE = 4;
 
 	public GuiLoader() {
 		NetworkRegistry.INSTANCE.registerGuiHandler(CbCraft.instance, this);
@@ -27,6 +28,8 @@ public class GuiLoader implements IGuiHandler {
 			return new ContainerCrushingGrindingMachine(player.inventory, world, new BlockPos(x, y, z));
 		case GUI_SEPARATOR:
 			return new ContainerSeparator(player, world.getTileEntity(new BlockPos(x, y, z)));
+		case GUI_INJECTION_TABLE:
+			return new ContainerInjectionTable(player.inventory, world, new BlockPos(x, y, z), player);
 		default:
 			return null;
 		}
@@ -43,6 +46,8 @@ public class GuiLoader implements IGuiHandler {
 					new ContainerCrushingGrindingMachine(player.inventory, world, new BlockPos(x, y, z)));
 		case GUI_SEPARATOR:
 			return new GuiSeparator(new ContainerSeparator(player, world.getTileEntity(new BlockPos(x, y, z))));
+		case GUI_INJECTION_TABLE:
+			return new GuiInjectionTable(new ContainerInjectionTable(player.inventory, world, new BlockPos(x, y, z), player));
 		default:
 			return null;
 		}

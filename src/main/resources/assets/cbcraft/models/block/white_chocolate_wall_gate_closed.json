@@ -1,0 +1,6 @@
+{
+    "parent": "block/wall_gate_closed",
+    "textures": {
+        "texture": "cbcraft:blocks/white_chocolate_brick"
+    }
+}
