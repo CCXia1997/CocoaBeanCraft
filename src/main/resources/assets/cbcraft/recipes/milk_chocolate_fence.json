@@ -13,6 +13,7 @@
     }
   },
   "result": {
-    "item": "cbcraft:milk_chocolate_fence"
+    "item": "cbcraft:milk_chocolate_fence",
+	"count":6
   }
 }

@@ -11,6 +11,7 @@
     }
   },
   "result": {
-    "item": "cbcraft:white_chocolate_stairs"
+    "item": "cbcraft:white_chocolate_stairs",
+	"count":4
   }
 }

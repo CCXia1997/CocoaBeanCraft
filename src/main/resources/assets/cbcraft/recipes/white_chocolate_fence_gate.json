@@ -13,6 +13,7 @@
     }
   },
   "result": {
-    "item": "cbcraft:white_chocolate_fence_gate"
+    "item": "cbcraft:white_chocolate_fence_gate",
+	"count":3
   }
 }

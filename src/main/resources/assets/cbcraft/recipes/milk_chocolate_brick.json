@@ -11,6 +11,7 @@
     }
   },
   "result": {
-    "item": "cbcraft:milk_chocolate_brick"
+    "item": "cbcraft:milk_chocolate_brick",
+	"count":16
   }
 }

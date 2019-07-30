@@ -13,6 +13,7 @@
     }
   },
   "result": {
-    "item": "cbcraft:dark_chocolate_fence"
+    "item": "cbcraft:dark_chocolate_fence",
+	"count":6
   }
 }

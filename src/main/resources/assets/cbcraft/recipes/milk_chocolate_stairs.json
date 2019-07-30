@@ -11,6 +11,7 @@
     }
   },
   "result": {
-    "item": "cbcraft:milk_chocolate_stairs"
+    "item": "cbcraft:milk_chocolate_stairs",
+	"count":4
   }
 }

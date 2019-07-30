@@ -6,8 +6,9 @@ import net.minecraft.block.state.IBlockState;
 
 public class BlockChocolateStairs extends BlockStairs {
 
-    protected BlockChocolateStairs(IBlockState modelState) {
-        super(modelState);
-        this.setCreativeTab(CreativeTabsCbCraft.tabCbCraft);
-    }
+	protected BlockChocolateStairs(IBlockState modelState) {
+		super(modelState);
+		this.useNeighborBrightness = true;
+		this.setCreativeTab(CreativeTabsCbCraft.tabCbCraft);
+	}
 }

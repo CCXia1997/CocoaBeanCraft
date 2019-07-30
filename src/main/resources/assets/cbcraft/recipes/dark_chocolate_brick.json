@@ -11,6 +11,7 @@
     }
   },
   "result": {
-    "item": "cbcraft:dark_chocolate_brick"
+    "item": "cbcraft:dark_chocolate_brick",
+	"count":16
   }
 }
