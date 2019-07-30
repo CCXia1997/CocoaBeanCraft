@@ -11,6 +11,11 @@
     }
   },
   "result": {
+<<<<<<< HEAD
+    "item": "cbcraft:milk_chocolate_stairs",
+	"count":4
+=======
     "item": "cbcraft:milk_chocolate_stairs"
+>>>>>>> origin/master
   }
 }

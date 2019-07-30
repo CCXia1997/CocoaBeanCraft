@@ -10,6 +10,11 @@
     }
   },
   "result": {
+<<<<<<< HEAD
+    "item": "cbcraft:white_chocolate_wall",
+	"count":6
+=======
     "item": "cbcraft:white_chocolate_wall"
+>>>>>>> origin/master
   }
 }

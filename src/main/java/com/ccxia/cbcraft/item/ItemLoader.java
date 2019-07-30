@@ -11,6 +11,8 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 @Mod.EventBusSubscriber(modid = CbCraft.MODID)
 public class ItemLoader {
+<<<<<<< HEAD
+=======
   
 	public static Item[] items = { 
 			new ItemFlour(), 
@@ -37,13 +39,14 @@ public class ItemLoader {
 			new ItemPressingMachineCore(),
 			new ItemPurpleGem()
 	};
+>>>>>>> origin/master
 
 	public static Item[] items = { new ItemFlour(), new ItemDough(), new ItemEggMilkDough(), new ItemCookedCocoa(),
 			new ItemCocoaPaste(), new ItemSkimMilk(), new ItemCheese(), new ItemYogurt(), new ItemCocoaBread(),
 			new ItemCakeBase(), new ItemCocoaCakeBase(), new ItemCookieDough(), new ItemCocoaPowder(),
 			new ItemCocoaLiquor(), new ItemCocoaButter(), new ItemCream(), new ItemDarkChocolate(),
 			new ItemMilkChocolate(), new ItemWhiteChocolate(), new ItemCocoaCream(), new ItemHotChocolate(),
-			new ItemPackedMilk() };
+			new ItemPressingMachineCore(), new ItemPurpleGem(), new ItemPackedMilk() };
 
 
 	public static Item getByName(String name) {
