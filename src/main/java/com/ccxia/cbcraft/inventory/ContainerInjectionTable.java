@@ -49,14 +49,16 @@ public class ContainerInjectionTable extends Container {
 
             @Override
             public void setInventorySlotContents(int index, ItemStack stack) {
-                try {
-                    super.setInventorySlotContents(index, stack);
-                } catch (IndexOutOfBoundsException e) {
-                    CbCraft.LOGGER.error("IOB: " + e);
-                }
+                super.setInventorySlotContents(index, stack);
             }
         };
-        this.outputSlot = new InventoryCraftResult();
+        this.outputSlot = new InventoryCraftResult(){
+            @Override
+            public void markDirty() {
+                super.markDirty();
+                ContainerInjectionTable.this.onCraftMatrixChanged(this);
+            }
+        };
 
         /** index都设成0了，设成0,1,2好像会抛出IndexOutOfBounds **/
         this.addSlotToContainer(new Slot(this.powderSlot, 0, 80, 53) {
@@ -84,7 +86,7 @@ public class ContainerInjectionTable extends Container {
                     thePlayer.addExperienceLevel(-ContainerInjectionTable.this.cost);
                 }
                 ContainerInjectionTable.this.powderSlot.decrStackSize(0, cost);
-                ContainerInjectionTable.this.inputSlot.decrStackSize(0, cost);
+                ContainerInjectionTable.this.inputSlot.decrStackSize(0, 1);
                 ContainerInjectionTable.this.world.playSound(
                         (EntityPlayer)null, ContainerInjectionTable.this.blockPos, SoundEvents.BLOCK_ENCHANTMENT_TABLE_USE,
                         SoundCategory.BLOCKS, 1.0F, ContainerInjectionTable.this.world.rand.nextFloat() * 0.1F + 1.7F);

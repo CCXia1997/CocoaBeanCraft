@@ -21,13 +21,8 @@ item.cbcraft.milkChocolate.name=牛奶巧克力
 item.cbcraft.whiteChocolate.name=白巧克力
 item.cbcraft.cocoaCream.name=可可奶油
 item.cbcraft.hotChocolate.name=热可可
-<<<<<<< HEAD
 item.cbcraft.pressingMachineCore.name=压合机核心
 item.cbcraft.purpleGem.name=紫宝石
-=======
-item.cbcraft.pressingMachineCore=压合机核心
-item.cbcraft.purpleGem=紫宝石
->>>>>>> origin/master
 item.cbcraft.packedMilk.name=盒装牛奶
 item.cbcraft.hotChocolate.name=巧克力牛奶
 

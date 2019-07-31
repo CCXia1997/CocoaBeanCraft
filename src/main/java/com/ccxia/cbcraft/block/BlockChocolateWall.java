@@ -4,7 +4,6 @@ import com.ccxia.cbcraft.creativetab.CreativeTabsCbCraft;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockWall;
 import net.minecraft.block.SoundType;
-<<<<<<< HEAD
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemStack;
@@ -30,23 +29,4 @@ public class BlockChocolateWall extends BlockWall {
 	public boolean canPlaceTorchOnTop(IBlockState state, IBlockAccess world, BlockPos pos) {
 		return true;
 	}
-=======
-import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.item.ItemStack;
-import net.minecraft.util.NonNullList;
-
-public class BlockChocolateWall extends BlockWall {
-
-    public BlockChocolateWall(Block modelBlock) {
-        super(modelBlock);
-        this.setCreativeTab(CreativeTabsCbCraft.tabCbCraft);
-        this.setHardness(1.0F);
-        this.setSoundType(SoundType.STONE);
-    }
-
-    @Override
-    public void getSubBlocks(CreativeTabs itemIn, NonNullList<ItemStack> items) {
-        items.add(new ItemStack(this));
-    }
->>>>>>> origin/master
 }
