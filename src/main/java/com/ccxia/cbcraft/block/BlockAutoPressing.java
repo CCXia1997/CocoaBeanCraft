@@ -5,7 +5,7 @@ import java.util.Random;
 import com.ccxia.cbcraft.CbCraft;
 import com.ccxia.cbcraft.creativetab.CreativeTabsCbCraft;
 import com.ccxia.cbcraft.inventory.GuiLoader;
-import com.ccxia.cbcraft.tileentity.TileEntityAutoCrushing;
+import com.ccxia.cbcraft.tileentity.TileEntityAutoPressing;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockContainer;
@@ -28,13 +28,14 @@ import net.minecraftforge.items.CapabilityItemHandler;
 import net.minecraftforge.items.IItemHandler;
 import net.minecraftforge.items.IItemHandlerModifiable;
 
-public class BlockAutoCrushing extends BlockContainer {
+public class BlockAutoPressing extends BlockContainer {
+
 	private static boolean keepInventory;
 
-	public BlockAutoCrushing() {
+	public BlockAutoPressing() {
 		super(Material.ROCK);
-		this.setUnlocalizedName(CbCraft.MODID + ".autoCrushingGrindingMachine");
-		this.setRegistryName("auto_crushing_grinding_machine");
+		this.setUnlocalizedName(CbCraft.MODID + ".autoPressingMachine");
+		this.setRegistryName("auto_pressing_machine");
 		this.setCreativeTab(CreativeTabsCbCraft.tabCbCraft);
 		this.setHardness(3.5F);
 		this.setSoundType(SoundType.STONE);
@@ -49,11 +50,6 @@ public class BlockAutoCrushing extends BlockContainer {
 	}
 
 	@Override
-	public TileEntity createNewTileEntity(World worldIn, int meta) {
-		return new TileEntityAutoCrushing();
-	}
-
-	@Override
 	public EnumBlockRenderType getRenderType(IBlockState state) {
 		return EnumBlockRenderType.MODEL;
 	}
@@ -63,8 +59,13 @@ public class BlockAutoCrushing extends BlockContainer {
 		return BlockRenderLayer.CUTOUT;
 	}
 
+	@Override
+	public TileEntity createNewTileEntity(World worldIn, int meta) {
+		return new TileEntityAutoPressing();
+	}
+
 	public Item getItemDropped(IBlockState state, Random rand, int fortune) {
-		return Item.getItemFromBlock(ModBlocks.AUTO_CRUSHING_GRINDING_MACHINE);
+		return Item.getItemFromBlock(ModBlocks.AUTO_PRESSING_MACHINE);
 	}
 
 	@Override
@@ -73,14 +74,14 @@ public class BlockAutoCrushing extends BlockContainer {
 		if (!playerIn.capabilities.allowEdit) {
 			return false;
 		} else if (!worldIn.isRemote) {
-			int id = GuiLoader.GUI_AUTO_CRUSHING;
+			int id = GuiLoader.GUI_AUTO_PRESSING;
 			playerIn.openGui(CbCraft.instance, id, worldIn, pos.getX(), pos.getY(), pos.getZ());
 		}
 		return true;
 	}
 
 	public void breakBlock(World worldIn, BlockPos pos, IBlockState state) {
-		TileEntityAutoCrushing te = (TileEntityAutoCrushing) worldIn.getTileEntity(pos);
+		TileEntityAutoPressing te = (TileEntityAutoPressing) worldIn.getTileEntity(pos);
 		IItemHandler up = te.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, EnumFacing.UP);
 		IItemHandler side = te.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, EnumFacing.NORTH);
 		IItemHandler down = te.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, EnumFacing.DOWN);
@@ -105,4 +106,5 @@ public class BlockAutoCrushing extends BlockContainer {
 			}
 		}
 	}
+
 }

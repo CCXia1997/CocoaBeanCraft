@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "AAA",
+    "BCB",
+	"DED"
+  ],
+  "key": {
+    "A": {
+      "item": "minecraft:glass_pane"
+    },
+	"B": {
+      "item": "minecraft:piston"
+    },
+	"C": {
+      "item": "cbcraft:pressing_machine_core"
+    },
+	"D":{
+	  "item":"minecraft:stone",
+	  "data":0
+	},
+	"E": {
+      "item": "minecraft:redstone_block"
+    }
+  },
+  "result": {
+    "item": "cbcraft:auto_pressing_machine"
+  }
+}

@@ -16,9 +16,11 @@ public class TileEntityLoader {
 		registerTileEntity(TileEntitySeparator.class, "Separator");
 		registerTileEntity(TileEntityAutoCrushing.class, "AutoCrushing");
 		registerTileEntity(TileEntityInjectionTable.class, "InjectionTable");
+		registerTileEntity(TileEntityAutoPressing.class, "AutoPressing");
 
-		//渲染与TileEntity绑定
-		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityInjectionTable.class, new TileEntityInjectionTableRenderer());
+		// 渲染与TileEntity绑定
+		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityInjectionTable.class,
+				new TileEntityInjectionTableRenderer());
 	}
 
 	public void registerTileEntity(Class<? extends TileEntity> tileEntityClass, String id) {

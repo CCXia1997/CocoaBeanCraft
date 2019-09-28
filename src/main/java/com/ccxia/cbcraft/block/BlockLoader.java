@@ -24,45 +24,25 @@ public class BlockLoader {
 	private static Block whiteBrick = new BlockWhiteBrick();
 	private static Block white = new BlockWhiteChocolate();
 
-	public static Block[] blocks = {
-			new BlockFermentationBaker(false),
-			new BlockFermentationBaker(true),
-			new BlockCrushingGrindingMachine(),
-			new BlockSeparator(false),
-			new BlockSeparator(true),
-			dark,
-			milk,
-			white,
-			new BlockChocolateCake(),
-			new BlockDarkMilk(),
-			new BlockMilkWhite(),
-			new BlockWhiteDark(),
-			new BlockDarkCarved(),
-			new BlockDarkPillar(),
-			new BlockDarkSmooth(),
-			new BlockMilkCarved(),
-			new BlockMilkPillar(),
-			new BlockMilkSmooth(),
-			new BlockWhiteCarved(),
-			new BlockWhitePillar(),
-			new BlockWhiteSmooth(),
-			new BlockAutoCrushing(),
+	public static Block[] blocks = { new BlockFermentationBaker(false), new BlockFermentationBaker(true),
+			new BlockCrushingGrindingMachine(), new BlockSeparator(false), new BlockSeparator(true), dark, milk, white,
+			new BlockChocolateCake(), new BlockDarkMilk(), new BlockMilkWhite(), new BlockWhiteDark(),
+			new BlockDarkCarved(), new BlockDarkPillar(), new BlockDarkSmooth(), new BlockMilkCarved(),
+			new BlockMilkPillar(), new BlockMilkSmooth(), new BlockWhiteCarved(), new BlockWhitePillar(),
+			new BlockWhiteSmooth(), new BlockAutoCrushing(),
 			(new BlockDarkChocolateSlab.Half().setIndex(0)).setUnlocalizedName(CbCraft.MODID + ".darkChocolateSlab")
-				.setRegistryName("dark_chocolate_slab").setCreativeTab(CreativeTabsCbCraft.tabCbCraft),
+					.setRegistryName("dark_chocolate_slab").setCreativeTab(CreativeTabsCbCraft.tabCbCraft),
 			(new BlockDarkChocolateSlab.Double().setIndex(1)).setUnlocalizedName(CbCraft.MODID + ".darkChocolateSlab")
-				.setRegistryName("dark_chocolate_double_slab"),
+					.setRegistryName("dark_chocolate_double_slab"),
 			(new BlockDarkChocolateSlab.Half().setIndex(2)).setUnlocalizedName(CbCraft.MODID + ".milkChocolateSlab")
-				.setRegistryName("milk_chocolate_slab").setCreativeTab(CreativeTabsCbCraft.tabCbCraft),
+					.setRegistryName("milk_chocolate_slab").setCreativeTab(CreativeTabsCbCraft.tabCbCraft),
 			(new BlockDarkChocolateSlab.Double().setIndex(3)).setUnlocalizedName(CbCraft.MODID + ".milkChocolateSlab")
-				.setRegistryName("milk_chocolate_double_slab"),
+					.setRegistryName("milk_chocolate_double_slab"),
 			(new BlockDarkChocolateSlab.Half().setIndex(4)).setUnlocalizedName(CbCraft.MODID + ".whiteChocolateSlab")
-				.setRegistryName("white_chocolate_slab").setCreativeTab(CreativeTabsCbCraft.tabCbCraft),
+					.setRegistryName("white_chocolate_slab").setCreativeTab(CreativeTabsCbCraft.tabCbCraft),
 			(new BlockDarkChocolateSlab.Double().setIndex(5)).setUnlocalizedName(CbCraft.MODID + ".whiteChocolateSlab")
-				.setRegistryName("white_chocolate_double_slab"),
-			new BlockInjectionTable(),
-			new BlockInjectedDark(),
-			new BlockInjectedWhite(),
-			new BlockInjectedMilk(),
+					.setRegistryName("white_chocolate_double_slab"),
+			new BlockInjectionTable(), new BlockInjectedDark(), new BlockInjectedWhite(), new BlockInjectedMilk(),
 			darkBrick,
 			new BlockChocolateWall(darkBrick).setUnlocalizedName(CbCraft.MODID + ".darkChocolateWall")
 					.setRegistryName("dark_chocolate_wall"),
@@ -84,13 +64,14 @@ public class BlockLoader {
 			whiteBrick,
 			new BlockChocolateWall(whiteBrick).setUnlocalizedName(CbCraft.MODID + ".whiteChocolateWall")
 					.setRegistryName("white_chocolate_wall"),
-			new BlockChocolateStairs(white.getDefaultState()).setUnlocalizedName(CbCraft.MODID + ".whiteChocolateStairs")
+			new BlockChocolateStairs(white.getDefaultState())
+					.setUnlocalizedName(CbCraft.MODID + ".whiteChocolateStairs")
 					.setRegistryName("white_chocolate_stairs"),
 			new BlockChocolateFence(whiteBrick).setUnlocalizedName(CbCraft.MODID + ".whiteChocolateFence")
 					.setRegistryName("white_chocolate_fence"),
 			new BlockChocolateFenceGate(whiteBrick).setUnlocalizedName(CbCraft.MODID + ".whiteChocolateFenceGate")
 					.setRegistryName("white_chocolate_fence_gate"),
-		};
+			new BlockAutoPressing() };
 
 	@SubscribeEvent
 	public static void registerBlocks(RegistryEvent.Register<Block> event) {

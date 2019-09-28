@@ -14,6 +14,8 @@ public class GuiLoader implements IGuiHandler {
 	public static final int GUI_CRUSHINGGRINDINGMACHINE = 2;
 	public static final int GUI_SEPARATOR = 3;
 	public static final int GUI_INJECTION_TABLE = 4;
+	public static final int GUI_AUTO_CRUSHING = 5;
+	public static final int GUI_AUTO_PRESSING = 6;
 
 	public GuiLoader() {
 		NetworkRegistry.INSTANCE.registerGuiHandler(CbCraft.instance, this);
@@ -30,6 +32,10 @@ public class GuiLoader implements IGuiHandler {
 			return new ContainerSeparator(player, world.getTileEntity(new BlockPos(x, y, z)));
 		case GUI_INJECTION_TABLE:
 			return new ContainerInjectionTable(player.inventory, world, new BlockPos(x, y, z), player);
+		case GUI_AUTO_CRUSHING:
+			return new ContainerAutoCrushing(player, world.getTileEntity(new BlockPos(x, y, z)));
+		case GUI_AUTO_PRESSING:
+			return new ContainerAutoPressing(player, world.getTileEntity(new BlockPos(x, y, z)));
 		default:
 			return null;
 		}
@@ -47,7 +53,12 @@ public class GuiLoader implements IGuiHandler {
 		case GUI_SEPARATOR:
 			return new GuiSeparator(new ContainerSeparator(player, world.getTileEntity(new BlockPos(x, y, z))));
 		case GUI_INJECTION_TABLE:
-			return new GuiInjectionTable(new ContainerInjectionTable(player.inventory, world, new BlockPos(x, y, z), player));
+			return new GuiInjectionTable(
+					new ContainerInjectionTable(player.inventory, world, new BlockPos(x, y, z), player));
+		case GUI_AUTO_CRUSHING:
+			return new GuiAutoCrushing(new ContainerAutoCrushing(player, world.getTileEntity(new BlockPos(x, y, z))));
+		case GUI_AUTO_PRESSING:
+			return new GuiAutoPressing(new ContainerAutoPressing(player, world.getTileEntity(new BlockPos(x, y, z))));
 		default:
 			return null;
 		}

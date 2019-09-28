@@ -70,6 +70,7 @@ tile.cbcraft.milkChocolateWall.name=Milk Chocolate Wall
 tile.cbcraft.milkChocolateStairs.name=Milk Chocolate Stairs
 tile.cbcraft.milkChocolateFence.name=Milk Chocolate Fence
 tile.cbcraft.milkChocolateFenceGate.name=Milk Chocolate Fence Gate
+tile.cbcraft.autoPressingMachine.name=Auto Pressing Machine
 
 
 container.cbcraft.fermentation_baking_machine=Fermentation Baking Machine
@@ -77,3 +78,5 @@ container.cbcraft.crushing_grinding_machine=Crushing Grinding Machine
 container.cbcraft.separator=Separator
 container.cbcraft.injection_table=Injection Table
 container.cbcraft.injection_table.cost=Need %d Level and Cocoa Powder
+container.cbcraft.auto_crushing_grinding_machine=Auto Crushing Grinding Machine
+container.cbcraft.auto_pressing_machine=Auto Pressing Machine

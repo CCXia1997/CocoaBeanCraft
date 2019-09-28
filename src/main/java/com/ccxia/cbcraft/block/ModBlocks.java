@@ -51,6 +51,7 @@ public class ModBlocks {
 	public static final Block WHITE_CHOCOLATE_STAIRS;
 	public static final Block WHITE_CHOCOLATE_FENCE;
 	public static final Block WHITE_CHOCOLATE_FENCE_GATE;
+	public static final Block AUTO_PRESSING_MACHINE; // 自动压合机
 
 	static {
 		// FERMENTATION_BAKER = BlockLoader.getByName("block." + CbCraft.MODID +
@@ -100,6 +101,7 @@ public class ModBlocks {
 		WHITE_CHOCOLATE_STAIRS = BlockLoader.getByName("tile." + CbCraft.MODID + ".whiteChocolateStairs");
 		WHITE_CHOCOLATE_FENCE = BlockLoader.getByName("tile." + CbCraft.MODID + ".whiteChocolateFence");
 		WHITE_CHOCOLATE_FENCE_GATE = BlockLoader.getByName("tile." + CbCraft.MODID + ".whiteChocolateFenceGate");
+		AUTO_PRESSING_MACHINE = BlockLoader.getByName("tile." + CbCraft.MODID + ".autoPressingMachine");
 	}
 
 }

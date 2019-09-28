@@ -70,6 +70,7 @@ tile.cbcraft.whiteChocolateWall.name=白巧克力墙
 tile.cbcraft.whiteChocolateStairs.name=白巧克力楼梯
 tile.cbcraft.whiteChocolateFence.name=白巧克力栅栏
 tile.cbcraft.whiteChocolateFenceGate.name=白巧克力栅栏门
+tile.cbcraft.autoPressingMachine.name=自动压合机
 
 container.cbcraft.fermentation_baking_machine=发酵烘焙机
 container.cbcraft.crushing_grinding_machine=打碎研磨机
@@ -78,3 +79,5 @@ container.cbcraft.injection_table=可可注魔台
 container.cbcraft.injection_table.level_not_enough=等级不足
 container.cbcraft.injection_table.powder_not_enough=可可粉不足
 container.cbcraft.injection_table.cost=需要 %d 等级与可可粉
+container.cbcraft.auto_crushing_grinding_machine=自动打碎研磨机
+container.cbcraft.auto_pressing_machine=自动压合机
