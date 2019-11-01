@@ -17,7 +17,7 @@ public class ItemLoader {
 			new ItemCakeBase(), new ItemCocoaCakeBase(), new ItemCookieDough(), new ItemCocoaPowder(),
 			new ItemCocoaLiquor(), new ItemCocoaButter(), new ItemCream(), new ItemDarkChocolate(),
 			new ItemMilkChocolate(), new ItemWhiteChocolate(), new ItemCocoaCream(), new ItemHotChocolate(),
-			new ItemPressingMachineCore(), new ItemPurpleGem(), new ItemPackedMilk() };
+			new ItemPressingMachineCore(), new ItemPurpleGem(), new ItemPackedMilk() ,new ItemInjectedIronIngot()};
 
 	public static Item getByName(String name) {
 		for (Item item : items)

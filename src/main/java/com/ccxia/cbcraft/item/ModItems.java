@@ -26,9 +26,10 @@ public class ModItems {
 	public static final Item WHITE_CHOCOLATE;// 白巧克力
 	public static final Item COCOA_CREAM;// 可可奶油
 	public static final Item HOT_CHOCOLATE;// 巧克力牛奶
-	public static final Item PRESSING_MACHINE_CORE;//压合机核心
-	public static final Item PURPLE_GEM;//紫宝石
+	public static final Item PRESSING_MACHINE_CORE;// 压合机核心
+	public static final Item PURPLE_GEM;// 紫宝石
 	public static final Item PACKED_MILK;// 盒装牛奶
+	public static final Item INJECTED_IRON_INGOT;// 注魔铁锭
 
 	static {
 		FLOUR = ItemLoader.getByName("item." + CbCraft.MODID + ".flour");
@@ -55,6 +56,7 @@ public class ModItems {
 		PRESSING_MACHINE_CORE = ItemLoader.getByName("item." + CbCraft.MODID + ".pressingMachineCore");
 		PURPLE_GEM = ItemLoader.getByName("item." + CbCraft.MODID + ".purpleGem");
 		PACKED_MILK = ItemLoader.getByName("item." + CbCraft.MODID + ".packedMilk");
+		INJECTED_IRON_INGOT = ItemLoader.getByName("item." + CbCraft.MODID + ".injectedIronIngot");
 	}
 
 }

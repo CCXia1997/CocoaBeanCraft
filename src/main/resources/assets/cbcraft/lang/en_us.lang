@@ -25,6 +25,7 @@ item.cbcraft.pressingMachineCore.name=Pressing Machine Core
 item.cbcraft.purpleGem.name=Purple Gem
 item.cbcraft.packedMilk.name=Packed Milk
 item.cbcraft.hotChocolate.name=Chocolate Milk
+item.cbcraft.injectedIronIngot.name=Injected Iron Ingot
 
 tile.cbcraft.fermentationBaker.name=Fermentation Baking Machine
 tile.cbcraft.fermentationBakerOn.name=Burning Fermentation Baking Machine
