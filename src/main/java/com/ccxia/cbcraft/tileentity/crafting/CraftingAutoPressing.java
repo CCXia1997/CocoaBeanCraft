@@ -17,6 +17,9 @@ public class CraftingAutoPressing {
 	public CraftingAutoPressing() {
 		// 4Ñ©Çò->1Ñ©
 		this.add(new ItemStack(Items.SNOWBALL, 4), new ItemStack(Item.getItemFromBlock(Blocks.SNOW)));
+		// 9Ìú¶§->1Ìú¿é
+		this.add(new ItemStack(Items.IRON_INGOT, 4), new ItemStack(Item.getItemFromBlock(Blocks.IRON_BLOCK)));
+		// 9½ð¶§->1½ð¿é
 	}
 
 	private void add(ItemStack item1, ItemStack item2) {

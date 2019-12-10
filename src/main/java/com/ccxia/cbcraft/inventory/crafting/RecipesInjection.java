@@ -14,9 +14,11 @@ import com.ccxia.cbcraft.block.ModBlocks;
 public class RecipesInjection {
 	private Map<ItemStack, ItemStack> injectionRecipes = new HashMap(8);
 	private Map<ItemStack, Integer> injectionCosts = new HashMap(8);
-	public static final RecipesInjection INJECTION_MANAGER = new RecipesInjection();
+	// 这边注魔台对应普通和进阶两种配方
+	public static final RecipesInjection INJECTION_MANAGER = new RecipesInjection(0);
+	public static final RecipesInjection HIGH_INJECTION_MANAGER = new RecipesInjection(1);
 
-	private RecipesInjection() {
+	private RecipesInjection(int level) {
 		add(new ItemStack(ModBlocks.DARK_CHOCOLATE_BLOCK), 1, new ItemStack(ModBlocks.INJECTED_DARK_CHOCOLATE));
 		add(new ItemStack(ModBlocks.MILK_CHOCOLATE_BLOCK), 1, new ItemStack(ModBlocks.INJECTED_MILK_CHOCOLATE));
 		add(new ItemStack(ModBlocks.WHITE_CHOCOLATE_BLOCK), 1, new ItemStack(ModBlocks.INJECTED_WHITE_CHOCOLATE));
@@ -27,6 +29,10 @@ public class RecipesInjection {
 		add(new ItemStack(Blocks.CRAFTING_TABLE), 30, new ItemStack(ModItems.PRESSING_MACHINE_CORE));
 		add(new ItemStack(Items.EMERALD), 1, new ItemStack(ModItems.PURPLE_GEM));
 		add(new ItemStack(Items.IRON_INGOT), 5, new ItemStack(ModItems.INJECTED_IRON_INGOT));
+		if (level == 1) {
+			add(new ItemStack(Items.GOLD_INGOT), 15, new ItemStack(ModItems.INJECTED_GOLD_INGOT));
+			add(new ItemStack(ModItems.COCOA_SPAR), 20, new ItemStack(ModItems.INJECTED_COCOA_SPAR));
+		}
 	}
 
 	private void add(final ItemStack input, int cost, ItemStack output) {

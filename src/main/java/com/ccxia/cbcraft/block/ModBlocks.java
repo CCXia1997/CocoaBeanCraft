@@ -52,6 +52,8 @@ public class ModBlocks {
 	public static final Block WHITE_CHOCOLATE_FENCE;
 	public static final Block WHITE_CHOCOLATE_FENCE_GATE;
 	public static final Block AUTO_PRESSING_MACHINE; // 自动压合机
+	public static final Block COCOA_SPAR_ORE;// 可可矿石
+	public static final Block COCOA_SPAR_BLOCK;// 可可晶石块
 
 	static {
 		// FERMENTATION_BAKER = BlockLoader.getByName("block." + CbCraft.MODID +
@@ -102,6 +104,8 @@ public class ModBlocks {
 		WHITE_CHOCOLATE_FENCE = BlockLoader.getByName("tile." + CbCraft.MODID + ".whiteChocolateFence");
 		WHITE_CHOCOLATE_FENCE_GATE = BlockLoader.getByName("tile." + CbCraft.MODID + ".whiteChocolateFenceGate");
 		AUTO_PRESSING_MACHINE = BlockLoader.getByName("tile." + CbCraft.MODID + ".autoPressingMachine");
+		COCOA_SPAR_ORE = BlockLoader.getByName("tile." + CbCraft.MODID + ".cocoaSparOre");
+		COCOA_SPAR_BLOCK = BlockLoader.getByName("tile." + CbCraft.MODID + ".cocoaSparBlock");
 	}
 
 }

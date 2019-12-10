@@ -30,6 +30,9 @@ public class ModItems {
 	public static final Item PURPLE_GEM;// 紫宝石
 	public static final Item PACKED_MILK;// 盒装牛奶
 	public static final Item INJECTED_IRON_INGOT;// 注魔铁锭
+	public static final Item COCOA_SPAR;// 可可晶石
+	public static final Item INJECTED_GOLD_INGOT;// 注魔金锭
+	public static final Item INJECTED_COCOA_SPAR;// 注魔可可晶石
 
 	static {
 		FLOUR = ItemLoader.getByName("item." + CbCraft.MODID + ".flour");
@@ -57,6 +60,9 @@ public class ModItems {
 		PURPLE_GEM = ItemLoader.getByName("item." + CbCraft.MODID + ".purpleGem");
 		PACKED_MILK = ItemLoader.getByName("item." + CbCraft.MODID + ".packedMilk");
 		INJECTED_IRON_INGOT = ItemLoader.getByName("item." + CbCraft.MODID + ".injectedIronIngot");
+		COCOA_SPAR = ItemLoader.getByName("item." + CbCraft.MODID + ".cocoaSpar");
+		INJECTED_GOLD_INGOT = ItemLoader.getByName("item." + CbCraft.MODID + ".injectedGoldIngot");
+		INJECTED_COCOA_SPAR = ItemLoader.getByName("item." + CbCraft.MODID + ".injectedCocoaSpar");
 	}
 
 }

@@ -26,6 +26,9 @@ item.cbcraft.purpleGem.name=Purple Gem
 item.cbcraft.packedMilk.name=Packed Milk
 item.cbcraft.hotChocolate.name=Chocolate Milk
 item.cbcraft.injectedIronIngot.name=Injected Iron Ingot
+item.cbcraft.cocoaSpar.name=Cocoa Spar
+item.cbcraft.injectedGoldIngot.name=Injected Gold Ingot
+item.cbcraft.injectedCocoaSpar.name=Injected Cocoa Spar
 
 tile.cbcraft.fermentationBaker.name=Fermentation Baking Machine
 tile.cbcraft.fermentationBakerOn.name=Burning Fermentation Baking Machine
@@ -72,6 +75,8 @@ tile.cbcraft.milkChocolateStairs.name=Milk Chocolate Stairs
 tile.cbcraft.milkChocolateFence.name=Milk Chocolate Fence
 tile.cbcraft.milkChocolateFenceGate.name=Milk Chocolate Fence Gate
 tile.cbcraft.autoPressingMachine.name=Auto Pressing Machine
+tile.cbcraft.cocoaSparOre.name=Cocoa Ore
+tile.cbcraft.cocoaSparBlock.name=Cocoa Spar Block
 
 
 container.cbcraft.fermentation_baking_machine=Fermentation Baking Machine

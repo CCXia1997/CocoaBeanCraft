@@ -31,7 +31,8 @@ public class GuiLoader implements IGuiHandler {
 		case GUI_SEPARATOR:
 			return new ContainerSeparator(player, world.getTileEntity(new BlockPos(x, y, z)));
 		case GUI_INJECTION_TABLE:
-			return new ContainerInjectionTable(player.inventory, world, new BlockPos(x, y, z), player);
+			return new ContainerInjectionTable(player.inventory, world, new BlockPos(x, y, z), player,
+					world.getTileEntity(new BlockPos(x, y, z)));
 		case GUI_AUTO_CRUSHING:
 			return new ContainerAutoCrushing(player, world.getTileEntity(new BlockPos(x, y, z)));
 		case GUI_AUTO_PRESSING:
@@ -53,8 +54,8 @@ public class GuiLoader implements IGuiHandler {
 		case GUI_SEPARATOR:
 			return new GuiSeparator(new ContainerSeparator(player, world.getTileEntity(new BlockPos(x, y, z))));
 		case GUI_INJECTION_TABLE:
-			return new GuiInjectionTable(
-					new ContainerInjectionTable(player.inventory, world, new BlockPos(x, y, z), player));
+			return new GuiInjectionTable(new ContainerInjectionTable(player.inventory, world, new BlockPos(x, y, z),
+					player, world.getTileEntity(new BlockPos(x, y, z))));
 		case GUI_AUTO_CRUSHING:
 			return new GuiAutoCrushing(new ContainerAutoCrushing(player, world.getTileEntity(new BlockPos(x, y, z))));
 		case GUI_AUTO_PRESSING:

@@ -71,7 +71,7 @@ public class BlockLoader {
 					.setRegistryName("white_chocolate_fence"),
 			new BlockChocolateFenceGate(whiteBrick).setUnlocalizedName(CbCraft.MODID + ".whiteChocolateFenceGate")
 					.setRegistryName("white_chocolate_fence_gate"),
-			new BlockAutoPressing() };
+			new BlockAutoPressing(), new BlockCocoaSparOre(),new BlockCocoaSparBlock() };
 
 	@SubscribeEvent
 	public static void registerBlocks(RegistryEvent.Register<Block> event) {

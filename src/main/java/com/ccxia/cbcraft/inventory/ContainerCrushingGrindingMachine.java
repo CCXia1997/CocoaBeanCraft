@@ -67,6 +67,7 @@ public class ContainerCrushingGrindingMachine extends Container {
 		}
 	}
 
+	// 关闭页面后应该把里面的物品全部返还给玩家
 	@Override
 	public void onContainerClosed(EntityPlayer playerIn) {
 		super.onContainerClosed(playerIn);
