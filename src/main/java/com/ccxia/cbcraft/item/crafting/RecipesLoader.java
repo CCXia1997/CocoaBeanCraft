@@ -16,7 +16,10 @@ public class RecipesLoader {
 				new RecipesBread(), new RecipesInjectedIronSword(), new RecipesInjectedIronAxe(),
 				new RecipesInjectedIronPickaxe(), new RecipesInjectedIronShovel(), new RecipesInjectedIronHoe(),
 				new RecipesInjectedIronLeggings(), new RecipesInjectedIronChestPlate(), new RecipesInjectedIronHelmet(),
-				new RecipesInjectedIronBoots());
+				new RecipesInjectedIronBoots(), new RecipesInjectedGoldSword(), new RecipesInjectedGoldPickaxe(),
+				new RecipesInjectedGoldAxe(), new RecipesInjectedGoldShovel(), new RecipesInjectedGoldHoe(),
+				new RecipesInjectedGoldHelmet(), new RecipesInjectedGoldChestPlate(), new RecipesInjectedGoldLeggings(),
+				new RecipesInjectedGoldBoots());
 	}
 
 }
