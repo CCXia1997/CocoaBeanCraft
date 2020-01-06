@@ -1,0 +1,10 @@
+{
+    "variants": {
+        "normal": [
+            { "model": "cbcraft:brownie_block" },
+            { "model": "cbcraft:brownie_block", "y": 90 },
+            { "model": "cbcraft:brownie_block", "y": 180 },
+            { "model": "cbcraft:brownie_block", "y": 270 }
+        ]
+    }
+}

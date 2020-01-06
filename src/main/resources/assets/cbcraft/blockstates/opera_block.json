@@ -1,0 +1,10 @@
+{
+    "variants": {
+        "normal": [
+            { "model": "cbcraft:opera_block" },
+            { "model": "cbcraft:opera_block", "y": 90 },
+            { "model": "cbcraft:opera_block", "y": 180 },
+            { "model": "cbcraft:opera_block", "y": 270 }
+        ]
+    }
+}

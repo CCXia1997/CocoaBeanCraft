@@ -54,6 +54,14 @@ public class ModBlocks {
 	public static final Block AUTO_PRESSING_MACHINE; // 自动压合机
 	public static final Block COCOA_SPAR_ORE;// 可可矿石
 	public static final Block COCOA_SPAR_BLOCK;// 可可晶石块
+	public static final Block COCOA_STONE;// 可可岩
+	public static final Block CAKE_BASE;// 蛋糕基底
+	public static final Block COCOA_CAKE_BASE;// 可可蛋糕基底
+	public static final Block TIRAMISU_BLOCK;// 提拉米苏方块
+	public static final Block BROWNIE_BLOCK;// 布朗尼方块
+	public static final Block SCHWARZWAELDER_BLOCK;// 黑森林蛋糕方块
+	public static final Block OPERA_BLOCK;// 欧培拉蛋糕方块
+	public static final Block COCOA_PORTAL_BLOCK;// 巧克力世界传送门方块
 
 	static {
 		// FERMENTATION_BAKER = BlockLoader.getByName("block." + CbCraft.MODID +
@@ -106,6 +114,14 @@ public class ModBlocks {
 		AUTO_PRESSING_MACHINE = BlockLoader.getByName("tile." + CbCraft.MODID + ".autoPressingMachine");
 		COCOA_SPAR_ORE = BlockLoader.getByName("tile." + CbCraft.MODID + ".cocoaSparOre");
 		COCOA_SPAR_BLOCK = BlockLoader.getByName("tile." + CbCraft.MODID + ".cocoaSparBlock");
+		COCOA_STONE = BlockLoader.getByName("tile." + CbCraft.MODID + ".cocoaStone");
+		CAKE_BASE = BlockLoader.getByName("tile." + CbCraft.MODID + ".cakeBase");
+		COCOA_CAKE_BASE = BlockLoader.getByName("tile." + CbCraft.MODID + ".cocoaCakeBase");
+		TIRAMISU_BLOCK = BlockLoader.getByName("tile." + CbCraft.MODID + ".tiramisuBlock");
+		BROWNIE_BLOCK = BlockLoader.getByName("tile." + CbCraft.MODID + ".brownieBlock");
+		SCHWARZWAELDER_BLOCK = BlockLoader.getByName("tile." + CbCraft.MODID + ".schwarzwaelderBlock");
+		OPERA_BLOCK = BlockLoader.getByName("tile." + CbCraft.MODID + ".operaBlock");
+		COCOA_PORTAL_BLOCK = BlockLoader.getByName("tile." + CbCraft.MODID + ".cocoaPortalBlock");
 	}
 
 }

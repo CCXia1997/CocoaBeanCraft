@@ -14,8 +14,8 @@ public class ModItems {
 	public static final Item CHEESE;// 奶酪
 	public static final Item YOGURT;// 酸奶
 	public static final Item COCOA_BREAD;// 可可面包
-	public static final Item CAKE_BASE;// 蛋糕基底
-	public static final Item COCOA_CAKE_BASE;// 可可蛋糕基底
+//	public static final Item CAKE_BASE;// 蛋糕基底
+//	public static final Item COCOA_CAKE_BASE;// 可可蛋糕基底
 	public static final Item COOKIE_DOUGH;// 曲奇面团
 	public static final Item COCOA_POWDER;// 可可粉
 	public static final Item COCOA_LIQUOR;// 可可液块
@@ -44,8 +44,8 @@ public class ModItems {
 		CHEESE = ItemLoader.getByName("item." + CbCraft.MODID + ".cheese");
 		YOGURT = ItemLoader.getByName("item." + CbCraft.MODID + ".yogurt");
 		COCOA_BREAD = ItemLoader.getByName("item." + CbCraft.MODID + ".cocoaBread");
-		CAKE_BASE = ItemLoader.getByName("item." + CbCraft.MODID + ".cakeBase");
-		COCOA_CAKE_BASE = ItemLoader.getByName("item." + CbCraft.MODID + ".cocoaCakeBase");
+//		CAKE_BASE = ItemLoader.getByName("item." + CbCraft.MODID + ".cakeBase");
+//		COCOA_CAKE_BASE = ItemLoader.getByName("item." + CbCraft.MODID + ".cocoaCakeBase");
 		COOKIE_DOUGH = ItemLoader.getByName("item." + CbCraft.MODID + ".cookieDough");
 		COCOA_POWDER = ItemLoader.getByName("item." + CbCraft.MODID + ".cocoaPowder");
 		COCOA_LIQUOR = ItemLoader.getByName("item." + CbCraft.MODID + ".cocoaLiquor");

@@ -17,7 +17,6 @@ public class TileEntityLoader {
 		registerTileEntity(TileEntityAutoCrushing.class, "AutoCrushing");
 		registerTileEntity(TileEntityInjectionTable.class, "InjectionTable");
 		registerTileEntity(TileEntityAutoPressing.class, "AutoPressing");
-
 		// ‰÷»æ”ÎTileEntity∞Û∂®
 		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityInjectionTable.class,
 				new TileEntityInjectionTableRenderer());

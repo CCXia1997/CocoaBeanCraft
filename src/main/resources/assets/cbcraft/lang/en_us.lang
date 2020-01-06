@@ -9,8 +9,6 @@ item.cbcraft.skimMilk.name=Skim Milk
 item.cbcraft.cheese.name=Cheese
 item.cbcraft.yogurt.name=Yogurt
 item.cbcraft.cocoaBread.name=Cocoa Bread
-item.cbcraft.cakeBase.name=Cake Base
-item.cbcraft.cocoaCakeBase.name=Cocoa Cake Base
 item.cbcraft.cookieDough.name=Cookie Dough
 item.cbcraft.cocoaPowder.name=Cocoa Powder
 item.cbcraft.cocoaLiquor.name=Cocoa Liquor
@@ -77,7 +75,14 @@ tile.cbcraft.milkChocolateFenceGate.name=Milk Chocolate Fence Gate
 tile.cbcraft.autoPressingMachine.name=Auto Pressing Machine
 tile.cbcraft.cocoaSparOre.name=Cocoa Ore
 tile.cbcraft.cocoaSparBlock.name=Cocoa Spar Block
-
+tile.cbcraft.cocoaStone.name=Cocoa Stone
+tile.cbcraft.cakeBase.name=Cake Base
+tile.cbcraft.cocoaCakeBase.name=Cocoa Cake Base
+tile.cbcraft.tiramisuBlock.name=Tiramisu Block
+tile.cbcraft.brownieBlock.name=Brownie Block
+tile.cbcraft.schwarzwaelderBlock.name=Schwarzwaelder Block
+tile.cbcraft.operaBlock.name=Opera Block
+tile.cbcraft.cocoaPortalBlock.name=Cocoa Portal Block
 
 container.cbcraft.fermentation_baking_machine=Fermentation Baking Machine
 container.cbcraft.crushing_grinding_machine=Crushing Grinding Machine
@@ -86,3 +91,6 @@ container.cbcraft.injection_table=Injection Table
 container.cbcraft.injection_table.cost=Need %d Level and Cocoa Powder
 container.cbcraft.auto_crushing_grinding_machine=Auto Crushing Grinding Machine
 container.cbcraft.auto_pressing_machine=Auto Pressing Machine
+
+generator.cocoa_world=Cocoa World
+generator.cocoa_world.info=lots of chocolate and cake

@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 
+import com.ccxia.cbcraft.block.ModBlocks;
 import com.ccxia.cbcraft.item.ModItems;
 import com.google.common.collect.Maps;
 
@@ -44,10 +45,10 @@ public class CraftingFermentationBaker {
 		this.add(new ItemStack(ModItems.DOUGH), new ItemStack(ModItems.COCOA_POWDER),
 				new ItemStack(ModItems.COCOA_BREAD), 0.5F);
 		// 蛋奶面团->蛋糕基底
-		this.add(new ItemStack(ModItems.EGG_MILK_DOUGH), new ItemStack(ModItems.CAKE_BASE), 0.5F);
+		this.add(new ItemStack(ModItems.EGG_MILK_DOUGH), new ItemStack(ModBlocks.CAKE_BASE), 0.5F);
 		// 蛋奶面团+可可粉->可可蛋糕基底
 		this.add(new ItemStack(ModItems.EGG_MILK_DOUGH), new ItemStack(ModItems.COCOA_POWDER),
-				new ItemStack(ModItems.COCOA_CAKE_BASE), 0.5F);
+				new ItemStack(ModBlocks.COCOA_CAKE_BASE), 0.5F);
 		// 曲奇面团->8曲奇饼
 		this.add(new ItemStack(ModItems.COOKIE_DOUGH), new ItemStack(Items.COOKIE, 8), 0.5F);
 	}

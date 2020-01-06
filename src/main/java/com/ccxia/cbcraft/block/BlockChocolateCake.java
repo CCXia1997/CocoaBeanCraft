@@ -7,6 +7,7 @@ import net.minecraft.block.BlockCake;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.init.Blocks;
 import net.minecraft.stats.StatList;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
@@ -39,6 +40,20 @@ public class BlockChocolateCake extends BlockCake {
 				worldIn.setBlockToAir(pos);
 			}
 			return true;
+		}
+	}
+
+	// 放置巧克力方块时判断是否可以生成传送门
+	public void onBlockAdded(World worldIn, BlockPos pos, IBlockState state) {
+		// 主世界<-->巧克力世界
+		if (Math.abs(worldIn.provider.getDimensionType().getId()) != 1
+				&& !((BlockPortalCocoa) (ModBlocks.COCOA_PORTAL_BLOCK)).trySpawnPortal(worldIn, pos)) {
+			if (!worldIn.getBlockState(pos.down()).isTopSolid()) {
+				worldIn.setBlockToAir(pos);
+			} else {
+				// worldIn.scheduleUpdate(pos, this, this.tickRate(worldIn) +
+				// worldIn.rand.nextInt(10));
+			}
 		}
 	}
 }

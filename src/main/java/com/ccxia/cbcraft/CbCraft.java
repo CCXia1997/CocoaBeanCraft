@@ -2,8 +2,12 @@ package com.ccxia.cbcraft;
 
 import com.ccxia.cbcraft.common.CommonProxy;
 import com.ccxia.cbcraft.item.ModItems;
+import com.ccxia.cbcraft.world.WorldProviderCocoa;
+import com.ccxia.cbcraft.world.WorldTypeCocoa;
 
 import net.minecraft.item.ItemStack;
+import net.minecraft.world.DimensionType;
+import net.minecraftforge.common.DimensionManager;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.Mod.Instance;
@@ -20,6 +24,9 @@ public class CbCraft {
 	public static final String MODID = "cbcraft";
 	public static final String NAME = "Cocoa Magic";
 	public static final String VERSION = "1.0.0";
+	// 新维度
+	public static int dimID = 233;
+	public static DimensionType myDim;
 	@SidedProxy(clientSide = "com.ccxia.cbcraft.client.ClientProxy", serverSide = "com.ccxia.cbcraft.common.CommonProxy")
 	public static CommonProxy proxy;
 	@Instance(CbCraft.MODID)
@@ -31,6 +38,10 @@ public class CbCraft {
 	@EventHandler
 	public static void preInit(FMLPreInitializationEvent event) {
 		proxy.preInit(event);
+		// 新维度配置
+		myDim = DimensionType.register("cocoa_world", "cocoa_world", dimID, WorldProviderCocoa.class, false);
+		DimensionManager.registerDimension(dimID, myDim);
+		new WorldTypeCocoa();
 	}
 
 	@EventHandler

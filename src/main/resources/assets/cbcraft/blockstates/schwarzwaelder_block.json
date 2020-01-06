@@ -1,0 +1,10 @@
+{
+    "variants": {
+        "normal": [
+            { "model": "cbcraft:schwarzwaelder_block" },
+            { "model": "cbcraft:schwarzwaelder_block", "y": 90 },
+            { "model": "cbcraft:schwarzwaelder_block", "y": 180 },
+            { "model": "cbcraft:schwarzwaelder_block", "y": 270 }
+        ]
+    }
+}

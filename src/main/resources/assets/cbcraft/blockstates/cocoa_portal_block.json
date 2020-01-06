@@ -1,0 +1,6 @@
+{
+    "variants": {
+        "axis=z": { "model": "cbcraft:portal_ew" },
+        "axis=x": { "model": "cbcraft:portal_ns" }
+    }
+}

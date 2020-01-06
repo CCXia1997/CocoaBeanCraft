@@ -1,0 +1,10 @@
+{
+    "variants": {
+        "normal": [
+            { "model": "cbcraft:cocoa_cake_base" },
+            { "model": "cbcraft:cocoa_cake_base", "y": 90 },
+            { "model": "cbcraft:cocoa_cake_base", "y": 180 },
+            { "model": "cbcraft:cocoa_cake_base", "y": 270 }
+        ]
+    }
+}

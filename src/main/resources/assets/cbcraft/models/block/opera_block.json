@@ -1,0 +1,8 @@
+{
+    "parent": "block/cube_bottom_top",
+    "textures": {
+        "bottom": "cbcraft:blocks/cocoa_cake_base",
+        "top": "cbcraft:blocks/opera_block_top",
+        "side": "cbcraft:blocks/opera_block_side"
+    }
+}
