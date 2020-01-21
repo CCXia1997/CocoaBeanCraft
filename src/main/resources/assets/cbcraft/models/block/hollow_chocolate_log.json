@@ -1,0 +1,60 @@
+{
+	"__comment": "Designed by XeKr with Cubik Studio - https://cubik.studio",
+	"parent": "block/cube",
+	"textures": {
+		"end": "cbcraft:blocks/hollow_chocolate_log_top",
+		"side": "cbcraft:blocks/hollow_chocolate_log_side",
+		"inner": "cbcraft:blocks/hollow_chocolate_log_inner",
+		"particle": "cbcraft:blocks/hollow_chocolate_log_top"
+	},
+	"elements": [ 	 
+		{
+			"__comment": "Box1",
+			"from": [ 0, 0, 0 ],
+			"to": [ 16, 16, 4 ],
+			"faces": {
+				"down": { "uv": [ 0, 12, 16, 16 ], "texture": "#end" },
+				"up": { "uv": [ 0, 0, 16, 4 ], "texture": "#end" },
+				"north": { "uv": [ 0, 0, 16, 16 ], "texture": "#side" },
+				"south": { "uv": [ 0, 0, 16, 16 ], "texture": "#inner" },
+				"west": { "uv": [ 0, 0, 4, 16 ], "texture": "#side" },
+				"east": { "uv": [ 12, 0, 16, 16 ], "texture": "#side" }
+			}
+		},
+		{
+			"__comment": "Box1",
+			"from": [ 0, 0, 12 ],
+			"to": [ 16, 16, 16 ],
+			"faces": {
+				"down": { "uv": [ 0, 0, 16, 4 ], "texture": "#end" },
+				"up": { "uv": [ 0, 12, 16, 16 ], "texture": "#end" },
+				"north": { "uv": [ 0, 0, 16, 16 ], "texture": "#inner" },
+				"south": { "uv": [ 0, 0, 16, 16 ], "texture": "#side" },
+				"west": { "uv": [ 12, 0, 16, 16 ], "texture": "#side" },
+				"east": { "uv": [ 0, 0, 4, 16 ], "texture": "#side" }
+			}
+		},
+		{
+			"__comment": "Box3",
+			"from": [ 0, 0, 4 ],
+			"to": [ 4, 16, 12 ],
+			"faces": {
+				"down": { "uv": [ 0, 4, 4, 12 ], "texture": "#end" },
+				"up": { "uv": [ 0, 4, 4, 12 ], "texture": "#end" },
+				"west": { "uv": [ 4, 0, 12, 16 ], "texture": "#side" },
+				"east": { "uv": [ 4, 0, 12, 16 ], "texture": "#inner" }
+			}
+		},
+		{
+			"__comment": "Box3",
+			"from": [ 12, 0, 4 ],
+			"to": [ 16, 16, 12 ],
+			"faces": {
+				"down": { "uv": [ 12, 4, 16, 12 ], "texture": "#end" },
+				"up": { "uv": [ 12, 4, 16, 12 ], "texture": "#end" },
+				"west": { "uv": [ 4, 0, 12, 16 ], "texture": "#inner" },
+				"east": { "uv": [ 4, 0, 12, 16 ], "texture": "#side" }
+			}
+		}
+	]
+}

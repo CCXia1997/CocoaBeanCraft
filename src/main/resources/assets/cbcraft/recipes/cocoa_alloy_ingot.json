@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "cbcraft:injected_gold_ingot"
+    },
+    {
+      "item": "cbcraft:injected_iron_ingot"
+    },
+	{
+	  "item":"cbcraft:cocoa_metal_ingot",
+	  "count":2
+	}
+  ],
+  "result": {
+    "item": "cbcraft:cocoa_alloy_ingot",
+    "count": 2
+  }
+}

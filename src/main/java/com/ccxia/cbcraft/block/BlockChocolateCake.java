@@ -49,7 +49,7 @@ public class BlockChocolateCake extends BlockCake {
 		if (Math.abs(worldIn.provider.getDimensionType().getId()) != 1
 				&& !((BlockPortalCocoa) (ModBlocks.COCOA_PORTAL_BLOCK)).trySpawnPortal(worldIn, pos)) {
 			if (!worldIn.getBlockState(pos.down()).isTopSolid()) {
-				worldIn.setBlockToAir(pos);
+				// worldIn.setBlockToAir(pos);
 			} else {
 				// worldIn.scheduleUpdate(pos, this, this.tickRate(worldIn) +
 				// worldIn.rand.nextInt(10));

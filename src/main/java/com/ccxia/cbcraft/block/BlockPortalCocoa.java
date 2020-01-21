@@ -212,19 +212,18 @@ public class BlockPortalCocoa extends BlockBreakable {
 	public void onEntityCollidedWithBlock(World worldIn, BlockPos pos, IBlockState state, Entity entityIn) {
 		if (!entityIn.isRiding() && !entityIn.isBeingRidden() && entityIn.isNonBoss()) {
 			if (entityIn.timeUntilPortal > 0) {
-				entityIn.timeUntilPortal = entityIn.getPortalCooldown();
+				entityIn.timeUntilPortal = 100;
 			} else {
 				if (entityIn instanceof EntityPlayer) {
 					EntityPlayer playerIn = (EntityPlayer) entityIn;
 					if (!worldIn.isRemote && worldIn.provider.getDimension() != CbCraft.dimID) {
 						playerIn.getServer().getPlayerList().transferPlayerToDimension((EntityPlayerMP) playerIn,
-								CbCraft.dimID,
-								new TeleporterCocoa(playerIn.getServer().getWorld(worldIn.provider.getDimension())));
-						entityIn.timeUntilPortal = entityIn.getPortalCooldown();
+								CbCraft.dimID, new TeleporterCocoa(playerIn.getServer().getWorld(CbCraft.dimID)));
+						playerIn.timeUntilPortal = 100;
 					} else if (!worldIn.isRemote) {
 						playerIn.getServer().getPlayerList().transferPlayerToDimension((EntityPlayerMP) playerIn, 0,
-								new TeleporterCocoa(playerIn.getServer().getWorld(CbCraft.dimID)));
-						entityIn.timeUntilPortal = entityIn.getPortalCooldown();
+								new TeleporterCocoa(playerIn.getServer().getWorld(0)));
+						playerIn.timeUntilPortal = 100;
 					}
 				}
 			}

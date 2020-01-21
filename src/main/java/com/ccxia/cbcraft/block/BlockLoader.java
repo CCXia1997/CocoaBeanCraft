@@ -73,7 +73,9 @@ public class BlockLoader {
 					.setRegistryName("white_chocolate_fence_gate"),
 			new BlockAutoPressing(), new BlockCocoaSparOre(), new BlockCocoaSparBlock(), new BlockCocoaStone(),
 			new BlockCakeBase(), new BlockCocoaCakeBase(), new BlockTiramisu(), new BlockBrownie(),
-			new BlockSchwarzwaelder(), new BlockOpera(), new BlockPortalCocoa() };
+			new BlockSchwarzwaelder(), new BlockOpera(), new BlockPortalCocoa(), new BlockHollowChocolateLog(),
+			new BlockHorizontalChocolateLog(), new BlockTwillChocolateLog(), new BlockVerticalChocolateLog(),
+			new BlockCocoaMetalOre() };
 
 	@SubscribeEvent
 	public static void registerBlocks(RegistryEvent.Register<Block> event) {

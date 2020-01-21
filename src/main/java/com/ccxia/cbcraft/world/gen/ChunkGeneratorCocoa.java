@@ -61,7 +61,7 @@ public class ChunkGeneratorCocoa implements IChunkGenerator {
 	private ChunkGeneratorSettings settings;
 	private IBlockState oceanBlock = Blocks.WATER.getDefaultState();
 	private double[] depthBuffer = new double[256];
-	private MapGenBase caveGenerator = new MapGenCaves();
+	private MapGenBase caveGenerator = new MapGenCocoaCaves();
 	private MapGenStronghold strongholdGenerator = new MapGenStronghold();
 	private MapGenVillage villageGenerator = new MapGenVillage();
 	private MapGenMineshaft mineshaftGenerator = new MapGenMineshaft();
@@ -237,9 +237,9 @@ public class ChunkGeneratorCocoa implements IChunkGenerator {
 				16);
 		this.replaceBiomeBlocks(x, z, chunkprimer, this.biomesForGeneration);
 //
-//		if (this.settings.useCaves) {
-//			this.caveGenerator.generate(this.world, x, z, chunkprimer);
-//		}
+		if (this.settings.useCaves) {
+			this.caveGenerator.generate(this.world, x, z, chunkprimer);
+		}
 //
 //		if (this.settings.useRavines) {
 //			this.ravineGenerator.generate(this.world, x, z, chunkprimer);

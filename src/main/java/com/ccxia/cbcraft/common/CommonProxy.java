@@ -4,6 +4,7 @@ import com.ccxia.cbcraft.inventory.GuiLoader;
 import com.ccxia.cbcraft.item.OreDictLoader;
 import com.ccxia.cbcraft.tileentity.TileEntityLoader;
 import com.ccxia.cbcraft.world.WorldTypeCocoa;
+import com.ccxia.cbcraft.world.gen.WorldGenCocoaMetalOre;
 import com.ccxia.cbcraft.world.gen.WorldGenCocoaSparOre;
 
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
@@ -18,6 +19,7 @@ public class CommonProxy {
 
 	public void init(FMLInitializationEvent event) {
 		GameRegistry.registerWorldGenerator(new WorldGenCocoaSparOre(), 0);
+		GameRegistry.registerWorldGenerator(new WorldGenCocoaMetalOre(), 0);
 		new GuiLoader();
 	}
 

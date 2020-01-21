@@ -1,0 +1,7 @@
+{
+    "variants": {
+        "axis=y": { "model": "cbcraft:vertical_chocolate_log" },
+        "axis=z": { "model": "cbcraft:vertical_chocolate_log", "x": 90 },
+        "axis=x": { "model": "cbcraft:vertical_chocolate_log", "x": 90, "y": 90 }
+    }
+}

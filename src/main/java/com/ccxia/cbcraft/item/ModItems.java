@@ -33,6 +33,8 @@ public class ModItems {
 	public static final Item COCOA_SPAR;// 可可晶石
 	public static final Item INJECTED_GOLD_INGOT;// 注魔金锭
 	public static final Item INJECTED_COCOA_SPAR;// 注魔可可晶石
+	public static final Item COCOA_METAL_INGOT;// 可可金属锭
+	public static final Item COCOA_ALLOV_INGOT;// 可可合金锭
 
 	static {
 		FLOUR = ItemLoader.getByName("item." + CbCraft.MODID + ".flour");
@@ -63,6 +65,8 @@ public class ModItems {
 		COCOA_SPAR = ItemLoader.getByName("item." + CbCraft.MODID + ".cocoaSpar");
 		INJECTED_GOLD_INGOT = ItemLoader.getByName("item." + CbCraft.MODID + ".injectedGoldIngot");
 		INJECTED_COCOA_SPAR = ItemLoader.getByName("item." + CbCraft.MODID + ".injectedCocoaSpar");
+		COCOA_METAL_INGOT = ItemLoader.getByName("item." + CbCraft.MODID + ".cocoaMetalIngot");
+		COCOA_ALLOV_INGOT = ItemLoader.getByName("item." + CbCraft.MODID + ".cocoaAlloyIngot");
 	}
 
 }

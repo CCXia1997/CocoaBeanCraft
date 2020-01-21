@@ -1,5 +1,6 @@
 package com.ccxia.cbcraft;
 
+import com.ccxia.cbcraft.block.ModBlocks;
 import com.ccxia.cbcraft.common.CommonProxy;
 import com.ccxia.cbcraft.item.ModItems;
 import com.ccxia.cbcraft.world.WorldProviderCocoa;
@@ -48,6 +49,8 @@ public class CbCraft {
 	public static void init(FMLInitializationEvent event) {
 		proxy.init(event);
 		GameRegistry.addSmelting(new ItemStack(ModItems.COCOA_PASTE), new ItemStack(ModItems.COCOA_LIQUOR), 1.0F);
+		GameRegistry.addSmelting(new ItemStack(ModBlocks.COCOA_METAL_ORE), new ItemStack(ModItems.COCOA_METAL_INGOT),
+				1.0F);
 	}
 
 	@EventHandler

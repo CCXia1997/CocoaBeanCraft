@@ -73,6 +73,19 @@ public class TeleporterCocoa extends Teleporter {
 
 	@Override
 	public void removeStalePortalLocations(long worldTime) {
+		if (worldTime % 100L == 0L) {
+			long i = worldTime - 300L;
+			ObjectIterator<TeleporterCocoa.PortalPosition> objectiterator = this.destinationCoordinateCache.values()
+					.iterator();
 
+			while (objectiterator.hasNext()) {
+				TeleporterCocoa.PortalPosition teleporter$portalposition = (TeleporterCocoa.PortalPosition) objectiterator
+						.next();
+
+				if (teleporter$portalposition == null || teleporter$portalposition.lastUpdateTime < i) {
+					objectiterator.remove();
+				}
+			}
+		}
 	}
 }

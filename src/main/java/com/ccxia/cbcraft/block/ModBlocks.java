@@ -52,7 +52,7 @@ public class ModBlocks {
 	public static final Block WHITE_CHOCOLATE_FENCE;
 	public static final Block WHITE_CHOCOLATE_FENCE_GATE;
 	public static final Block AUTO_PRESSING_MACHINE; // 自动压合机
-	public static final Block COCOA_SPAR_ORE;// 可可矿石
+	public static final Block COCOA_SPAR_ORE;// 可可晶石矿石
 	public static final Block COCOA_SPAR_BLOCK;// 可可晶石块
 	public static final Block COCOA_STONE;// 可可岩
 	public static final Block CAKE_BASE;// 蛋糕基底
@@ -62,6 +62,11 @@ public class ModBlocks {
 	public static final Block SCHWARZWAELDER_BLOCK;// 黑森林蛋糕方块
 	public static final Block OPERA_BLOCK;// 欧培拉蛋糕方块
 	public static final Block COCOA_PORTAL_BLOCK;// 巧克力世界传送门方块
+	public static final Block HOLLOW_CHOCOLATE_LOG;// 空心巧克力原木
+	public static final Block HORIZONTAL_CHOCOLATE_LOG;// 横纹巧克力原木
+	public static final Block TWILL_CHOCOLATE_LOG;// 斜纹巧克力原木
+	public static final Block VERTICAL_CHOCOLATE_LOG;// 竖纹巧克力原木
+	public static final Block COCOA_METAL_ORE;// 可可金属矿
 
 	static {
 		// FERMENTATION_BAKER = BlockLoader.getByName("block." + CbCraft.MODID +
@@ -122,6 +127,11 @@ public class ModBlocks {
 		SCHWARZWAELDER_BLOCK = BlockLoader.getByName("tile." + CbCraft.MODID + ".schwarzwaelderBlock");
 		OPERA_BLOCK = BlockLoader.getByName("tile." + CbCraft.MODID + ".operaBlock");
 		COCOA_PORTAL_BLOCK = BlockLoader.getByName("tile." + CbCraft.MODID + ".cocoaPortalBlock");
+		HOLLOW_CHOCOLATE_LOG = BlockLoader.getByName("tile." + CbCraft.MODID + ".hollowChocolateLog");
+		HORIZONTAL_CHOCOLATE_LOG = BlockLoader.getByName("tile." + CbCraft.MODID + ".horizontalChocolateLog");
+		TWILL_CHOCOLATE_LOG = BlockLoader.getByName("tile." + CbCraft.MODID + ".twillChocolateLog");
+		VERTICAL_CHOCOLATE_LOG = BlockLoader.getByName("tile." + CbCraft.MODID + ".verticalChocolateLog");
+		COCOA_METAL_ORE = BlockLoader.getByName("tile." + CbCraft.MODID + ".cocoaMetalOre");
 	}
 
 }

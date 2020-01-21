@@ -27,6 +27,8 @@ item.cbcraft.injectedIronIngot.name=Injected Iron Ingot
 item.cbcraft.cocoaSpar.name=Cocoa Spar
 item.cbcraft.injectedGoldIngot.name=Injected Gold Ingot
 item.cbcraft.injectedCocoaSpar.name=Injected Cocoa Spar
+item.cbcraft.cocoaMetalIngot.name=Cocoa Metal Ingot
+item.cbcraft.cocoaAlloyIngot.name=Cocoa Alloy Ingot
 
 tile.cbcraft.fermentationBaker.name=Fermentation Baking Machine
 tile.cbcraft.fermentationBakerOn.name=Burning Fermentation Baking Machine
@@ -83,6 +85,11 @@ tile.cbcraft.brownieBlock.name=Brownie Block
 tile.cbcraft.schwarzwaelderBlock.name=Schwarzwaelder Block
 tile.cbcraft.operaBlock.name=Opera Block
 tile.cbcraft.cocoaPortalBlock.name=Cocoa Portal Block
+tile.cbcraft.hollowChocolateLog.name=Hollow Chocolate Log
+tile.cbcraft.horizontalChocolateLog.name=Horizontal Chocolate Log
+tile.cbcraft.twillChocolateLog.name=Twill Chocolate Log
+tile.cbcraft.verticalChocolateLog.name=Vertical Chocolate Log
+tile cbcraft.cocoaMetalOre.name=Cocoa Metal Ore
 
 container.cbcraft.fermentation_baking_machine=Fermentation Baking Machine
 container.cbcraft.crushing_grinding_machine=Crushing Grinding Machine
