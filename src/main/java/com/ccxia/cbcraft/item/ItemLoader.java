@@ -18,7 +18,10 @@ public class ItemLoader {
 			new ItemDarkChocolate(), new ItemMilkChocolate(), new ItemWhiteChocolate(), new ItemCocoaCream(),
 			new ItemHotChocolate(), new ItemPressingMachineCore(), new ItemPurpleGem(), new ItemPackedMilk(),
 			new ItemInjectedIronIngot(), new ItemCocoaSpar(), new ItemInjectedGoldIngot(), new ItemInjectedCocoaSpar(),
-			new ItemCocoaMetalIngot(), new ItemCocoaAllovIngot() };
+			new ItemCocoaMetalIngot(), new ItemCocoaAllovIngot(), new ItemCocoaMetalSword(), new ItemCocoaMetalAxe(),
+			new ItemCocoaMetalPickaxe(), new ItemCocoaMetalShovel(), new ItemCocoaMetalHoe(),
+			new ItemCocoaMetalHelmet(), new ItemCocoaMetalChestplate(), new ItemCocoaMetalLeggings(),
+			new ItemCocoaMetalBoots() };
 
 	public static Item getByName(String name) {
 		for (Item item : items)

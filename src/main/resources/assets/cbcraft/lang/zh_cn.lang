@@ -29,6 +29,15 @@ item.cbcraft.injectedGoldIngot.name=注魔金锭
 item.cbcraft.injectedCocoaSpar.name=注魔可可晶石
 item.cbcraft.cocoaMetalIngot.name=可可金属锭
 item.cbcraft.cocoaAlloyIngot.name=可可合金锭
+item.cbcraft.cocoaMetalSword.name=可可金属剑
+item.cbcraft.cocoaMetalAxe.name=可可金属斧
+item.cbcraft.cocoaMetalPickaxe.name=可可金属镐
+item.cbcraft.cocoaMetalShovel.name=可可金属铲
+item.cbcraft.cocoaMetalHoe.name=可可金属锄
+item.cbcraft.cocoaMetalHelmet.name=可可金属头盔
+item.cbcraft.cocoaMetalChestplate.name=可可金属胸甲
+item.cbcraft.cocoaMetalLeggings.name=可可金属护腿
+item.cbcraft.cocoaMetalBoots.name=可可金属靴子
 
 tile.cbcraft.fermentationBaker.name=发酵烘焙机
 tile.cbcraft.fermentationBakerOn.name=燃烧的发酵烘焙机

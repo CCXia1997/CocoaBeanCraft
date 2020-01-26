@@ -29,6 +29,15 @@ item.cbcraft.injectedGoldIngot.name=Injected Gold Ingot
 item.cbcraft.injectedCocoaSpar.name=Injected Cocoa Spar
 item.cbcraft.cocoaMetalIngot.name=Cocoa Metal Ingot
 item.cbcraft.cocoaAlloyIngot.name=Cocoa Alloy Ingot
+item.cbcraft.cocoaMetalSword.name=Cocoa Metal Sword
+item.cbcraft.cocoaMetalAxe.name=Cocoa Metal Axe
+item.cbcraft.cocoaMetalPickaxe.name=Cocoa Metal Pickaxe
+item.cbcraft.cocoaMetalShovel.name=Cocoa Metal Shovel
+item.cbcraft.cocoaMetalHoe.name=Cocoa Metal Hoe
+item.cbcraft.cocoaMetalHelmet.name=Cocoa Metal Helmet
+item.cbcraft.cocoaMetalChestplate.name=Cocoa Metal Chestplate
+item.cbcraft.cocoaMetalLeggings.name=Cocoa Metal Leggings
+item.cbcraft.cocoaMetalBoots.name=Cocoa Metal Boots
 
 tile.cbcraft.fermentationBaker.name=Fermentation Baking Machine
 tile.cbcraft.fermentationBakerOn.name=Burning Fermentation Baking Machine
