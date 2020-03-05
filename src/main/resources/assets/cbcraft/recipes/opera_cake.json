@@ -1,0 +1,17 @@
+{
+  "type": "forge:ore_shaped",
+  "pattern": [
+    "###",
+    "###",
+	"###"
+  ],
+  "key": {
+    "#": {
+      "item": "cbcraft:opera_block"
+    }
+  },
+  "result": {
+    "item": "cbcraft:opera_cake",
+	"count":1
+  }
+}

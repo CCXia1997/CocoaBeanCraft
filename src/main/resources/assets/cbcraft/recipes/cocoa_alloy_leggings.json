@@ -1,0 +1,17 @@
+{
+  "type": "forge:ore_shaped",
+  "pattern": [
+    "###",
+    "# #",
+	"# #"
+  ],
+  "key": {
+    "#": {
+      "item": "cbcraft:cocoa_alloy_ingot"
+    }
+  },
+  "result": {
+    "item": "cbcraft:cocoa_alloy_leggings",
+	"count":1
+  }
+}

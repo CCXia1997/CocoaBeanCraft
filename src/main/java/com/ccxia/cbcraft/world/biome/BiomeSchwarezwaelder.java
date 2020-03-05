@@ -2,8 +2,12 @@ package com.ccxia.cbcraft.world.biome;
 
 import java.util.Random;
 
+import com.ccxia.cbcraft.block.BlockHollowChocolateLog;
 import com.ccxia.cbcraft.block.ModBlocks;
+import com.ccxia.cbcraft.world.gen.WorldGenTwillTrees;
 
+import net.minecraft.block.BlockLeaves;
+import net.minecraft.block.BlockLog;
 import net.minecraft.block.BlockSand;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
@@ -12,8 +16,19 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.biome.BiomeForest;
 import net.minecraft.world.chunk.ChunkPrimer;
+import net.minecraft.world.gen.feature.WorldGenAbstractTree;
+import net.minecraft.world.gen.feature.WorldGenShrub;
+import net.minecraft.world.gen.feature.WorldGenTrees;
 
 public class BiomeSchwarezwaelder extends BiomeForest {
+
+	private static final IBlockState DEFAULT_TRUNK = ModBlocks.TWILL_CHOCOLATE_LOG.getDefaultState()
+			.withProperty(BlockHollowChocolateLog.LOG_AXIS, BlockLog.EnumAxis.Y);;
+	private static final IBlockState DEFAULT_LEAF = ModBlocks.TWILL_CHOCOLATE_LEAVES.getDefaultState()
+			.withProperty(BlockLeaves.CHECK_DECAY, Boolean.valueOf(false));
+
+	// 树木生成配置
+	private static final WorldGenTwillTrees TWILL_FEATURE = new WorldGenTwillTrees(false);
 
 	public BiomeSchwarezwaelder(Type typeIn, BiomeProperties properties) {
 		super(typeIn, properties);
@@ -22,6 +37,11 @@ public class BiomeSchwarezwaelder extends BiomeForest {
 		this.fillerBlock = ModBlocks.COCOA_CAKE_BASE.getDefaultState();
 		// 先禁止生物生成
 		this.spawnableCreatureList.clear();
+		// 一些配置
+		this.decorator.treesPerChunk = 10;
+		this.decorator.extraTreeChance = 0.00F;
+		this.decorator.flowersPerChunk = 0;
+		this.decorator.grassPerChunk = 0;
 	}
 
 	public void generateBiomeBrownieHillTerrain(World worldIn, Random rand, ChunkPrimer chunkPrimerIn, int x, int z,
@@ -86,6 +106,21 @@ public class BiomeSchwarezwaelder extends BiomeForest {
 				}
 			}
 		}
+	}
+
+	// 生成树木
+	public WorldGenAbstractTree getRandomTreeFeature(Random rand) {
+		if (rand.nextInt(10) == 0) {
+			return TWILL_FEATURE;
+		} else if (rand.nextInt(2) == 0) {
+			return new WorldGenShrub(DEFAULT_TRUNK, DEFAULT_LEAF);
+		} else {
+			return new WorldGenTrees(false, 4 + rand.nextInt(7), DEFAULT_TRUNK, DEFAULT_LEAF, true);
+		}
+	}
+
+	public void decorate(World worldIn, Random rand, BlockPos pos) {
+		this.decorator.decorate(worldIn, rand, this, pos);
 	}
 
 }

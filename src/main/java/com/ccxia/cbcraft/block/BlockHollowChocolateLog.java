@@ -30,7 +30,7 @@ public class BlockHollowChocolateLog extends BlockLog {
 		this.setUnlocalizedName(CbCraft.MODID + ".hollowChocolateLog");
 		this.setRegistryName("hollow_chocolate_log");
 		this.setCreativeTab(CreativeTabsCbCraft.tabCbCraft);
-		Blocks.FIRE.setFireInfo(this, 5, 20);
+		Blocks.FIRE.setFireInfo(this, 5, 5);
 	}
 
 	public boolean isOpaqueCube(IBlockState state) {

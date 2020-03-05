@@ -21,16 +21,16 @@ public class ItemFlour extends Item {
 		this.setCreativeTab(CreativeTabsCbCraft.tabCbCraft);
 	}
 
-	public ActionResult<ItemStack> onItemRightClick(World worldIn, EntityPlayer playerIn, EnumHand handIn) {
-		if (!worldIn.isRemote && worldIn.provider.getDimension() != CbCraft.dimID) {
-			playerIn.getServer().getPlayerList().transferPlayerToDimension((EntityPlayerMP) playerIn, CbCraft.dimID,
-					new TeleporterCocoa(playerIn.getServer().getWorld(worldIn.provider.getDimension())));
-		} else if (!worldIn.isRemote) {
-			playerIn.getServer().getPlayerList().transferPlayerToDimension((EntityPlayerMP) playerIn, 0,
-					new TeleporterCocoa(playerIn.getServer().getWorld(CbCraft.dimID)));
-		}
-		playerIn.sendMessage(new TextComponentString("" + playerIn.world.provider.getDimension()));
-		return new ActionResult<ItemStack>(EnumActionResult.PASS, playerIn.getHeldItem(handIn));
-	}
+//	public ActionResult<ItemStack> onItemRightClick(World worldIn, EntityPlayer playerIn, EnumHand handIn) {
+//		if (!worldIn.isRemote && worldIn.provider.getDimension() != CbCraft.dimID) {
+//			playerIn.getServer().getPlayerList().transferPlayerToDimension((EntityPlayerMP) playerIn, CbCraft.dimID,
+//					new TeleporterCocoa(playerIn.getServer().getWorld(worldIn.provider.getDimension())));
+//		} else if (!worldIn.isRemote) {
+//			playerIn.getServer().getPlayerList().transferPlayerToDimension((EntityPlayerMP) playerIn, 0,
+//					new TeleporterCocoa(playerIn.getServer().getWorld(CbCraft.dimID)));
+//		}
+//		playerIn.sendMessage(new TextComponentString("" + playerIn.world.provider.getDimension()));
+//		return new ActionResult<ItemStack>(EnumActionResult.PASS, playerIn.getHeldItem(handIn));
+//	}
 
 }

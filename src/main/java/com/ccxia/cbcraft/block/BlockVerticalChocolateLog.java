@@ -21,7 +21,7 @@ public class BlockVerticalChocolateLog extends BlockLog {
 		this.setRegistryName("vertical_chocolate_log");
 		this.setCreativeTab(CreativeTabsCbCraft.tabCbCraft);
 		// 这个要加，不然火没法烧掉木头
-		Blocks.FIRE.setFireInfo(this, 5, 20);
+		Blocks.FIRE.setFireInfo(this, 5, 5);
 	}
 
 	public IBlockState getStateFromMeta(int meta) {

@@ -32,38 +32,16 @@ public class TeleporterCocoa extends Teleporter {
 	@Override
 	public void placeInPortal(Entity entityIn, float rotationYaw) {
 		// 只允许主世界和巧克力世界的互通
+		int i = MathHelper.floor(entityIn.posX);
+		int k = MathHelper.floor(entityIn.posZ);
 		if (this.world.provider.getDimensionType().getId() != 1
 				&& this.world.provider.getDimensionType().getId() != -1) {
-			if (!this.placeInExistingPortal(entityIn, rotationYaw)) {
-				this.makePortal(entityIn);
-				this.placeInExistingPortal(entityIn, rotationYaw);
-			}
-		} else {
-			int i = MathHelper.floor(entityIn.posX);
-			int j = MathHelper.floor(entityIn.posY) - 1;
-			int k = MathHelper.floor(entityIn.posZ);
-			int l = 1;
-			int i1 = 0;
-
-			for (int j1 = -2; j1 <= 2; ++j1) {
-				for (int k1 = -2; k1 <= 2; ++k1) {
-					for (int l1 = -1; l1 < 3; ++l1) {
-						int i2 = i + k1 * 1 + j1 * 0;
-						int j2 = j + l1;
-						int k2 = k + k1 * 0 - j1 * 1;
-						boolean flag = l1 < 0;
-						this.world.setBlockState(new BlockPos(i2, j2, k2),
-								flag ? ModBlocks.INJECTED_WHITE_CHOCOLATE.getDefaultState()
-										: Blocks.AIR.getDefaultState());
-					}
-				}
-			}
-
-			entityIn.setLocationAndAngles((double) i, (double) j, (double) k, entityIn.rotationYaw, 0.0F);
-			entityIn.motionX = 0.0D;
-			entityIn.motionY = 0.0D;
-			entityIn.motionZ = 0.0D;
+			entityIn.setLocationAndAngles((double) i, this.world.getTopSolidOrLiquidBlock(new BlockPos(i, 0, k)).getY(),
+					(double) k, entityIn.rotationYaw, 0.0F);
 		}
+		entityIn.motionX = 0.0D;
+		entityIn.motionY = 0.0D;
+		entityIn.motionZ = 0.0D;
 	}
 
 	@Override

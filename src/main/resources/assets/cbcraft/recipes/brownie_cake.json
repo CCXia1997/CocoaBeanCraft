@@ -1,0 +1,17 @@
+{
+  "type": "forge:ore_shaped",
+  "pattern": [
+    "###",
+    "###",
+	"###"
+  ],
+  "key": {
+    "#": {
+      "item": "cbcraft:brownie_block"
+    }
+  },
+  "result": {
+    "item": "cbcraft:brownie_cake",
+	"count":1
+  }
+}

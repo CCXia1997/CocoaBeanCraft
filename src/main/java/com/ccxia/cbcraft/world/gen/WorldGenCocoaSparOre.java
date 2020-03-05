@@ -4,6 +4,7 @@ import java.util.Random;
 
 import com.ccxia.cbcraft.CbCraft;
 import com.ccxia.cbcraft.block.ModBlocks;
+import com.ccxia.cbcraft.world.biome.CocoaBiomes;
 import com.google.common.base.Predicate;
 
 import net.minecraft.block.state.IBlockState;
@@ -27,7 +28,14 @@ public class WorldGenCocoaSparOre implements IWorldGenerator {
 	private int maxHeight;
 
 	private void generateCocoaWorld(Random rand, int chunkX, int chunkZ, World world) {
-		for (int i = 0; i < this.genCountInChunk; i++) {
+		int k = 0;
+		// 布朗尼山地的生成数量更多
+		if (world.getBiome(new BlockPos(chunkX * 16, 16, chunkZ * 16)) == CocoaBiomes.BROWNIE_HILL) {
+			k = 4;
+		} else {
+			k = this.genCountInChunk;
+		}
+		for (int i = 0; i < k; i++) {
 			BlockPos genPos = new BlockPos(chunkX * 16 + rand.nextInt(16), rand.nextInt(16),
 					chunkZ * 16 + rand.nextInt(16));
 			cocoaSparOreGen.generate(world, rand, genPos);

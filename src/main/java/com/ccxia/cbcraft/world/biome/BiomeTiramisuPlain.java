@@ -3,7 +3,9 @@ package com.ccxia.cbcraft.world.biome;
 import java.util.Random;
 
 import com.ccxia.cbcraft.block.ModBlocks;
+import com.ccxia.cbcraft.world.gen.WorldGenHollowTrees;
 
+import net.minecraft.block.BlockFlower;
 import net.minecraft.block.BlockSand;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
@@ -13,8 +15,14 @@ import net.minecraft.world.World;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.biome.BiomePlains;
 import net.minecraft.world.chunk.ChunkPrimer;
+import net.minecraft.world.gen.feature.WorldGenAbstractTree;
+import net.minecraft.world.gen.feature.WorldGenTrees;
 
 public class BiomeTiramisuPlain extends BiomePlains {
+
+	// 树木生成配置
+	private static final WorldGenHollowTrees HOLLOW_FEATURE = new WorldGenHollowTrees(false, false);
+
 	public BiomeTiramisuPlain(boolean p_i46699_1_, BiomeProperties properties) {
 		super(p_i46699_1_, properties);
 		this.setRegistryName("tiramisu_plain");
@@ -23,6 +31,11 @@ public class BiomeTiramisuPlain extends BiomePlains {
 		this.fillerBlock = ModBlocks.COCOA_CAKE_BASE.getDefaultState();
 		// 先禁止生物生成
 		this.spawnableCreatureList.clear();
+		// 一些配置
+		this.decorator.treesPerChunk = 0;
+		this.decorator.extraTreeChance = 0.05F;
+		this.decorator.flowersPerChunk = 0;
+		this.decorator.grassPerChunk = 0;
 	}
 
 	public void generateBiomeTiramisuPlainTerrain(World worldIn, Random rand, ChunkPrimer chunkPrimerIn, int x, int z,
@@ -87,6 +100,19 @@ public class BiomeTiramisuPlain extends BiomePlains {
 				}
 			}
 		}
+	}
+
+	// 生成树木
+	public WorldGenAbstractTree getRandomTreeFeature(Random rand) {
+		return HOLLOW_FEATURE;
+	}
+
+	public void decorate(World worldIn, Random rand, BlockPos pos) {
+		this.decorator.decorate(worldIn, rand, this, pos);
+	}
+
+	public BlockFlower.EnumFlowerType pickRandomFlower(Random rand, BlockPos pos) {
+		return rand.nextInt(3) > 0 ? BlockFlower.EnumFlowerType.DANDELION : BlockFlower.EnumFlowerType.POPPY;
 	}
 
 }

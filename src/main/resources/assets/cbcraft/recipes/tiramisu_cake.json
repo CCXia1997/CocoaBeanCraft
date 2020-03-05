@@ -1,0 +1,17 @@
+{
+  "type": "forge:ore_shaped",
+  "pattern": [
+    "###",
+    "###",
+	"###"
+  ],
+  "key": {
+    "#": {
+      "item": "cbcraft:tiramisu_block"
+    }
+  },
+  "result": {
+    "item": "cbcraft:tiramisu_cake",
+	"count":1
+  }
+}

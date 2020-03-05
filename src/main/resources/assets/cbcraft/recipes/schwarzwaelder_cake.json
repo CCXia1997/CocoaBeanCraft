@@ -1,0 +1,17 @@
+{
+  "type": "forge:ore_shaped",
+  "pattern": [
+    "###",
+    "###",
+	"###"
+  ],
+  "key": {
+    "#": {
+      "item": "cbcraft:schwarzwaelder_block"
+    }
+  },
+  "result": {
+    "item": "cbcraft:schwarzwaelder_cake",
+	"count":1
+  }
+}

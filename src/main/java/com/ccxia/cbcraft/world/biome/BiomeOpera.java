@@ -3,6 +3,7 @@ package com.ccxia.cbcraft.world.biome;
 import java.util.Random;
 
 import com.ccxia.cbcraft.block.ModBlocks;
+import com.ccxia.cbcraft.world.gen.WorldGenHorizontalTrees;
 
 import net.minecraft.block.BlockSand;
 import net.minecraft.block.material.Material;
@@ -12,8 +13,12 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.biome.BiomeSavanna;
 import net.minecraft.world.chunk.ChunkPrimer;
+import net.minecraft.world.gen.feature.WorldGenAbstractTree;
 
 public class BiomeOpera extends BiomeSavanna {
+
+	// 树木生成配置
+	private static final WorldGenHorizontalTrees HORIZONTAL_FEATURE = new WorldGenHorizontalTrees(false);
 
 	public BiomeOpera(BiomeProperties properties) {
 		super(properties);
@@ -22,6 +27,11 @@ public class BiomeOpera extends BiomeSavanna {
 		this.fillerBlock = ModBlocks.COCOA_CAKE_BASE.getDefaultState();
 		// 先禁止生物生成
 		this.spawnableCreatureList.clear();
+		// 一些配置
+		this.decorator.treesPerChunk = 0;
+		this.decorator.extraTreeChance = 0.05F;
+		this.decorator.flowersPerChunk = 0;
+		this.decorator.grassPerChunk = 0;
 	}
 
 	public void generateBiomeBrownieHillTerrain(World worldIn, Random rand, ChunkPrimer chunkPrimerIn, int x, int z,
@@ -86,6 +96,15 @@ public class BiomeOpera extends BiomeSavanna {
 				}
 			}
 		}
+	}
+
+	// 生成树木
+	public WorldGenAbstractTree getRandomTreeFeature(Random rand) {
+		return HORIZONTAL_FEATURE;
+	}
+
+	public void decorate(World worldIn, Random rand, BlockPos pos) {
+		this.decorator.decorate(worldIn, rand, this, pos);
 	}
 
 }

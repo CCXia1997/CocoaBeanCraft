@@ -57,7 +57,7 @@ public class BlockPortalCocoa extends BlockBreakable {
 		this.setTickRandomly(true);
 		this.setUnlocalizedName(CbCraft.MODID + ".cocoaPortalBlock");
 		this.setRegistryName("cocoa_portal_block");
-		this.setCreativeTab(CreativeTabsCbCraft.tabCbCraft);
+		//this.setCreativeTab(CreativeTabsCbCraft.tabCbCraft);
 	}
 
 	public AxisAlignedBB getBoundingBox(IBlockState state, IBlockAccess source, BlockPos pos) {

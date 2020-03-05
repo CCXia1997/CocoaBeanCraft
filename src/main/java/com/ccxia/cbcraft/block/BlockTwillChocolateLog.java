@@ -19,7 +19,7 @@ public class BlockTwillChocolateLog extends BlockLog {
 		this.setUnlocalizedName(CbCraft.MODID + ".twillChocolateLog");
 		this.setRegistryName("twill_chocolate_log");
 		this.setCreativeTab(CreativeTabsCbCraft.tabCbCraft);
-		Blocks.FIRE.setFireInfo(this, 5, 20);
+		Blocks.FIRE.setFireInfo(this, 5, 5);
 	}
 
 	public IBlockState getStateFromMeta(int meta) {

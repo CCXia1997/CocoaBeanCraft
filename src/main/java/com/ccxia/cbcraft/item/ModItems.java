@@ -44,6 +44,15 @@ public class ModItems {
 	public static final Item COCOA_METAL_CHESTPLATE;// 可可金属胸甲
 	public static final Item COCOA_METAL_LEGGINGS;// 可可金属护腿
 	public static final Item COCOA_METAL_BOOTS;// 可可金属靴子
+	public static final Item COCOA_ALLOY_SWORD;// 可可合金剑
+	public static final Item COCOA_ALLOY_AXE;// 可可合金斧
+	public static final Item COCOA_ALLOY_PICKAXE;// 可可合金镐
+	public static final Item COCOA_ALLOY_SHOVEL;// 可可合金铲
+	public static final Item COCOA_ALLOY_HOE;// 可可合金锄
+	public static final Item COCOA_ALLOY_HELMET;// 可可合金头盔
+	public static final Item COCOA_ALLOY_CHESTPLATE;// 可可合金胸甲
+	public static final Item COCOA_ALLOY_LEGGINGS;// 可可合金护腿
+	public static final Item COCOA_ALLOY_BOOTS;// 可可合金靴子
 
 	static {
 		FLOUR = ItemLoader.getByName("item." + CbCraft.MODID + ".flour");
@@ -85,6 +94,15 @@ public class ModItems {
 		COCOA_METAL_CHESTPLATE = ItemLoader.getByName("item." + CbCraft.MODID + ".cocoaMetalChestplate");
 		COCOA_METAL_LEGGINGS = ItemLoader.getByName("item." + CbCraft.MODID + ".cocoaMetalLeggings");
 		COCOA_METAL_BOOTS = ItemLoader.getByName("item." + CbCraft.MODID + ".cocoaMetalBoots");
+		COCOA_ALLOY_SWORD = ItemLoader.getByName("item." + CbCraft.MODID + ".cocoaAlloySword");
+		COCOA_ALLOY_AXE = ItemLoader.getByName("item." + CbCraft.MODID + ".cocoaAlloyAxe");
+		COCOA_ALLOY_PICKAXE = ItemLoader.getByName("item." + CbCraft.MODID + ".cocoaAlloyPickaxe");
+		COCOA_ALLOY_SHOVEL = ItemLoader.getByName("item." + CbCraft.MODID + ".cocoaAlloyShovel");
+		COCOA_ALLOY_HOE = ItemLoader.getByName("item." + CbCraft.MODID + ".cocoaAlloyHoe");
+		COCOA_ALLOY_HELMET = ItemLoader.getByName("item." + CbCraft.MODID + ".cocoaAlloyHelmet");
+		COCOA_ALLOY_CHESTPLATE = ItemLoader.getByName("item." + CbCraft.MODID + ".cocoaAlloyChestplate");
+		COCOA_ALLOY_LEGGINGS = ItemLoader.getByName("item." + CbCraft.MODID + ".cocoaAlloyLeggings");
+		COCOA_ALLOY_BOOTS = ItemLoader.getByName("item." + CbCraft.MODID + ".cocoaAlloyBoots");
 	}
 
 }

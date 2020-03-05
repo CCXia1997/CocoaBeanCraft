@@ -7,12 +7,17 @@
 	{
 	  "item":"minecraft:sugar"		
 	},
+	[
 	{
 	  "item":"minecraft:milk_bucket"		
+	},
+	{
+	  "item":"packed_milk"
 	}
+	]
   ],
   "result": {
     "item": "cbcraft:white_chocolate",
-    "count": 1
+    "count": 2
   }
 }

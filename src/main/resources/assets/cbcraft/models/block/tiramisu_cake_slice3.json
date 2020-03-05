@@ -1,0 +1,22 @@
+{
+    "textures": {
+        "particle": "cbcraft:blocks/tiramisu_cake_side",
+        "bottom": "cbcraft:blocks/tiramisu_cake_bottom",
+        "top": "cbcraft:blocks/tiramisu_cake_top",
+        "side": "cbcraft:blocks/tiramisu_cake_side",
+        "inside": "cbcraft:blocks/tiramisu_cake_inner"
+    },
+    "elements": [
+        {   "from": [ 7, 0, 1 ],
+            "to": [ 15, 8, 15 ],
+            "faces": {
+                "down":  { "texture": "#bottom", "cullface": "down" },
+                "up":    { "texture": "#top" },
+                "north": { "texture": "#side" },
+                "south": { "texture": "#side" },
+                "west":  { "texture": "#inside" },
+                "east":  { "texture": "#side" }
+            }
+        }
+    ]
+}

@@ -21,7 +21,9 @@ public class ItemLoader {
 			new ItemCocoaMetalIngot(), new ItemCocoaAllovIngot(), new ItemCocoaMetalSword(), new ItemCocoaMetalAxe(),
 			new ItemCocoaMetalPickaxe(), new ItemCocoaMetalShovel(), new ItemCocoaMetalHoe(),
 			new ItemCocoaMetalHelmet(), new ItemCocoaMetalChestplate(), new ItemCocoaMetalLeggings(),
-			new ItemCocoaMetalBoots() };
+			new ItemCocoaMetalBoots(), new ItemCocoaAlloySword(), new ItemCocoaAlloyAxe(), new ItemCocoaAlloyPickaxe(),
+			new ItemCocoaAlloyShovel(), new ItemCocoaAlloyHoe(), new ItemCocoaAlloyHelmet(),
+			new ItemCocoaAlloyChestplate(), new ItemCocoaAlloyLeggings(), new ItemCocoaAlloyBoots() };
 
 	public static Item getByName(String name) {
 		for (Item item : items)

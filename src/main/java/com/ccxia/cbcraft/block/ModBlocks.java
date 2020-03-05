@@ -67,6 +67,14 @@ public class ModBlocks {
 	public static final Block TWILL_CHOCOLATE_LOG;// 斜纹巧克力原木
 	public static final Block VERTICAL_CHOCOLATE_LOG;// 竖纹巧克力原木
 	public static final Block COCOA_METAL_ORE;// 可可金属矿
+	public static final Block TIRAMISU_CAKE;// 提拉米苏蛋糕
+	public static final Block BROWNIE_CAKE;// 布朗尼蛋糕
+	public static final Block OPERA_CAKE;// 欧培拉蛋糕
+	public static final Block SCHWARZWAELDERCAKE_CAKE;// 黑森林蛋糕
+	public static final Block HOLLOW_CHOCOLATE_LEAVES;// 空心巧克力树叶
+	public static final Block HORIZONTAL_CHOCOLATE_LEAVES;// 横纹巧克力树叶
+	public static final Block TWILL_CHOCOLATE_LEAVES;// 斜纹巧克力树叶
+	public static final Block VERTICAL_CHOCOLATE_LEAVES;// 竖纹巧克力树叶
 
 	static {
 		// FERMENTATION_BAKER = BlockLoader.getByName("block." + CbCraft.MODID +
@@ -132,6 +140,14 @@ public class ModBlocks {
 		TWILL_CHOCOLATE_LOG = BlockLoader.getByName("tile." + CbCraft.MODID + ".twillChocolateLog");
 		VERTICAL_CHOCOLATE_LOG = BlockLoader.getByName("tile." + CbCraft.MODID + ".verticalChocolateLog");
 		COCOA_METAL_ORE = BlockLoader.getByName("tile." + CbCraft.MODID + ".cocoaMetalOre");
+		TIRAMISU_CAKE = BlockLoader.getByName("tile." + CbCraft.MODID + ".tiramisuCake");
+		BROWNIE_CAKE = BlockLoader.getByName("tile." + CbCraft.MODID + ".brownieCake");
+		OPERA_CAKE = BlockLoader.getByName("tile." + CbCraft.MODID + ".operaCake");
+		SCHWARZWAELDERCAKE_CAKE = BlockLoader.getByName("tile." + CbCraft.MODID + ".schwarzwaelderCake");
+		HOLLOW_CHOCOLATE_LEAVES = BlockLoader.getByName("tile." + CbCraft.MODID + ".hollowChocolateLeaves");
+		HORIZONTAL_CHOCOLATE_LEAVES = BlockLoader.getByName("tile." + CbCraft.MODID + ".horizontalChocolateLeaves");
+		TWILL_CHOCOLATE_LEAVES = BlockLoader.getByName("tile." + CbCraft.MODID + ".twillChocolateLeaves");
+		VERTICAL_CHOCOLATE_LEAVES = BlockLoader.getByName("tile." + CbCraft.MODID + ".verticalChocolateLeaves");
 	}
 
 }
