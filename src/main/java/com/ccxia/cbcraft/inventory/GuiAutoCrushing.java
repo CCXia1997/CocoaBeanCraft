@@ -28,10 +28,8 @@ public class GuiAutoCrushing extends GuiContainer {
 		this.mc.getTextureManager().bindTexture(TEXTURE);
 		int offsetX = (this.width - this.xSize) / 2, offsetY = (this.height - this.ySize) / 2;
 		this.drawTexturedModalRect(offsetX, offsetY, 0, 0, this.xSize, this.ySize);
-		int k = ((ContainerAutoCrushing) this.inventorySlots).getCocoaPower() * 50 / 1000;
-		this.drawTexturedModalRect(offsetX + 15, offsetY + 69 - k, 176, 51 - k, 17, k + 1);
 		int k1 = ((ContainerAutoCrushing) this.inventorySlots).getCrushTime();
-		this.drawTexturedModalRect(offsetX + 103, offsetY + 53, 176, 52, 24 * k1 / 8, 17);
+		this.drawTexturedModalRect(offsetX + 77, offsetY + 20, 176, 3, 24 * k1 / 8, 17);
 	}
 
 	@Override

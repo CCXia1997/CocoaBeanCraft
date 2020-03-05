@@ -18,13 +18,13 @@ import net.minecraftforge.items.CapabilityItemHandler;
 import net.minecraftforge.items.ItemStackHandler;
 
 public class TileEntityAutoCrushing extends TileEntity implements ITickable {
-	// 上方原料，侧边可可粉，下方成品
+	// 上方和侧边原料，下方成品
 	protected ItemStackHandler upInventory = new ItemStackHandler();
-	protected ItemStackHandler sideInventory = new ItemStackHandler();
+	// protected ItemStackHandler sideInventory = new ItemStackHandler();
 	protected ItemStackHandler downInventory = new ItemStackHandler();
 
 	// 可可能量条
-	private int cocoaPower;
+	// private int cocoaPower;
 	// 研磨时间
 	private int crushTime;
 	// 工作列表
@@ -68,9 +68,7 @@ public class TileEntityAutoCrushing extends TileEntity implements ITickable {
 	public <T> T getCapability(Capability<T> capability, EnumFacing facing) {
 		if (CapabilityItemHandler.ITEM_HANDLER_CAPABILITY.equals(capability)) {
 			@SuppressWarnings("unchecked")
-			T result = (T) (facing == EnumFacing.DOWN ? downInventory : sideInventory);
-			if (facing == EnumFacing.UP)
-				result = (T) upInventory;
+			T result = (T) (facing == EnumFacing.DOWN ? downInventory : upInventory);
 			return result;
 		}
 		return super.getCapability(capability, facing);
@@ -79,33 +77,23 @@ public class TileEntityAutoCrushing extends TileEntity implements ITickable {
 	@Override
 	public void update() {
 		if (!this.world.isRemote) {
-			// 充能逻辑
-			if (!this.isFullPower()) {
-				if (this.hasCocoaPowder()) {
-					sideInventory.extractItem(0, 1, false);
-					this.cocoaPower += 10;
-				}
-			}
 			// 工作逻辑
-			if (this.cocoaPower > 0) {
-				if (!this.getResult(this.upInventory.getStackInSlot(0)).isEmpty()) {
-					ItemStack itemStack = this.getResult(this.upInventory.getStackInSlot(0));
-					if ((itemStack.isItemEqual(this.downInventory.getStackInSlot(0))
-							&& (this.downInventory.getStackInSlot(0).getCount() + itemStack.getCount() <= itemStack
-									.getMaxStackSize()))
-							|| (this.downInventory.getStackInSlot(0).isEmpty())) {
-						if (++this.crushTime == 8) {
-							this.upInventory.extractItem(0, 1, false);
-							this.downInventory.insertItem(0, itemStack.copy(), false);
-							this.crushTime = 0;
-							this.cocoaPower -= 1;
-						}
-					} else {
+			if (!this.getResult(this.upInventory.getStackInSlot(0)).isEmpty()) {
+				ItemStack itemStack = this.getResult(this.upInventory.getStackInSlot(0));
+				if ((itemStack.isItemEqual(this.downInventory.getStackInSlot(0))
+						&& (this.downInventory.getStackInSlot(0).getCount() + itemStack.getCount() <= itemStack
+								.getMaxStackSize()))
+						|| (this.downInventory.getStackInSlot(0).isEmpty())) {
+					if (++this.crushTime == 8) {
+						this.upInventory.extractItem(0, 1, false);
+						this.downInventory.insertItem(0, itemStack.copy(), false);
 						this.crushTime = 0;
 					}
 				} else {
 					this.crushTime = 0;
 				}
+			} else {
+				this.crushTime = 0;
 			}
 		}
 	}
@@ -117,18 +105,6 @@ public class TileEntityAutoCrushing extends TileEntity implements ITickable {
 			}
 		}
 		return ItemStack.EMPTY;
-	}
-
-	private boolean isFullPower() {
-		return this.cocoaPower > 990;
-	}
-
-	private boolean hasCocoaPowder() {
-		return this.sideInventory.getStackInSlot(0).getItem() == ModItems.COCOA_POWDER;
-	}
-
-	public int getCocoaPower() {
-		return this.cocoaPower;
 	}
 
 	public int getCrushTime() {

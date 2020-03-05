@@ -4,6 +4,7 @@ import com.ccxia.cbcraft.CbCraft;
 import com.ccxia.cbcraft.creativetab.CreativeTabsCbCraft;
 import com.ccxia.cbcraft.item.OreDictLoader;
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockCake;
 import net.minecraft.block.BlockSlab;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.init.Blocks;
@@ -99,7 +100,9 @@ public class BlockLoader {
 	public static void registerItems(RegistryEvent.Register<Item> event) {
 		for (Block block : blocks) {
 			Item itemBlock = new ItemBlock(block).setRegistryName(block.getRegistryName());
-			if (block instanceof BlockChocolateCake) {
+			// 设置一些方块对应物品的最大堆叠数量
+			// 所有的蛋糕最大堆叠为1
+			if (block instanceof BlockCake) {
 				itemBlock.setMaxStackSize(1);
 			}
 			if (block.getRegistryName().toString().equals(CbCraft.MODID + ":dark_chocolate_slab")
