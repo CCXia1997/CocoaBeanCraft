@@ -53,6 +53,24 @@ public class ModItems {
 	public static final Item COCOA_ALLOY_CHESTPLATE;// 可可合金胸甲
 	public static final Item COCOA_ALLOY_LEGGINGS;// 可可合金护腿
 	public static final Item COCOA_ALLOY_BOOTS;// 可可合金靴子
+	public static final Item COCOA_SPAR_SWORD;// 可可晶石剑
+	public static final Item COCOA_SPAR_AXE;// 可可晶石斧
+	public static final Item COCOA_SPAR_PICKAXE;// 可可晶石镐
+	public static final Item COCOA_SPAR_SHOVEL;// 可可晶石铲
+	public static final Item COCOA_SPAR_HOE;// 可可晶石锄
+	public static final Item COCOA_SPAR_HELMET;// 可可晶石头盔
+	public static final Item COCOA_SPAR_CHESTPLATE;// 可可晶石胸甲
+	public static final Item COCOA_SPAR_LEGGINGS;// 可可晶石护腿
+	public static final Item COCOA_SPAR_BOOTS;// 可可晶石靴子
+	public static final Item INJECTED_COCOA_SPAR_SWORD;// 注魔可可晶石剑
+	public static final Item INJECTED_COCOA_SPAR_AXE;// 注魔可可晶石斧
+	public static final Item INJECTED_COCOA_SPAR_PICKAXE;// 注魔可可晶石镐
+	public static final Item INJECTED_COCOA_SPAR_SHOVEL;// 注魔可可晶石铲
+	public static final Item INJECTED_COCOA_SPAR_HOE;// 注魔可可晶石锄
+	public static final Item INJECTED_COCOA_SPAR_HELMET;// 注魔可可晶石头盔
+	public static final Item INJECTED_COCOA_SPAR_CHESTPLATE;// 注魔可可晶石胸甲
+	public static final Item INJECTED_COCOA_SPAR_LEGGINGS;// 注魔可可晶石护腿
+	public static final Item INJECTED_COCOA_SPAR_BOOTS;// 注魔可可晶石靴子
 
 	static {
 		FLOUR = ItemLoader.getByName("item." + CbCraft.MODID + ".flour");
@@ -103,6 +121,24 @@ public class ModItems {
 		COCOA_ALLOY_CHESTPLATE = ItemLoader.getByName("item." + CbCraft.MODID + ".cocoaAlloyChestplate");
 		COCOA_ALLOY_LEGGINGS = ItemLoader.getByName("item." + CbCraft.MODID + ".cocoaAlloyLeggings");
 		COCOA_ALLOY_BOOTS = ItemLoader.getByName("item." + CbCraft.MODID + ".cocoaAlloyBoots");
+		COCOA_SPAR_SWORD = ItemLoader.getByName("item." + CbCraft.MODID + ".cocoaSparSword");
+		COCOA_SPAR_AXE = ItemLoader.getByName("item." + CbCraft.MODID + ".cocoaSparAxe");
+		COCOA_SPAR_PICKAXE = ItemLoader.getByName("item." + CbCraft.MODID + ".cocoaSparPickaxe");
+		COCOA_SPAR_SHOVEL = ItemLoader.getByName("item." + CbCraft.MODID + ".cocoaSparShovel");
+		COCOA_SPAR_HOE = ItemLoader.getByName("item." + CbCraft.MODID + ".cocoaSparHoe");
+		COCOA_SPAR_HELMET = ItemLoader.getByName("item." + CbCraft.MODID + ".cocoaSparHelmet");
+		COCOA_SPAR_CHESTPLATE = ItemLoader.getByName("item." + CbCraft.MODID + ".cocoaSparChestplate");
+		COCOA_SPAR_LEGGINGS = ItemLoader.getByName("item." + CbCraft.MODID + ".cocoaSparLeggings");
+		COCOA_SPAR_BOOTS = ItemLoader.getByName("item." + CbCraft.MODID + ".cocoaSparBoots");
+		INJECTED_COCOA_SPAR_SWORD = ItemLoader.getByName("item." + CbCraft.MODID + ".injectedCocoaSparSword");
+		INJECTED_COCOA_SPAR_AXE = ItemLoader.getByName("item." + CbCraft.MODID + ".injectedCocoaSparAxe");
+		INJECTED_COCOA_SPAR_PICKAXE = ItemLoader.getByName("item." + CbCraft.MODID + ".injectedCocoaSparPickaxe");
+		INJECTED_COCOA_SPAR_SHOVEL = ItemLoader.getByName("item." + CbCraft.MODID + ".injectedCocoaSparShovel");
+		INJECTED_COCOA_SPAR_HOE = ItemLoader.getByName("item." + CbCraft.MODID + ".injectedCocoaSparHoe");
+		INJECTED_COCOA_SPAR_HELMET = ItemLoader.getByName("item." + CbCraft.MODID + ".injectedCocoaSparHelmet");
+		INJECTED_COCOA_SPAR_CHESTPLATE = ItemLoader.getByName("item." + CbCraft.MODID + ".injectedCocoaSparChestplate");
+		INJECTED_COCOA_SPAR_LEGGINGS = ItemLoader.getByName("item." + CbCraft.MODID + ".injectedCocoaSparLeggings");
+		INJECTED_COCOA_SPAR_BOOTS = ItemLoader.getByName("item." + CbCraft.MODID + ".injectedCocoaSparBoots");
 	}
 
 }

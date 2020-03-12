@@ -1,0 +1,20 @@
+{
+  "type": "forge:ore_shaped",
+  "pattern": [
+    "#",
+    "#",
+    "X"
+  ],
+  "key": {
+    "#": {
+      "item": "cbcraft:injected_cocoa_spar"
+    },
+    "X": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "cbcraft:injected_cocoa_spar_sword",
+	"count":1
+  }
+}

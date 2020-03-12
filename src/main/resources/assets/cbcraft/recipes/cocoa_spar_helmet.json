@@ -1,0 +1,16 @@
+{
+  "type": "forge:ore_shaped",
+  "pattern": [
+    "###",
+    "# #"
+  ],
+  "key": {
+    "#": {
+      "item": "cbcraft:cocoa_spar"
+    }
+  },
+  "result": {
+    "item": "cbcraft:cocoa_spar_helmet",
+	"count":1
+  }
+}

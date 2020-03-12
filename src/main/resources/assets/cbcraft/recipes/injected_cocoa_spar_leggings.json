@@ -1,0 +1,17 @@
+{
+  "type": "forge:ore_shaped",
+  "pattern": [
+    "###",
+    "# #",
+	"# #"
+  ],
+  "key": {
+    "#": {
+      "item": "cbcraft:injected_cocoa_spar"
+    }
+  },
+  "result": {
+    "item": "cbcraft:injected_cocoa_spar_leggings",
+	"count":1
+  }
+}

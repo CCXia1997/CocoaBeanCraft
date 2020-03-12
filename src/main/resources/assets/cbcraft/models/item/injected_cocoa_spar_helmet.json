@@ -1,0 +1,6 @@
+{
+    "parent": "item/generated",
+    "textures": {
+        "layer0": "cbcraft:items/injected_cocoa_spar_helmet"
+    }
+}

@@ -23,7 +23,13 @@ public class ItemLoader {
 			new ItemCocoaMetalHelmet(), new ItemCocoaMetalChestplate(), new ItemCocoaMetalLeggings(),
 			new ItemCocoaMetalBoots(), new ItemCocoaAlloySword(), new ItemCocoaAlloyAxe(), new ItemCocoaAlloyPickaxe(),
 			new ItemCocoaAlloyShovel(), new ItemCocoaAlloyHoe(), new ItemCocoaAlloyHelmet(),
-			new ItemCocoaAlloyChestplate(), new ItemCocoaAlloyLeggings(), new ItemCocoaAlloyBoots() };
+			new ItemCocoaAlloyChestplate(), new ItemCocoaAlloyLeggings(), new ItemCocoaAlloyBoots(),
+			new ItemCocoaSparSword(), new ItemCocoaSparAxe(), new ItemCocoaSparPickaxe(), new ItemCocoaSparShovel(),
+			new ItemCocoaSparHoe(), new ItemCocoaSparHelmet(), new ItemCocoaSparChestplate(),
+			new ItemCocoaSparLeggings(), new ItemCocoaSparBoots(), new ItemInjectedCocoaSparSword(),
+			new ItemInjectedCocoaSparAxe(), new ItemInjectedCocoaSparPickaxe(), new ItemInjectedCocoaSparShovel(),
+			new ItemInjectedCocoaSparHoe(), new ItemInjectedCocoaSparHelmet(), new ItemInjectedCocoaSparChestplate(),
+			new ItemInjectedCocoaSparLeggings(), new ItemInjectedCocoaSparBoots() };
 
 	public static Item getByName(String name) {
 		for (Item item : items)
