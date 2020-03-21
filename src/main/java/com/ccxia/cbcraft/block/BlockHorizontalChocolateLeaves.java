@@ -1,6 +1,7 @@
 package com.ccxia.cbcraft.block;
 
 import java.util.List;
+import java.util.Random;
 
 import com.ccxia.cbcraft.CbCraft;
 import com.ccxia.cbcraft.creativetab.CreativeTabsCbCraft;
@@ -11,6 +12,7 @@ import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Blocks;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.BlockRenderLayer;
 import net.minecraft.util.EnumFacing;
@@ -84,4 +86,9 @@ public class BlockHorizontalChocolateLeaves extends BlockLeaves {
 	public boolean shouldSideBeRendered(IBlockState state, IBlockAccess world, BlockPos pos, EnumFacing side) {
 		return Blocks.LEAVES.shouldSideBeRendered(state, world, pos, side);
 	}
+
+	public Item getItemDropped(IBlockState state, Random rand, int fortune) {
+		return Item.getItemFromBlock(ModBlocks.HORIZONTAL_CHOCOLATE_SAPLING);
+	}
+
 }

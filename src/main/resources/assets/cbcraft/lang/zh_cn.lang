@@ -134,6 +134,10 @@ tile.cbcraft.hollowChocolateLeaves.name=空心巧克力树叶
 tile.cbcraft.horizontalChocolateLeaves.name=横纹巧克力树叶
 tile.cbcraft.twillChocolateLeaves.name=斜纹巧克力树叶
 tile.cbcraft.verticalChocolateLeaves.name=竖纹巧克力树叶
+tile.cbcraft.hollowChocolateSapling.name=空心巧克力树苗
+tile.cbcraft.horizontalChocolateSapling.name=横纹巧克力树苗
+tile.cbcraft.twillChocolateSapling.name=斜纹巧克力树苗
+tile.cbcraft.verticalChocolateSapling.name=竖纹巧克力树苗
 
 container.cbcraft.fermentation_baking_machine=发酵烘焙机
 container.cbcraft.crushing_grinding_machine=打碎研磨机

@@ -6,6 +6,12 @@ import com.ccxia.cbcraft.creativetab.CreativeTabsCbCraft;
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
+import net.minecraft.block.state.IBlockState;
+import net.minecraft.init.Blocks;
+import net.minecraft.util.EnumFacing;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.IBlockAccess;
+import net.minecraftforge.common.EnumPlantType;
 
 public class BlockCocoaCakeBase extends Block {
 	public BlockCocoaCakeBase() {
@@ -15,5 +21,20 @@ public class BlockCocoaCakeBase extends Block {
 		this.setCreativeTab(CreativeTabsCbCraft.tabCbCraft);
 		this.setHardness(1.0F);
 		this.setSoundType(SoundType.STONE);
+	}
+
+	public boolean canSustainPlant(IBlockState state, IBlockAccess world, BlockPos pos, EnumFacing direction,
+			net.minecraftforge.common.IPlantable plantable) {
+		IBlockState plant = plantable.getPlant(world, pos.offset(direction));
+		net.minecraftforge.common.EnumPlantType plantType = plantable.getPlantType(world, pos.offset(direction));
+		if ((plantType == EnumPlantType.Plains && plant.getBlock() == Blocks.SAPLING)
+				|| plant.getBlock() == ModBlocks.VERTICAL_CHOCOLATE_SAPLING
+				|| plant.getBlock() == ModBlocks.HOLLOW_CHOCOLATE_SAPLING
+				|| plant.getBlock() == ModBlocks.HORIZONTAL_CHOCOLATE_SAPLING
+				|| plant.getBlock() == ModBlocks.TWILL_CHOCOLATE_SAPLING) {
+			return true;
+		} else {
+			return false;
+		}
 	}
 }

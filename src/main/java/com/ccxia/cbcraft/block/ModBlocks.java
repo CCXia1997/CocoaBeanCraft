@@ -75,6 +75,10 @@ public class ModBlocks {
 	public static final Block HORIZONTAL_CHOCOLATE_LEAVES;// ºáÎÆÇÉ¿ËÁ¦Ê÷Ò¶
 	public static final Block TWILL_CHOCOLATE_LEAVES;// Ð±ÎÆÇÉ¿ËÁ¦Ê÷Ò¶
 	public static final Block VERTICAL_CHOCOLATE_LEAVES;// ÊúÎÆÇÉ¿ËÁ¦Ê÷Ò¶
+	public static final Block HOLLOW_CHOCOLATE_SAPLING;// ¿ÕÐÄÇÉ¿ËÁ¦Ê÷Ãç
+	public static final Block HORIZONTAL_CHOCOLATE_SAPLING;// ºáÎÆÇÉ¿ËÁ¦Ê÷Ãç
+	public static final Block TWILL_CHOCOLATE_SAPLING;// Ð±ÎÆÇÉ¿ËÁ¦Ê÷Ãç
+	public static final Block VERTICAL_CHOCOLATE_SAPLING;// ÊúÎÆÇÉ¿ËÁ¦Ê÷Ãç
 
 	static {
 		// FERMENTATION_BAKER = BlockLoader.getByName("block." + CbCraft.MODID +
@@ -148,6 +152,10 @@ public class ModBlocks {
 		HORIZONTAL_CHOCOLATE_LEAVES = BlockLoader.getByName("tile." + CbCraft.MODID + ".horizontalChocolateLeaves");
 		TWILL_CHOCOLATE_LEAVES = BlockLoader.getByName("tile." + CbCraft.MODID + ".twillChocolateLeaves");
 		VERTICAL_CHOCOLATE_LEAVES = BlockLoader.getByName("tile." + CbCraft.MODID + ".verticalChocolateLeaves");
+		HOLLOW_CHOCOLATE_SAPLING = BlockLoader.getByName("tile." + CbCraft.MODID + ".hollowChocolateSapling");
+		HORIZONTAL_CHOCOLATE_SAPLING = BlockLoader.getByName("tile." + CbCraft.MODID + ".horizontalChocolateSapling");
+		TWILL_CHOCOLATE_SAPLING = BlockLoader.getByName("tile." + CbCraft.MODID + ".twillChocolateSapling");
+		VERTICAL_CHOCOLATE_SAPLING = BlockLoader.getByName("tile." + CbCraft.MODID + ".verticalChocolateSapling");
 	}
 
 }

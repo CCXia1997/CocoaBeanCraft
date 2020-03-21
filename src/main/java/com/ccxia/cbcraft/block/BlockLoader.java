@@ -78,7 +78,8 @@ public class BlockLoader {
 			new BlockHorizontalChocolateLog(), new BlockTwillChocolateLog(), new BlockVerticalChocolateLog(),
 			new BlockCocoaMetalOre(), new BlockTiramisuCake(), new BlockBrownieCake(), new BlockOperaCake(),
 			new BlockSchwarzwaelderCake(), new BlockHollowChocolateLeaves(), new BlockHorizontalChocolateLeaves(),
-			new BlockTwillChocolateLeaves(), new BlockVerticalChocolateLeaves() };
+			new BlockTwillChocolateLeaves(), new BlockVerticalChocolateLeaves(), new BlockHollowChocolateSapling(),
+			new BlockHorizontalChocolateSapling(), new TwillChocolateSapling(), new BlockVerticalChocolateSapling() };
 
 	@SubscribeEvent
 	public static void registerBlocks(RegistryEvent.Register<Block> event) {

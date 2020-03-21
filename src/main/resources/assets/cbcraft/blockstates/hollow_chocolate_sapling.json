@@ -1,0 +1,25 @@
+{
+  "forge_marker": 1,
+  "defaults": {
+    "model": "minecraft:cross",
+    "transform": "forge:default-item"
+  },
+  "variants": {
+    "normal": [
+      {
+        "model": "cross",
+        "textures": {
+          "cross": "cbcraft:blocks/hollow_chocolate_sapling"
+        }
+      }
+    ],
+    "inventory": [
+      {
+        "model": "builtin/generated",
+        "textures": {
+          "layer0": "cbcraft:blocks/hollow_chocolate_sapling"
+        }
+      }
+    ]
+  }
+}

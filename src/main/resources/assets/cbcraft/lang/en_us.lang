@@ -134,6 +134,10 @@ tile.cbcraft.hollowChocolateLeaves.name=Hollow Chocolate Leaves
 tile.cbcraft.horizontalChocolateLeaves.name=Horizontal Chocolate Leaves
 tile.cbcraft.twillChocolateLeaves.name=Twill Chocolate Leaves
 tile.cbcraft.verticalChocolateLeaves.name=Vertical Chocolate Leaves
+tile.cbcraft.hollowChocolateSapling.name=Hollow Chocolate Sapling
+tile.cbcraft.horizontalChocolateSapling.name=Horizontal Chocolate Sapling
+tile.cbcraft.twillChocolateSapling.name=Twill Chocolate Sapling
+tile.cbcraft.verticalChocolateSapling.name=Vertical Chocolate Sapling
 
 container.cbcraft.fermentation_baking_machine=Fermentation Baking Machine
 container.cbcraft.crushing_grinding_machine=Crushing Grinding Machine
