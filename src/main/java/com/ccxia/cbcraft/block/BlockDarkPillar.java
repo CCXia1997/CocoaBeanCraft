@@ -16,6 +16,7 @@ public class BlockDarkPillar extends BlockRotatedPillar {
 		this.setRegistryName("dark_chocolate_block_pillar");
 		this.setCreativeTab(CreativeTabsCbCraft.tabCbCraft);
 		this.setHardness(1.0F);
+		this.setResistance(5.0F);
 		this.setSoundType(SoundType.STONE);
 	}
 }

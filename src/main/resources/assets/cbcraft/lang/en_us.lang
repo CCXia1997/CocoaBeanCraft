@@ -65,6 +65,7 @@ item.cbcraft.injectedCocoaSparHelmet.name=Injected Cocoa Spar Helmet
 item.cbcraft.injectedCocoaSparChestplate.name=Injected Cocoa Spar Chestplate
 item.cbcraft.injectedCocoaSparLeggings.name=Injected Cocoa Spar Leggings
 item.cbcraft.injectedCocoaSparBoots.name=Injected Cocoa Spar Boots
+item.cbcraft.goldenCocoa.name=Golden Cocoa
 
 tile.cbcraft.fermentationBaker.name=Fermentation Baking Machine
 tile.cbcraft.fermentationBakerOn.name=Burning Fermentation Baking Machine

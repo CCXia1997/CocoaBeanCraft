@@ -10,5 +10,7 @@ public class BlockChocolateStairs extends BlockStairs {
 		super(modelState);
 		this.useNeighborBrightness = true;
 		this.setCreativeTab(CreativeTabsCbCraft.tabCbCraft);
+		this.setHardness(1.0F);
+		this.setResistance(5.0F);
 	}
 }

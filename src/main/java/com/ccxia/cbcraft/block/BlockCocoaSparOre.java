@@ -24,6 +24,7 @@ public class BlockCocoaSparOre extends BlockOre {
 		this.setRegistryName("cocoa_spar_ore");
 		this.setCreativeTab(CreativeTabsCbCraft.tabCbCraft);
 		this.setHardness(3.0F);
+		this.setResistance(5.0F);
 		this.setSoundType(SoundType.STONE);
 		// 设计成与原版钻石矿相近，只能使用钻石镐挖掘才能掉落物品
 		this.setHarvestLevel("pickaxe", 3);

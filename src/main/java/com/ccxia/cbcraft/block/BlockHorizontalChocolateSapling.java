@@ -31,6 +31,7 @@ public class BlockHorizontalChocolateSapling extends BlockBush implements IGrowa
 		this.setRegistryName("horizontal_chocolate_sapling");
 		this.setCreativeTab(CreativeTabsCbCraft.tabCbCraft);
 		this.setSoundType(SoundType.PLANT);
+		this.setHardness(0.0F);
 	}
 
 	@Override

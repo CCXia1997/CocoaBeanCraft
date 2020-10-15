@@ -14,6 +14,7 @@ public class BlockMilkWhite extends Block {
 		this.setRegistryName("milk_white_chocolate_block");
 		this.setCreativeTab(CreativeTabsCbCraft.tabCbCraft);
 		this.setHardness(1.0F);
+		this.setResistance(5.0F);
 		this.setSoundType(SoundType.STONE);
 	}
 }

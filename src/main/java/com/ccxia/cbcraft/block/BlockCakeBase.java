@@ -9,11 +9,12 @@ import net.minecraft.block.material.Material;
 
 public class BlockCakeBase extends Block {
 	public BlockCakeBase() {
-		super(Material.ROCK);
+		super(Material.GROUND);
 		this.setUnlocalizedName(CbCraft.MODID + ".cakeBase");
 		this.setRegistryName("cake_base");
 		this.setCreativeTab(CreativeTabsCbCraft.tabCbCraft);
-		this.setHardness(1.0F);
-		this.setSoundType(SoundType.STONE);
+		this.setHardness(0.5F);
+		this.setHarvestLevel("shovel", 0);
+		this.setSoundType(SoundType.GROUND);
 	}
 }

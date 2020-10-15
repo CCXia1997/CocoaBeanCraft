@@ -50,6 +50,7 @@ public class BlockCrushingGrindingMachine extends Block {
 		this.setRegistryName("crushing_grinding_machine");
 		this.setCreativeTab(CreativeTabsCbCraft.tabCbCraft);
 		this.setHardness(3.5F);
+		this.setResistance(10.0F);
 		this.setSoundType(SoundType.STONE);
 	}
 

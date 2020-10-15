@@ -43,6 +43,7 @@ public abstract class BlockDarkChocolateSlab extends BlockSlab {
 
 		this.setDefaultState(iblockstate.withProperty(VARIANT, BlockDarkChocolateSlab.Variant.DEFAULT));
 		this.setHardness(1.0F);
+		this.setResistance(5.0F);
 		this.setSoundType(SoundType.STONE);
 		this.useNeighborBrightness = !this.isDouble();
 		// this.setCreativeTab(CreativeTabsCbCraft.tabCbCraft);

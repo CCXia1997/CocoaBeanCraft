@@ -13,7 +13,8 @@ public class BlockCocoaStone extends Block {
 		this.setUnlocalizedName(CbCraft.MODID + ".cocoaStone");
 		this.setRegistryName("cocoa_stone");
 		this.setCreativeTab(CreativeTabsCbCraft.tabCbCraft);
-		this.setHardness(3.0F);
+		this.setHardness(1.5F);
+		this.setResistance(10.0F);
 		this.setSoundType(SoundType.STONE);
 	}
 

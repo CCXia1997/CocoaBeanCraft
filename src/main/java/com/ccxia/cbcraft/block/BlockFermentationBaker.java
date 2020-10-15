@@ -54,6 +54,7 @@ public class BlockFermentationBaker extends BlockContainer {
 			this.setUnlocalizedName(CbCraft.MODID + ".fermentationBakerOn");
 			this.setRegistryName("fermentation_baking_machine_on");
 			this.setHardness(3.5F);
+			this.setResistance(10.0F);
 			this.setSoundType(SoundType.STONE);
 			this.setLightLevel(0.875F);
 		} else {
@@ -61,6 +62,7 @@ public class BlockFermentationBaker extends BlockContainer {
 			this.setRegistryName("fermentation_baking_machine");
 			this.setCreativeTab(CreativeTabsCbCraft.tabCbCraft);
 			this.setHardness(3.5F);
+			this.setResistance(10.0F);
 			this.setSoundType(SoundType.STONE);
 		}
 	}

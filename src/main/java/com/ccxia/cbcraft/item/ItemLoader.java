@@ -29,7 +29,7 @@ public class ItemLoader {
 			new ItemCocoaSparLeggings(), new ItemCocoaSparBoots(), new ItemInjectedCocoaSparSword(),
 			new ItemInjectedCocoaSparAxe(), new ItemInjectedCocoaSparPickaxe(), new ItemInjectedCocoaSparShovel(),
 			new ItemInjectedCocoaSparHoe(), new ItemInjectedCocoaSparHelmet(), new ItemInjectedCocoaSparChestplate(),
-			new ItemInjectedCocoaSparLeggings(), new ItemInjectedCocoaSparBoots() };
+			new ItemInjectedCocoaSparLeggings(), new ItemInjectedCocoaSparBoots(), new ItemGoldCocoa() };
 
 	public static Item getByName(String name) {
 		for (Item item : items)

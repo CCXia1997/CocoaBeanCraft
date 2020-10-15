@@ -115,12 +115,15 @@ public class BiomeSchwarezwaelder extends BiomeForest {
 		} else if (rand.nextInt(2) == 0) {
 			return new WorldGenShrub(DEFAULT_TRUNK, DEFAULT_LEAF);
 		} else {
-			return new WorldGenTrees(false, 4 + rand.nextInt(7), DEFAULT_TRUNK, DEFAULT_LEAF, true);
+			// 最后一个布尔参数控制是否生成藤蔓
+			return new WorldGenTrees(false, 4 + rand.nextInt(7), DEFAULT_TRUNK, DEFAULT_LEAF, false);
 		}
 	}
 
 	public void decorate(World worldIn, Random rand, BlockPos pos) {
 		this.decorator.decorate(worldIn, rand, this, pos);
 	}
+
+	// 把藤蔓生成去掉
 
 }

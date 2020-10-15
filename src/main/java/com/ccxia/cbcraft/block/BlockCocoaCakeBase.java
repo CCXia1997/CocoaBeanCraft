@@ -15,12 +15,13 @@ import net.minecraftforge.common.EnumPlantType;
 
 public class BlockCocoaCakeBase extends Block {
 	public BlockCocoaCakeBase() {
-		super(Material.ROCK);
+		super(Material.GROUND);
 		this.setUnlocalizedName(CbCraft.MODID + ".cocoaCakeBase");
 		this.setRegistryName("cocoa_cake_base");
 		this.setCreativeTab(CreativeTabsCbCraft.tabCbCraft);
-		this.setHardness(1.0F);
-		this.setSoundType(SoundType.STONE);
+		this.setHardness(0.5F);
+		this.setHarvestLevel("shovel", 0);
+		this.setSoundType(SoundType.GROUND);
 	}
 
 	public boolean canSustainPlant(IBlockState state, IBlockAccess world, BlockPos pos, EnumFacing direction,

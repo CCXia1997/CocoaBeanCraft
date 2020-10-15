@@ -17,6 +17,7 @@ public class BlockCocoaMetalOre extends BlockOre {
 		this.setRegistryName("cocoa_metal_ore");
 		this.setCreativeTab(CreativeTabsCbCraft.tabCbCraft);
 		this.setHardness(3.0F);
+		this.setResistance(5.0F);
 		this.setSoundType(SoundType.STONE);
 		// 设计成与原版铁矿相近，只能使用石镐以上挖掘才能掉落物品
 		this.setHarvestLevel("pickaxe", 1);

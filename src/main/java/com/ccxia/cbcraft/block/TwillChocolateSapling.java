@@ -31,6 +31,7 @@ public class TwillChocolateSapling extends BlockBush implements IGrowable {
 		this.setRegistryName("twill_chocolate_sapling");
 		this.setCreativeTab(CreativeTabsCbCraft.tabCbCraft);
 		this.setSoundType(SoundType.PLANT);
+		this.setHardness(0.0F);
 	}
 
 	@Override

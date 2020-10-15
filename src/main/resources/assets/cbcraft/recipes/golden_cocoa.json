@@ -1,0 +1,21 @@
+{
+  "type": "forge:ore_shaped",
+  "pattern": [
+    "###",
+    "#A#",
+	"###"
+  ],
+  "key": {
+    "A": {
+      "item": "minecraft:dye",
+	  "data":3
+    },
+	"#": {
+      "item": "minecraft:gold_nugget"
+    }
+  },
+  "result": {
+    "item": "cbcraft:golden_cocoa",
+	"count":1
+  }
+}

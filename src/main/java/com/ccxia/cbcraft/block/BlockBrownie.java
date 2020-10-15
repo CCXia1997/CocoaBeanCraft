@@ -18,12 +18,13 @@ import net.minecraftforge.common.EnumPlantType;
 
 public class BlockBrownie extends Block {
 	public BlockBrownie() {
-		super(Material.ROCK);
+		super(Material.GRASS);
 		this.setUnlocalizedName(CbCraft.MODID + ".brownieBlock");
 		this.setRegistryName("brownie_block");
 		this.setCreativeTab(CreativeTabsCbCraft.tabCbCraft);
-		this.setHardness(1.0F);
-		this.setSoundType(SoundType.STONE);
+		this.setHardness(0.6F);
+		this.setHarvestLevel("shovel", 0);
+		this.setSoundType(SoundType.PLANT);
 		this.setTickRandomly(true);
 	}
 

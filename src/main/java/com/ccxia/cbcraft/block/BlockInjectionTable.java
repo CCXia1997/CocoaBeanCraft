@@ -31,66 +31,67 @@ import static com.ccxia.cbcraft.inventory.GuiLoader.GUI_INJECTION_TABLE;
 
 public class BlockInjectionTable extends BlockContainer {
 
-    public BlockInjectionTable() {
-        super(Material.ROCK);
-        this.setUnlocalizedName(CbCraft.MODID + ".injectionTable");
-        this.setRegistryName("injection_table");
-        this.setCreativeTab(CreativeTabsCbCraft.tabCbCraft);
-        this.setHardness(3.5F);
-        this.setSoundType(SoundType.STONE);
-    }
+	public BlockInjectionTable() {
+		super(Material.ROCK);
+		this.setUnlocalizedName(CbCraft.MODID + ".injectionTable");
+		this.setRegistryName("injection_table");
+		this.setCreativeTab(CreativeTabsCbCraft.tabCbCraft);
+		this.setHardness(5.0F);
+		this.setResistance(2000.0F);
+		this.setSoundType(SoundType.STONE);
+	}
 
-    /** 方块的基本碰撞和渲染属性 **/
+	/** 方块的基本碰撞和渲染属性 **/
 
-    @Override
-    public boolean isOpaqueCube(IBlockState blockState) {
-        return false;
-    }
+	@Override
+	public boolean isOpaqueCube(IBlockState blockState) {
+		return false;
+	}
 
-    @Override
-    public EnumBlockRenderType getRenderType(IBlockState blockState) {
-        return EnumBlockRenderType.MODEL;
-    }
+	@Override
+	public EnumBlockRenderType getRenderType(IBlockState blockState) {
+		return EnumBlockRenderType.MODEL;
+	}
 
-    @SideOnly(Side.CLIENT)
-    @Override
-    public BlockRenderLayer getBlockLayer() {
-        return BlockRenderLayer.CUTOUT;
-    }
+	@SideOnly(Side.CLIENT)
+	@Override
+	public BlockRenderLayer getBlockLayer() {
+		return BlockRenderLayer.CUTOUT;
+	}
 
-    @Override
-    public boolean isFullCube(IBlockState blockState) {
-        return false;
-    }
+	@Override
+	public boolean isFullCube(IBlockState blockState) {
+		return false;
+	}
 
-    @Override
-    public AxisAlignedBB getBoundingBox(IBlockState state, IBlockAccess source, BlockPos pos) {
-        return new AxisAlignedBB(0.0D, 0.0D, 0.0D, 1.0D, 0.75D, 1.0D);
-    }
+	@Override
+	public AxisAlignedBB getBoundingBox(IBlockState state, IBlockAccess source, BlockPos pos) {
+		return new AxisAlignedBB(0.0D, 0.0D, 0.0D, 1.0D, 0.75D, 1.0D);
+	}
 
-    @Override
-    public BlockFaceShape getBlockFaceShape(IBlockAccess worldIn, IBlockState state, BlockPos pos, EnumFacing face) {
-        return face == EnumFacing.DOWN ? BlockFaceShape.SOLID : BlockFaceShape.UNDEFINED;
-    }
+	@Override
+	public BlockFaceShape getBlockFaceShape(IBlockAccess worldIn, IBlockState state, BlockPos pos, EnumFacing face) {
+		return face == EnumFacing.DOWN ? BlockFaceShape.SOLID : BlockFaceShape.UNDEFINED;
+	}
 
-    /** TileEntity 部分 **/
+	/** TileEntity 部分 **/
 
-    @Override
-    public boolean hasTileEntity(IBlockState state) {
-        return true;
-    }
+	@Override
+	public boolean hasTileEntity(IBlockState state) {
+		return true;
+	}
 
-    @Override
-    public TileEntity createNewTileEntity(World worldIn, int meta) {
-        return new TileEntityInjectionTable();
-    }
+	@Override
+	public TileEntity createNewTileEntity(World worldIn, int meta) {
+		return new TileEntityInjectionTable();
+	}
 
-    @Override
-    public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn,
-                                    EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ) {
-        if (!worldIn.isRemote) {
-            playerIn.openGui(CbCraft.instance, GUI_INJECTION_TABLE, worldIn, pos.getX(), pos.getY(), pos.getZ());
-        }
-        return true;
-    }
+	@Override
+	public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn,
+			EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ) {
+		if (!worldIn.isRemote) {
+			playerIn.openGui(CbCraft.instance, GUI_INJECTION_TABLE, worldIn, pos.getX(), pos.getY(), pos.getZ());
+		}
+		return true;
+	}
 }

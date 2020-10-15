@@ -52,6 +52,7 @@ public class BlockSeparator extends BlockContainer {
 			this.setUnlocalizedName(CbCraft.MODID + ".separatorOn");
 			this.setRegistryName("separator_on");
 			this.setHardness(3.5F);
+			this.setResistance(10.0F);
 			this.setSoundType(SoundType.STONE);
 			this.setLightLevel(0.875F);
 		} else {
@@ -59,6 +60,7 @@ public class BlockSeparator extends BlockContainer {
 			this.setRegistryName("separator");
 			this.setCreativeTab(CreativeTabsCbCraft.tabCbCraft);
 			this.setHardness(3.5F);
+			this.setResistance(10.0F);
 			this.setSoundType(SoundType.STONE);
 		}
 	}

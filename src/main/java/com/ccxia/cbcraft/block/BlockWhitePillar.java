@@ -15,6 +15,7 @@ public class BlockWhitePillar extends BlockRotatedPillar {
 		this.setRegistryName("white_chocolate_block_pillar");
 		this.setCreativeTab(CreativeTabsCbCraft.tabCbCraft);
 		this.setHardness(1.0F);
+		this.setResistance(5.0F);
 		this.setSoundType(SoundType.STONE);
 	}
 }

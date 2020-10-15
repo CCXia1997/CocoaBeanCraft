@@ -18,12 +18,13 @@ import net.minecraftforge.common.EnumPlantType;
 
 public class BlockSchwarzwaelder extends Block {
 	public BlockSchwarzwaelder() {
-		super(Material.ROCK);
+		super(Material.GRASS);
 		this.setUnlocalizedName(CbCraft.MODID + ".schwarzwaelderBlock");
 		this.setRegistryName("schwarzwaelder_block");
 		this.setCreativeTab(CreativeTabsCbCraft.tabCbCraft);
-		this.setHardness(1.0F);
-		this.setSoundType(SoundType.STONE);
+		this.setHardness(0.6F);
+		this.setHarvestLevel("shovel", 0);
+		this.setSoundType(SoundType.PLANT);
 		this.setTickRandomly(true);
 	}
 

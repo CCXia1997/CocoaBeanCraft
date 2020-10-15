@@ -38,6 +38,7 @@ public class BlockAutoPressing extends BlockContainer {
 		this.setRegistryName("auto_pressing_machine");
 		this.setCreativeTab(CreativeTabsCbCraft.tabCbCraft);
 		this.setHardness(3.5F);
+		this.setResistance(10.0F);
 		this.setSoundType(SoundType.STONE);
 	}
 

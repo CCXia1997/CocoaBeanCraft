@@ -36,21 +36,21 @@ public class ModBlocks {
 	public static final Block INJECTED_DARK_CHOCOLATE;// 注魔黑巧克力
 	public static final Block INJECTED_WHITE_CHOCOLATE;// 注魔白巧克力
 	public static final Block INJECTED_MILK_CHOCOLATE;// 注魔牛奶巧克力
-	public static final Block DARK_CHOCOLATE_BRICK;
-	public static final Block DARK_CHOCOLATE_WALL;
-	public static final Block DARK_CHOCOLATE_STAIRS;
-	public static final Block DARK_CHOCOLATE_FENCE;
-	public static final Block DARK_CHOCOLATE_FENCE_GATE;
-	public static final Block MILK_CHOCOLATE_BRICK;
-	public static final Block MILK_CHOCOLATE_WALL;
-	public static final Block MILK_CHOCOLATE_STAIRS;
-	public static final Block MILK_CHOCOLATE_FENCE;
-	public static final Block MILK_CHOCOLATE_FENCE_GATE;
-	public static final Block WHITE_CHOCOLATE_BRICK;
-	public static final Block WHITE_CHOCOLATE_WALL;
-	public static final Block WHITE_CHOCOLATE_STAIRS;
-	public static final Block WHITE_CHOCOLATE_FENCE;
-	public static final Block WHITE_CHOCOLATE_FENCE_GATE;
+	public static final Block DARK_CHOCOLATE_BRICK;// 黑巧克力砖
+	public static final Block DARK_CHOCOLATE_WALL;// 黑巧克力墙
+	public static final Block DARK_CHOCOLATE_STAIRS;// 黑巧克力楼梯
+	public static final Block DARK_CHOCOLATE_FENCE;// 黑巧克力栅栏
+	public static final Block DARK_CHOCOLATE_FENCE_GATE;// 黑巧克力栅栏门
+	public static final Block MILK_CHOCOLATE_BRICK;// 牛奶巧克力砖
+	public static final Block MILK_CHOCOLATE_WALL;// 牛奶巧克力墙
+	public static final Block MILK_CHOCOLATE_STAIRS;// 牛奶巧克力楼梯
+	public static final Block MILK_CHOCOLATE_FENCE;// 牛奶巧克力栅栏
+	public static final Block MILK_CHOCOLATE_FENCE_GATE;// 牛奶巧克力栅栏门
+	public static final Block WHITE_CHOCOLATE_BRICK;// 白巧克力砖
+	public static final Block WHITE_CHOCOLATE_WALL;// 白巧克力墙
+	public static final Block WHITE_CHOCOLATE_STAIRS;// 白巧克力楼梯
+	public static final Block WHITE_CHOCOLATE_FENCE;// 白巧克力栅栏
+	public static final Block WHITE_CHOCOLATE_FENCE_GATE;// 白巧克力栅栏门
 	public static final Block AUTO_PRESSING_MACHINE; // 自动压合机
 	public static final Block COCOA_SPAR_ORE;// 可可晶石矿石
 	public static final Block COCOA_SPAR_BLOCK;// 可可晶石块

@@ -12,6 +12,7 @@ import com.google.common.cache.LoadingCache;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockBreakable;
 import net.minecraft.block.BlockPortal;
+import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.properties.PropertyEnum;
@@ -57,7 +58,10 @@ public class BlockPortalCocoa extends BlockBreakable {
 		this.setTickRandomly(true);
 		this.setUnlocalizedName(CbCraft.MODID + ".cocoaPortalBlock");
 		this.setRegistryName("cocoa_portal_block");
-		//this.setCreativeTab(CreativeTabsCbCraft.tabCbCraft);
+		// this.setCreativeTab(CreativeTabsCbCraft.tabCbCraft);
+		this.setHardness(-1.0F);
+		this.setSoundType(SoundType.GLASS);
+		this.setLightLevel(0.75F);
 	}
 
 	public AxisAlignedBB getBoundingBox(IBlockState state, IBlockAccess source, BlockPos pos) {

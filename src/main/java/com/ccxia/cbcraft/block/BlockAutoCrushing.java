@@ -37,6 +37,7 @@ public class BlockAutoCrushing extends BlockContainer {
 		this.setRegistryName("auto_crushing_grinding_machine");
 		this.setCreativeTab(CreativeTabsCbCraft.tabCbCraft);
 		this.setHardness(3.5F);
+		this.setResistance(10.0F);
 		this.setSoundType(SoundType.STONE);
 	}
 
