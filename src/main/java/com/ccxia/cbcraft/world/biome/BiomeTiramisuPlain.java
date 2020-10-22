@@ -68,7 +68,7 @@ public class BiomeTiramisuPlain extends BiomePlains {
 						}
 
 						if (j1 < i && (iblockstate == null || iblockstate.getMaterial() == Material.AIR)) {
-							if (this.getFloatTemperature(blockpos$mutableblockpos.setPos(x, j1, z)) < 0.15F) {
+							if (this.getTemperature(blockpos$mutableblockpos.setPos(x, j1, z)) < 0.15F) {
 								iblockstate = ICE;
 							} else {
 								iblockstate = WATER;
