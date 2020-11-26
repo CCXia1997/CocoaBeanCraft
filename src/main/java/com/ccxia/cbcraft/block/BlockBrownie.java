@@ -32,8 +32,7 @@ public class BlockBrownie extends Block {
 			net.minecraftforge.common.IPlantable plantable) {
 		IBlockState plant = plantable.getPlant(world, pos.offset(direction));
 		net.minecraftforge.common.EnumPlantType plantType = plantable.getPlantType(world, pos.offset(direction));
-		if ((plantType == EnumPlantType.Plains && plant.getBlock() == Blocks.SAPLING)
-				|| plant.getBlock() == ModBlocks.VERTICAL_CHOCOLATE_SAPLING) {
+		if (plant.getBlock() == ModBlocks.VERTICAL_CHOCOLATE_SAPLING) {
 			return true;
 		} else {
 			return false;

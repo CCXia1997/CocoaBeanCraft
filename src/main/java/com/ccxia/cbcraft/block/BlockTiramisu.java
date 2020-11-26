@@ -35,8 +35,8 @@ public class BlockTiramisu extends Block {
 			net.minecraftforge.common.IPlantable plantable) {
 		IBlockState plant = plantable.getPlant(world, pos.offset(direction));
 		net.minecraftforge.common.EnumPlantType plantType = plantable.getPlantType(world, pos.offset(direction));
-		if ((plantType == EnumPlantType.Plains && plant.getBlock() == Blocks.SAPLING)
-				|| plant.getBlock() == ModBlocks.HOLLOW_CHOCOLATE_SAPLING) {
+		//确定上方能种植的植物类型
+		if (plant.getBlock() == ModBlocks.HOLLOW_CHOCOLATE_SAPLING) {
 			return true;
 		} else {
 			return false;

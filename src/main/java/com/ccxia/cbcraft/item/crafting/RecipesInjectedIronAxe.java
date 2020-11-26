@@ -18,6 +18,8 @@ public class RecipesInjectedIronAxe extends Impl<IRecipe> implements IRecipe {
 
 	private List<ItemStack> recipes1 = new ArrayList<ItemStack>();
 	private List<ItemStack> recipes2 = new ArrayList<ItemStack>();
+	private List<ItemStack> recipes3 = new ArrayList<ItemStack>();
+	private List<ItemStack> recipes4 = new ArrayList<ItemStack>();
 
 	public RecipesInjectedIronAxe() {
 		this.setRegistryName("recipes_injected_iron_axe");
@@ -41,28 +43,67 @@ public class RecipesInjectedIronAxe extends Impl<IRecipe> implements IRecipe {
 		recipes2.add(ItemStack.EMPTY);
 		recipes2.add(ItemStack.EMPTY);
 		recipes2.add(new ItemStack(Items.STICK));
+		//3#
+		recipes3.add(new ItemStack(ModItems.INJECTED_IRON_INGOT));
+		recipes3.add(new ItemStack(ModItems.INJECTED_IRON_INGOT));
+		recipes3.add(ItemStack.EMPTY);
+		recipes3.add(new ItemStack(Items.STICK));
+		recipes3.add(new ItemStack(ModItems.INJECTED_IRON_INGOT));
+		recipes3.add(ItemStack.EMPTY);
+		recipes3.add(new ItemStack(Items.STICK));
+		recipes3.add(ItemStack.EMPTY);
+		recipes3.add(ItemStack.EMPTY);
+		//4#
+		recipes4.add(ItemStack.EMPTY);
+		recipes4.add(new ItemStack(ModItems.INJECTED_IRON_INGOT));
+		recipes4.add(new ItemStack(ModItems.INJECTED_IRON_INGOT));
+		recipes4.add(ItemStack.EMPTY);
+		recipes4.add(new ItemStack(Items.STICK));
+		recipes4.add(new ItemStack(ModItems.INJECTED_IRON_INGOT));
+		recipes4.add(ItemStack.EMPTY);
+		recipes4.add(new ItemStack(Items.STICK));
+		recipes4.add(ItemStack.EMPTY);
 	}
 
 	@Override
 	public boolean matches(InventoryCrafting inv, World worldIn) {
-		boolean flag = true;
+		boolean flag1 = true;
+		boolean flag2 = true;
+		boolean flag3 = true;
+		boolean flag4 = true;
 		for (int i = 0; i < inv.getSizeInventory(); i++) {
 			if (!inv.getStackInSlot(i).isItemEqual(recipes1.get(i))
 					&& !(inv.getStackInSlot(i).isEmpty() && recipes1.get(i).isEmpty())) {
-				flag = false;
+				flag1 = false;
 				break;
 			}
-		}
-		if (flag) {
-			return true;
 		}
 		for (int i = 0; i < inv.getSizeInventory(); i++) {
 			if (!inv.getStackInSlot(i).isItemEqual(recipes2.get(i))
 					&& !(inv.getStackInSlot(i).isEmpty() && recipes2.get(i).isEmpty())) {
-				return false;
+				flag2 = false;
+				break;
 			}
 		}
-		return true;
+		for (int i = 0; i < inv.getSizeInventory(); i++) {
+			if (!inv.getStackInSlot(i).isItemEqual(recipes3.get(i))
+					&& !(inv.getStackInSlot(i).isEmpty() && recipes3.get(i).isEmpty())) {
+				flag3 = false;
+				break;
+			}
+		}
+		for (int i = 0; i < inv.getSizeInventory(); i++) {
+			if (!inv.getStackInSlot(i).isItemEqual(recipes4.get(i))
+					&& !(inv.getStackInSlot(i).isEmpty() && recipes4.get(i).isEmpty())) {
+				flag4 = false;
+				break;
+			}
+		}
+		if (flag1 == false && flag2 == false && flag3 == false && flag4 == false) {
+			return false;
+		} else {
+			return true;
+		}
 	}
 
 	@Override

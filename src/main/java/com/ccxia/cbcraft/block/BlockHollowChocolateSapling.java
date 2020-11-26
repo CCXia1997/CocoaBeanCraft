@@ -11,6 +11,9 @@ import net.minecraft.block.BlockBush;
 import net.minecraft.block.IGrowable;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
+import net.minecraft.block.properties.IProperty;
+import net.minecraft.block.properties.PropertyInteger;
+import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.init.Blocks;
 import net.minecraft.util.EnumFacing;
@@ -24,11 +27,13 @@ import net.minecraftforge.common.EnumPlantType;
 public class BlockHollowChocolateSapling extends BlockBush implements IGrowable {
 	protected static final AxisAlignedBB SAPLING_AABB = new AxisAlignedBB(0.09999999403953552D, 0.0D,
 			0.09999999403953552D, 0.8999999761581421D, 0.800000011920929D, 0.8999999761581421D);
+	public static final PropertyInteger STAGE = PropertyInteger.create("stage", 0, 1);
 
 	public BlockHollowChocolateSapling() {
 		super();
 		this.setUnlocalizedName(CbCraft.MODID + ".hollowChocolateSapling");
 		this.setRegistryName("hollow_chocolate_sapling");
+		this.setDefaultState(this.blockState.getBaseState().withProperty(STAGE, Integer.valueOf(0)));
 		this.setCreativeTab(CreativeTabsCbCraft.tabCbCraft);
 		this.setSoundType(SoundType.PLANT);
 		this.setHardness(0.0F);
@@ -41,17 +46,21 @@ public class BlockHollowChocolateSapling extends BlockBush implements IGrowable 
 
 	@Override
 	public boolean canUseBonemeal(World worldIn, Random rand, BlockPos pos, IBlockState state) {
-		return rand.nextFloat() < 0.5;
+		return rand.nextFloat() < 0.45;
 	}
 
 	@Override
 	public void grow(World worldIn, Random rand, BlockPos pos, IBlockState state) {
-		WorldGenerator treeGenerator = new WorldGenHollowTrees(false, false);
-		worldIn.setBlockState(pos, Blocks.AIR.getDefaultState(), 4);
-		if (!treeGenerator.generate(worldIn, rand, pos)) {
+		if (((Integer) state.getValue(STAGE)).intValue() == 0) {
+			worldIn.setBlockState(pos, state.cycleProperty(STAGE), 4);
+		} else {
+			WorldGenerator treeGenerator = new WorldGenHollowTrees(false, false);
+			worldIn.setBlockState(pos, Blocks.AIR.getDefaultState(), 4);
+			if (!treeGenerator.generate(worldIn, rand, pos)) {
 
-			worldIn.setBlockState(pos, state, 4);
+				worldIn.setBlockState(pos, state, 4);
 
+			}
 		}
 
 	}
@@ -85,10 +94,25 @@ public class BlockHollowChocolateSapling extends BlockBush implements IGrowable 
 		if (!worldIn.isRemote) {
 			super.updateTick(worldIn, pos, state, rand);
 
-			if (worldIn.getLightFromNeighbors(pos.up()) >= 0 && rand.nextInt(7) == 0) {
+			if (worldIn.getLightFromNeighbors(pos.up()) >= 9 && rand.nextInt(7) == 0) {
 				this.grow(worldIn, rand, pos, state);
 			}
 		}
+	}
+
+	public IBlockState getStateFromMeta(int meta) {
+		return this.getDefaultState().withProperty(STAGE, Integer.valueOf(meta));
+	}
+
+	/**
+	 * Convert the BlockState into the correct metadata value
+	 */
+	public int getMetaFromState(IBlockState state) {
+		return ((Integer) state.getValue(STAGE)).intValue();
+	}
+
+	protected BlockStateContainer createBlockState() {
+		return new BlockStateContainer(this, new IProperty[] { STAGE });
 	}
 
 }

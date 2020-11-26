@@ -11,8 +11,7 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 public class RecipesLoader {
 	@SubscribeEvent
 	public static void registerRecipes(RegistryEvent.Register<IRecipe> event) {
-		event.getRegistry().registerAll(new RecipesDough(), new RecipesEggMilkDough(), new RecipesMilkChocolate(),
-				new RecipesWhiteChocolate(), new RecipesHotChocolate(), new RecipesCake(), new RecipesCocoa(),
+		event.getRegistry().registerAll(new RecipesHotChocolate(), new RecipesCake(), new RecipesCocoa(),
 				new RecipesBread(), new RecipesInjectedIronSword(), new RecipesInjectedIronAxe(),
 				new RecipesInjectedIronPickaxe(), new RecipesInjectedIronShovel(), new RecipesInjectedIronHoe(),
 				new RecipesInjectedIronLeggings(), new RecipesInjectedIronChestPlate(), new RecipesInjectedIronHelmet(),

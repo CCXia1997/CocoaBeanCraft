@@ -1,0 +1,6 @@
+{
+    "parent": "block/cross",
+    "textures": {
+        "cross": "cbcraft:blocks/horizontal_chocolate_sapling"
+    }
+}
