@@ -6,6 +6,8 @@ import com.ccxia.cbcraft.CbCraft;
 import com.ccxia.cbcraft.creativetab.CreativeTabsCbCraft;
 
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockBush;
+import net.minecraft.block.BlockLiquid;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
@@ -32,6 +34,7 @@ public class BlockSchwarzwaelder extends Block {
 			net.minecraftforge.common.IPlantable plantable) {
 		IBlockState plant = plantable.getPlant(world, pos.offset(direction));
 		net.minecraftforge.common.EnumPlantType plantType = plantable.getPlantType(world, pos.offset(direction));
+		//确定上方能种植的植物类型
 		if (plant.getBlock() == ModBlocks.TWILL_CHOCOLATE_SAPLING) {
 			return true;
 		} else {

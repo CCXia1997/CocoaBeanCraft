@@ -18,6 +18,6 @@ public class EntityLoader {
 		event.getRegistry()
 				.register(EntityEntryBuilder.create().entity(EntityCocoaEnderPearl.class)
 						.id(new ResourceLocation(CbCraft.MODID, "cocoa_ender_pearl"), 104).name("ThrownCocoaEnderpearl")
-						.tracker(80, 1, false).build());
+						.tracker(160, 1, false).build());
 	}
 }

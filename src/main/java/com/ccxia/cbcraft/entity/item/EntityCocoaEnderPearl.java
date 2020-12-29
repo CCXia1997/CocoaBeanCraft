@@ -84,14 +84,15 @@ public class EntityCocoaEnderPearl extends EntityEnderPearl {
 							entityplayermp, this.posX, this.posY, this.posZ, 5.0F);
 					if (!net.minecraftforge.common.MinecraftForge.EVENT_BUS.post(event)) { // Don't indent to lower
 																							// patch size
-						if (this.rand.nextFloat() < 0.05F && this.world.getGameRules().getBoolean("doMobSpawning")) {
-							EntityEndermite entityendermite = new EntityEndermite(this.world);
-							entityendermite.setSpawnedByPlayer(true);
-							entityendermite.setLocationAndAngles(entitylivingbase.posX, entitylivingbase.posY,
-									entitylivingbase.posZ, entitylivingbase.rotationYaw,
-									entitylivingbase.rotationPitch);
-							this.world.spawnEntity(entityendermite);
-						}
+						//Õâ¶Î´úÂë×¢ÊÍµô£¬·ÀÖ¹ÔÒÕäÖéµÄÊ±ºòÉú³ÉÄ©Ó°òý
+//						if (this.rand.nextFloat() < 0.05F && this.world.getGameRules().getBoolean("doMobSpawning")) {
+//							EntityEndermite entityendermite = new EntityEndermite(this.world);
+//							entityendermite.setSpawnedByPlayer(true);
+//							entityendermite.setLocationAndAngles(entitylivingbase.posX, entitylivingbase.posY,
+//									entitylivingbase.posZ, entitylivingbase.rotationYaw,
+//									entitylivingbase.rotationPitch);
+//							this.world.spawnEntity(entityendermite);
+//						}
 
 						if (entitylivingbase.isRiding()) {
 							entitylivingbase.dismountRidingEntity();

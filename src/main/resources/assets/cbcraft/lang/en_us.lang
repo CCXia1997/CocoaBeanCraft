@@ -140,14 +140,21 @@ tile.cbcraft.hollowChocolateSapling.name=Hollow Chocolate Sapling
 tile.cbcraft.horizontalChocolateSapling.name=Horizontal Chocolate Sapling
 tile.cbcraft.twillChocolateSapling.name=Twill Chocolate Sapling
 tile.cbcraft.verticalChocolateSapling.name=Vertical Chocolate Sapling
+tile.cbcraft.cocoaAltar.name=Cocoa Altar
 
 container.cbcraft.fermentation_baking_machine=Fermentation Baking Machine
 container.cbcraft.crushing_grinding_machine=Crushing Grinding Machine
 container.cbcraft.separator=Separator
 container.cbcraft.injection_table=Injection Table
+container.cbcraft.injection_table.level_not_enough=Not Enough Level
+container.cbcraft.injection_table.powder_not_enough=Not Enough Powder
 container.cbcraft.injection_table.cost=Need %d Level and Cocoa Powder
 container.cbcraft.auto_crushing_grinding_machine=Auto Crushing Grinding Machine
 container.cbcraft.auto_pressing_machine=Auto Pressing Machine
 
 generator.cocoa_world=Cocoa World
 generator.cocoa_world.info=lots of chocolate and cake
+
+potion.darkStrength=DarkChocolate Strength
+potion.milkStrength=Milk Strength
+potion.whiteStrength=White Strength

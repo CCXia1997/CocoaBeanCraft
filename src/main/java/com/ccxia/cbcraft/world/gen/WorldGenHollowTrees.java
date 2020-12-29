@@ -78,8 +78,7 @@ public class WorldGenHollowTrees extends WorldGenAbstractTree {
 			} else {
 				BlockPos down = position.down();
 				IBlockState state = worldIn.getBlockState(down);
-				boolean isSoil = state.getBlock().canSustainPlant(state, worldIn, down,
-						net.minecraft.util.EnumFacing.UP, (net.minecraft.block.BlockSapling) Blocks.SAPLING);
+				boolean isSoil = state.getBlock() == ModBlocks.TIRAMISU_BLOCK;
 
 				if (isSoil && position.getY() < worldIn.getHeight() - i - 1) {
 					state.getBlock().onPlantGrow(state, worldIn, down, position);

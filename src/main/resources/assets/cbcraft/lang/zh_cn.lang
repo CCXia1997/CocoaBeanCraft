@@ -140,6 +140,7 @@ tile.cbcraft.hollowChocolateSapling.name=空心巧克力树苗
 tile.cbcraft.horizontalChocolateSapling.name=横纹巧克力树苗
 tile.cbcraft.twillChocolateSapling.name=斜纹巧克力树苗
 tile.cbcraft.verticalChocolateSapling.name=竖纹巧克力树苗
+tile.cbcraft.cocoaAltar.name=可可祭坛
 
 container.cbcraft.fermentation_baking_machine=发酵烘焙机
 container.cbcraft.crushing_grinding_machine=打碎研磨机
@@ -153,3 +154,7 @@ container.cbcraft.auto_pressing_machine=自动压合机
 
 generator.cocoa_world=巧克力维度
 generator.cocoa_world.info=很多蛋糕和巧克力
+
+potion.darkStrength=黑巧克力强化
+potion.milkStrength=牛奶巧克力强化
+potion.whiteStrength=白巧克力强化

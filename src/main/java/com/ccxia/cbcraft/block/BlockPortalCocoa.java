@@ -76,29 +76,30 @@ public class BlockPortalCocoa extends BlockBreakable {
 		}
 	}
 
+	//这边修改下，不然会刷出僵尸猪人
 	public void updateTick(World worldIn, BlockPos pos, IBlockState state, Random rand) {
 		super.updateTick(worldIn, pos, state, rand);
 
-		if (worldIn.provider.isSurfaceWorld() && worldIn.getGameRules().getBoolean("doMobSpawning")
-				&& rand.nextInt(2000) < worldIn.getDifficulty().getDifficultyId()) {
-			int i = pos.getY();
-			BlockPos blockpos;
-
-			for (blockpos = pos; !worldIn.getBlockState(blockpos).isTopSolid()
-					&& blockpos.getY() > 0; blockpos = blockpos.down()) {
-				;
-			}
-
-			if (i > 0 && !worldIn.getBlockState(blockpos.up()).isNormalCube()) {
-				Entity entity = ItemMonsterPlacer.spawnCreature(worldIn, EntityList.getKey(EntityPigZombie.class),
-						(double) blockpos.getX() + 0.5D, (double) blockpos.getY() + 1.1D,
-						(double) blockpos.getZ() + 0.5D);
-
-				if (entity != null) {
-					entity.timeUntilPortal = entity.getPortalCooldown();
-				}
-			}
-		}
+//		if (worldIn.provider.isSurfaceWorld() && worldIn.getGameRules().getBoolean("doMobSpawning")
+//				&& rand.nextInt(2000) < worldIn.getDifficulty().getDifficultyId()) {
+//			int i = pos.getY();
+//			BlockPos blockpos;
+//
+//			for (blockpos = pos; !worldIn.getBlockState(blockpos).isTopSolid()
+//					&& blockpos.getY() > 0; blockpos = blockpos.down()) {
+//				;
+//			}
+//
+//			if (i > 0 && !worldIn.getBlockState(blockpos.up()).isNormalCube()) {
+//				Entity entity = ItemMonsterPlacer.spawnCreature(worldIn, EntityList.getKey(EntityPigZombie.class),
+//						(double) blockpos.getX() + 0.5D, (double) blockpos.getY() + 1.1D,
+//						(double) blockpos.getZ() + 0.5D);
+//
+//				if (entity != null) {
+//					entity.timeUntilPortal = entity.getPortalCooldown();
+//				}
+//			}
+//		}
 	}
 
 	@Nullable

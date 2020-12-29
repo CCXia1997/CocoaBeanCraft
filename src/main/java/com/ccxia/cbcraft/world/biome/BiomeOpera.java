@@ -27,9 +27,12 @@ public class BiomeOpera extends BiomeSavanna {
 		this.fillerBlock = ModBlocks.COCOA_CAKE_BASE.getDefaultState();
 		// 先禁止生物生成
 		this.spawnableCreatureList.clear();
+		this.spawnableMonsterList.clear();
+		this.spawnableWaterCreatureList.clear();
+		this.spawnableCaveCreatureList.clear();
 		// 一些配置
 		this.decorator.treesPerChunk = 0;
-		this.decorator.extraTreeChance = 0.05F;
+		this.decorator.extraTreeChance = 0.2F;
 		this.decorator.flowersPerChunk = 0;
 		this.decorator.grassPerChunk = 0;
 	}

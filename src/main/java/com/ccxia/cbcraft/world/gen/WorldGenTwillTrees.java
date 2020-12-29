@@ -317,8 +317,7 @@ public class WorldGenTwillTrees extends WorldGenAbstractTree {
 	private boolean validTreeLocation() {
 		BlockPos down = this.basePos.down();
 		net.minecraft.block.state.IBlockState state = this.world.getBlockState(down);
-		boolean isSoil = state.getBlock().canSustainPlant(state, this.world, down, net.minecraft.util.EnumFacing.UP,
-				((net.minecraft.block.BlockSapling) Blocks.SAPLING));
+		boolean isSoil = state.getBlock() == ModBlocks.SCHWARZWAELDER_BLOCK;
 
 		if (!isSoil) {
 			return false;
