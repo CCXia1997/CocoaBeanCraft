@@ -15,6 +15,7 @@ import net.minecraft.inventory.Container;
 import net.minecraft.inventory.ISidedInventory;
 import net.minecraft.inventory.ItemStackHelper;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemAir;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.tileentity.TileEntity;
@@ -57,6 +58,8 @@ public class TileEntityCrushingGrindingMachine extends TileEntity implements ITi
 		workList.put(Items.BONE, new ItemStack(Items.DYE, 4, 15));
 		// 1小麦->1面粉
 		workList.put(Items.WHEAT, new ItemStack(ModItems.FLOUR, 1));
+		// 1泥土->1黏土球
+		workList.put(Item.getItemFromBlock(Blocks.DIRT),new ItemStack(Items.CLAY_BALL));
 	}
 
 	@Override

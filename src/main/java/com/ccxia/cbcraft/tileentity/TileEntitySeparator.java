@@ -9,6 +9,7 @@ import com.ccxia.cbcraft.tileentity.crafting.CraftingSeparator;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
+import net.minecraft.block.state.IBlockState;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
@@ -19,14 +20,20 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemSword;
 import net.minecraft.item.ItemTool;
 import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.network.NetworkManager;
+import net.minecraft.network.play.server.SPacketUpdateTileEntity;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.ITickable;
 import net.minecraft.util.NonNullList;
+import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
+import net.minecraft.world.World;
 import net.minecraftforge.common.capabilities.Capability;
 import net.minecraftforge.items.CapabilityItemHandler;
 import net.minecraftforge.items.ItemStackHandler;
+
+import javax.annotation.Nonnull;
 
 public class TileEntitySeparator extends TileEntity implements ITickable {
 	// 分离机的底部成品位置有两个物品槽，输出两种成品
@@ -128,17 +135,6 @@ public class TileEntitySeparator extends TileEntity implements ITickable {
 
 	public int getInventoryStackLimit() {
 		return 64;
-	}
-
-	@Override
-	public void readFromNBT(NBTTagCompound compound) {
-		super.readFromNBT(compound);
-	}
-
-	@Override
-	public NBTTagCompound writeToNBT(NBTTagCompound compound) {
-		super.writeToNBT(compound);
-		return compound;
 	}
 
 	public int getCookTime(ItemStack stack) {
@@ -276,6 +272,64 @@ public class TileEntitySeparator extends TileEntity implements ITickable {
 		default:
 			return 0;
 		}
+	}
+
+	public boolean shouldRefresh(World world, BlockPos pos, IBlockState oldState, IBlockState newState) {
+		return oldState.getBlock() != newState.getBlock();
+	}
+
+
+	@Nonnull
+	@Override
+	public NBTTagCompound writeToNBT(NBTTagCompound par1nbtTagCompound) {
+		NBTTagCompound ret = super.writeToNBT(par1nbtTagCompound);
+		writePacketNBT(ret);
+		return ret;
+	}
+
+	@Nonnull
+	@Override
+	public final NBTTagCompound getUpdateTag() {
+		return writeToNBT(new NBTTagCompound());
+	}
+
+	@Override
+	public void readFromNBT(NBTTagCompound par1nbtTagCompound) {
+		super.readFromNBT(par1nbtTagCompound);
+		readPacketNBT(par1nbtTagCompound);
+	}
+
+	public void writePacketNBT(NBTTagCompound cmp) {
+		cmp.setTag("UpInventory", this.upInventory.serializeNBT());
+		cmp.setTag("DownInventory", this.downInventory.serializeNBT());
+		cmp.setTag("SideInventory", this.sideInventory.serializeNBT());
+		cmp.setInteger("FurnaceBurnTime", this.furnaceBurnTime);
+		cmp.setInteger("CurrentItemBurnTime", this.currentItemBurnTime);
+		cmp.setInteger("CookTime", this.cookTime);
+		cmp.setInteger("TotalCookTime", this.totalCookTime);
+	}
+
+	public void readPacketNBT(NBTTagCompound cmp) {
+		this.upInventory.deserializeNBT(cmp.getCompoundTag("UpInventory"));
+		this.downInventory.deserializeNBT(cmp.getCompoundTag("DownInventory"));
+		this.sideInventory.deserializeNBT(cmp.getCompoundTag("SideInventory"));
+		this.furnaceBurnTime = cmp.getInteger("FurnaceBurnTime");
+		this.currentItemBurnTime = cmp.getInteger("CurrentItemBurnTime");
+		this.cookTime = cmp.getInteger("CookTime");
+		this.totalCookTime = cmp.getInteger("TotalCookTime");
+	}
+
+	@Override
+	public final SPacketUpdateTileEntity getUpdatePacket() {
+		NBTTagCompound tag = new NBTTagCompound();
+		writePacketNBT(tag);
+		return new SPacketUpdateTileEntity(pos, -999, tag);
+	}
+
+	@Override
+	public void onDataPacket(NetworkManager net, SPacketUpdateTileEntity packet) {
+		super.onDataPacket(net, packet);
+		readPacketNBT(packet.getNbtCompound());
 	}
 
 }

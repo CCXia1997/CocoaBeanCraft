@@ -6,6 +6,7 @@ import com.ccxia.cbcraft.potion.DarkChocolateRecipe;
 import com.ccxia.cbcraft.potion.MilkChocolateRecipe;
 import com.ccxia.cbcraft.potion.WhiteChocolateRecipe;
 import com.ccxia.cbcraft.tileentity.TileEntityLoader;
+import com.ccxia.cbcraft.until.CbCraftRecipeRegister;
 import com.ccxia.cbcraft.world.WorldTypeCocoa;
 import com.ccxia.cbcraft.world.gen.WorldGenCocoaMetalOre;
 import com.ccxia.cbcraft.world.gen.WorldGenCocoaSparOre;
@@ -30,6 +31,8 @@ public class CommonProxy {
 		BrewingRecipeRegistry.addRecipe(new MilkChocolateRecipe());
 		BrewingRecipeRegistry.addRecipe(new WhiteChocolateRecipe());
 		new GuiLoader();
+		// jei÷ß≥÷
+		CbCraftRecipeRegister.getInstance().Init();
 	}
 
 	public void postInit(FMLPostInitializationEvent event) {

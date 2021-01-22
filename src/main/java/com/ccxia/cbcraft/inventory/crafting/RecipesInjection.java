@@ -30,6 +30,7 @@ public class RecipesInjection {
 		add(new ItemStack(Items.EMERALD), 1, new ItemStack(ModItems.PURPLE_GEM));
 		add(new ItemStack(Items.IRON_INGOT), 5, new ItemStack(ModItems.INJECTED_IRON_INGOT));
 		if (level == 1) {
+			add(new ItemStack(ModBlocks.INJECTION_TABLE),50,new ItemStack(ModBlocks.COCOA_ALTAR));
 			add(new ItemStack(Items.GOLD_INGOT), 15, new ItemStack(ModItems.INJECTED_GOLD_INGOT));
 			add(new ItemStack(ModItems.COCOA_SPAR), 20, new ItemStack(ModItems.INJECTED_COCOA_SPAR));
 		}

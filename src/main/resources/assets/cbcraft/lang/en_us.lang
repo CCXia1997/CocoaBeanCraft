@@ -158,3 +158,10 @@ generator.cocoa_world.info=lots of chocolate and cake
 potion.darkStrength=DarkChocolate Strength
 potion.milkStrength=Milk Strength
 potion.whiteStrength=White Strength
+
+jei.cbcraft.category.fer=Fermentation Baking Machine
+jei.cbcraft.category.crush=Crushing Grinding Machine
+jei.cbcraft.category.separator=Separator
+jei.cbcraft.category.autoCrush=Auto Crushing Grinding Machine
+jei.cbcraft.category.autoPressing=Auto Pressing Machine
+jei.cbcraft.category.injectionTable=Injection Table
