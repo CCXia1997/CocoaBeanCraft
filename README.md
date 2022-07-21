@@ -38,3 +38,4 @@
 - 2020.12.9  Cocoa Magic-1.1.0-pre1发布
 - 2020.12.29 Cocoa Magic-1.1.0-pre2发布
 - 2021.1.22  Cocoa Magic-1.1.0-pre3发布
+- 2022.7.21  短暂复活下hh，把config和矿物辞典搞定
