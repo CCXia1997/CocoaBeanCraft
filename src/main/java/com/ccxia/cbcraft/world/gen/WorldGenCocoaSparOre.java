@@ -3,6 +3,7 @@ package com.ccxia.cbcraft.world.gen;
 import java.util.Random;
 
 import com.ccxia.cbcraft.CbCraft;
+import com.ccxia.cbcraft.CbCraftConfig;
 import com.ccxia.cbcraft.block.ModBlocks;
 import com.ccxia.cbcraft.world.biome.CocoaBiomes;
 import com.google.common.base.Predicate;
@@ -21,19 +22,17 @@ public class WorldGenCocoaSparOre implements IWorldGenerator {
 	// 直接用函数式写法
 	WorldGenMinable cocoaSparOreGen = new WorldGenMinable(ModBlocks.COCOA_SPAR_ORE.getDefaultState(), 8,
 			state -> state != null && state.getBlock() == ModBlocks.COCOA_STONE);
-	// 一个区块里尝试生成的次数
-	private int genCountInChunk = 1;
 	// 矿石生成的高度范围
 	private int minHeight;
 	private int maxHeight;
 
 	private void generateCocoaWorld(Random rand, int chunkX, int chunkZ, World world) {
 		int k = 0;
-		// 布朗尼山地的生成数量更多
+		// config变量控制一个区块内的生成次数
 		if (world.getBiome(new BlockPos(chunkX * 16, 16, chunkZ * 16)) == CocoaBiomes.BROWNIE_HILL) {
-			k = 4;
+			k = CbCraftConfig.cocoa_spar_ore_weight_brownie;
 		} else {
-			k = this.genCountInChunk;
+			k = CbCraftConfig.cocoa_spar_ore_weight;
 		}
 		for (int i = 0; i < k; i++) {
 			BlockPos genPos = new BlockPos(chunkX * 16 + rand.nextInt(16), rand.nextInt(16),

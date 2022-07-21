@@ -3,6 +3,7 @@ package com.ccxia.cbcraft.world.gen;
 import java.util.Random;
 
 import com.ccxia.cbcraft.CbCraft;
+import com.ccxia.cbcraft.CbCraftConfig;
 import com.ccxia.cbcraft.block.ModBlocks;
 
 import net.minecraft.util.math.BlockPos;
@@ -16,14 +17,13 @@ public class WorldGenCocoaMetalOre implements IWorldGenerator {
 	// 可可金属矿脉生成
 	WorldGenMinable cocoaMetalOreGen = new WorldGenMinable(ModBlocks.COCOA_METAL_ORE.getDefaultState(), 9,
 			state -> state != null && state.getBlock() == ModBlocks.COCOA_STONE);
-	// 一个区块里尝试生成的次数
-	private int genCountInChunk = 20;
 	// 矿石生成的高度范围
 	private int minHeight;
 	private int maxHeight;
 
 	private void generateCocoaWorld(Random rand, int chunkX, int chunkZ, World world) {
-		for (int i = 0; i < this.genCountInChunk; i++) {
+		// 使用config变量cocoa_metal_ore_weight控制一个区块内的生成次数
+		for (int i = 0; i < CbCraftConfig.cocoa_metal_ore_weight; i++) {
 			BlockPos genPos = new BlockPos(chunkX * 16 + rand.nextInt(16), rand.nextInt(64),
 					chunkZ * 16 + rand.nextInt(16));
 			cocoaMetalOreGen.generate(world, rand, genPos);

@@ -10,14 +10,9 @@
 	{
 	  "item":"minecraft:sugar"		
 	},
-	[
 	{
-	  "item":"minecraft:milk_bucket"		
-	},
-	{
-	  "item":"packed_milk"
+	  "type": "forge:ore_dict", "ore": "listAllmilk"
 	}
-	]
   ],
   "result": {
     "item": "cbcraft:milk_chocolate",

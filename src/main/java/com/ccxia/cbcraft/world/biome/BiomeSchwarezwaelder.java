@@ -2,6 +2,7 @@ package com.ccxia.cbcraft.world.biome;
 
 import java.util.Random;
 
+import com.ccxia.cbcraft.CbCraftConfig;
 import com.ccxia.cbcraft.block.BlockHollowChocolateLog;
 import com.ccxia.cbcraft.block.ModBlocks;
 import com.ccxia.cbcraft.world.gen.WorldGenMegaTwill;
@@ -46,7 +47,7 @@ public class BiomeSchwarezwaelder extends BiomeForest {
         this.spawnableWaterCreatureList.clear();
         this.spawnableCaveCreatureList.clear();
         // “ª–©≈‰÷√
-        this.decorator.treesPerChunk = 50;
+        this.decorator.treesPerChunk = CbCraftConfig.twill_tree_amount;
         this.decorator.extraTreeChance = 0.00F;
         this.decorator.flowersPerChunk = 0;
         this.decorator.grassPerChunk = 0;
